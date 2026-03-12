@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovator | #1 House Painter Melbourne | Interior & Exterior Painting</title>
+    <meta name="description" content="Renovator — Melbourne's trusted house painter for interior painting, exterior painting, residential & commercial projects. 15+ years experience. Get your free quote today!">
+    <meta name="keywords" content="House Painter Melbourne, Interior Painting Melbourne, Exterior Painting Melbourne, Residential Painter Melbourne, Commercial Painter Melbourne, Fence Painting Melbourne, Deck Painting Melbourne, Painters Melbourne">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Renovator Melbourne">
+    <meta property="og:title" content="Renovator | Professional House Painter Melbourne">
+    <meta property="og:description" content="Melbourne's trusted painting contractor. Interior, exterior, residential & commercial painting services. Free quotes available.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_AU">
+    <link rel="canonical" href="https://www.renovator.com.au">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --royal: #1a3a7a;
+            --royal-deep: #0f2654;
+            --royal-light: #2b56b2;
+            --accent: #e8a928;
+            --accent-hover: #f5be45;
+            --white: #ffffff;
+            --off-white: #f4f7fc;
+            --gray-100: #e9edf5;
+            --gray-200: #d1d8e6;
+            --gray-600: #5a6a82;
+            --gray-800: #2c3e56;
+            --text: #1a2332;
+            --font-display: 'DM Serif Display', serif;
+            --font-body: 'Outfit', sans-serif;
+            --shadow-sm: 0 2px 8px rgba(26,58,122,0.08);
+            --shadow-md: 0 8px 30px rgba(26,58,122,0.12);
+            --shadow-lg: 0 20px 60px rgba(26,58,122,0.15);
+            --radius: 12px;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        /* ── UTILITY ── */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section-pad { padding: 100px 0; }
+        .badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(26,58,122,0.08); color: var(--royal);
+            padding: 8px 18px; border-radius: 50px; font-size: 0.82rem;
+            font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .section-title {
+            font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3rem);
+            color: var(--royal-deep); line-height: 1.2; margin-bottom: 18px;
+        }
+        .section-sub {
+            color: var(--gray-600); font-size: 1.08rem; max-width: 600px;
+            line-height: 1.8;
+        }
+        .btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 36px; border-radius: 50px; font-family: var(--font-body);
+            font-weight: 700; font-size: 1rem; text-decoration: none;
+            transition: all 0.35s cubic-bezier(.4,0,.2,1); cursor: pointer; border: none;
+        }
+        .btn-primary {
+            background: var(--accent); color: var(--royal-deep);
+            box-shadow: 0 4px 20px rgba(232,169,40,0.35);
+        }
+        .btn-primary:hover {
+            background: var(--accent-hover); transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(232,169,40,0.5);
+        }
+        .btn-outline {
+            background: transparent; color: var(--white);
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+        .btn-outline:hover { background: rgba(255,255,255,0.12); border-color: var(--white); }
+        .btn-royal {
+            background: var(--royal); color: var(--white);
+            box-shadow: 0 4px 20px rgba(26,58,122,0.3);
+        }
+        .btn-royal:hover {
+            background: var(--royal-light); transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(26,58,122,0.4);
+        }
+
+        /* ── ANIMATIONS ── */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(.4,0,.2,1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-left { opacity: 0; transform: translateX(-50px); transition: all 0.8s cubic-bezier(.4,0,.2,1); }
+        .reveal-left.active { opacity: 1; transform: translateX(0); }
+        .reveal-right { opacity: 0; transform: translateX(50px); transition: all 0.8s cubic-bezier(.4,0,.2,1); }
+        .reveal-right.active { opacity: 1; transform: translateX(0); }
+
+        /* ── NAVBAR ── */
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 16px 0; transition: all 0.4s ease;
+        }
+        .navbar.scrolled {
+            background: rgba(255,255,255,0.97); backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-sm); padding: 10px 0;
+        }
+        .navbar .container { display: flex; align-items: center; justify-content: space-between; }
+        .logo {
+            display: flex; align-items: center; gap: 10px;
+            text-decoration: none; font-family: var(--font-display);
+            font-size: 1.6rem; color: var(--white); transition: color 0.3s;
+        }
+        .logo i { color: var(--accent); font-size: 1.3rem; }
+        .navbar.scrolled .logo { color: var(--royal-deep); }
+        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+        .nav-links a {
+            text-decoration: none; color: rgba(255,255,255,0.85);
+            font-weight: 500; font-size: 0.92rem; transition: color 0.3s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--accent);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .navbar.scrolled .nav-links a { color: var(--gray-800); }
+        .navbar.scrolled .nav-links a:hover { color: var(--royal); }
+        .nav-cta { padding: 10px 24px !important; font-size: 0.88rem !important; }
+        .hamburger {
+            display: none; flex-direction: column; gap: 5px;
+            cursor: pointer; background: none; border: none; padding: 4px;
+        }
+        .hamburger span {
+            width: 26px; height: 2.5px; background: var(--white);
+            border-radius: 4px; transition: all 0.3s;
+        }
+        .navbar.scrolled .hamburger span { background: var(--royal-deep); }
+
+        /* ── HERO ── */
+        .hero {
+            position: relative; min-height: 100vh; display: flex; align-items: center;
+            background: linear-gradient(135deg, var(--royal-deep) 0%, var(--royal) 50%, var(--royal-light) 100%);
+            overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: url('https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=1920&q=80') center/cover;
+            opacity: 0.12;
+        }
+        .hero-pattern {
+            position: absolute; inset: 0; opacity: 0.06;
+            background-image: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.3) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        .hero .container { position: relative; z-index: 2; }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero-content { color: var(--white); }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(232,169,40,0.15); border: 1px solid rgba(232,169,40,0.3);
+            color: var(--accent); padding: 8px 18px; border-radius: 50px;
+            font-size: 0.82rem; font-weight: 600; letter-spacing: 1px;
+            margin-bottom: 24px;
+            animation: fadeInDown 0.8s ease forwards;
+        }
+        .hero h1 {
+            font-family: var(--font-display); font-size: clamp(2.5rem, 5.5vw, 4rem);
+            line-height: 1.1; margin-bottom: 22px;
+            animation: fadeInUp 0.8s 0.2s ease both;
+        }
+        .hero h1 span { color: var(--accent); }
+        .hero-desc {
+            font-size: 1.12rem; color: rgba(255,255,255,0.8);
+            max-width: 500px; margin-bottom: 36px; line-height: 1.8;
+            animation: fadeInUp 0.8s 0.4s ease both;
+        }
+        .hero-btns {
+            display: flex; gap: 16px; flex-wrap: wrap;
+            animation: fadeInUp 0.8s 0.6s ease both;
+        }
+        .hero-stats {
+            display: flex; gap: 40px; margin-top: 50px;
+            animation: fadeInUp 0.8s 0.8s ease both;
+        }
+        .stat { text-align: center; }
+        .stat-num {
+            font-family: var(--font-display); font-size: 2.2rem; color: var(--accent);
+        }
+        .stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 2px; letter-spacing: 0.5px; }
+
+        .hero-visual {
+            position: relative;
+            animation: fadeInRight 1s 0.4s ease both;
+        }
+        .hero-img-main {
+            width: 100%; border-radius: 20px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            object-fit: cover; height: 480px;
+        }
+        .hero-floating-card {
+            position: absolute; bottom: -20px; left: -30px;
+            background: var(--white); padding: 18px 24px; border-radius: 16px;
+            box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 14px;
+            animation: float 3s ease-in-out infinite;
+        }
+        .hero-floating-card i { font-size: 1.4rem; color: var(--accent); }
+        .hero-floating-card .card-text strong { display: block; color: var(--royal-deep); font-size: 0.95rem; }
+        .hero-floating-card .card-text span { color: var(--gray-600); font-size: 0.8rem; }
+
+        @keyframes float { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-10px); } }
+        @keyframes fadeInUp { from{ opacity:0; transform:translateY(30px); } to{ opacity:1; transform:translateY(0); } }
+        @keyframes fadeInDown { from{ opacity:0; transform:translateY(-20px); } to{ opacity:1; transform:translateY(0); } }
+        @keyframes fadeInRight { from{ opacity:0; transform:translateX(40px); } to{ opacity:1; transform:translateX(0); } }
+
+        /* ── SERVICES ── */
+        .services { background: var(--off-white); }
+        .services-head { text-align: center; margin-bottom: 60px; }
+        .services-head .section-sub { margin: 0 auto; }
+        .services-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--white); border-radius: var(--radius);
+            padding: 36px 28px; text-align: center;
+            box-shadow: var(--shadow-sm); transition: all 0.4s cubic-bezier(.4,0,.2,1);
+            border: 1px solid transparent; position: relative; overflow: hidden;
+        }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, var(--royal), var(--accent));
+            transform: scaleX(0); transition: transform 0.4s; transform-origin: left;
+        }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg); border-color: rgba(26,58,122,0.08);
+        }
+        .service-icon {
+            width: 64px; height: 64px; border-radius: 16px;
+            background: linear-gradient(135deg, rgba(26,58,122,0.08), rgba(26,58,122,0.03));
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px; font-size: 1.5rem; color: var(--royal);
+            transition: all 0.4s;
+        }
+        .service-card:hover .service-icon { background: var(--royal); color: var(--white); }
+        .service-card h3 {
+            font-family: var(--font-display); font-size: 1.15rem;
+            color: var(--royal-deep); margin-bottom: 10px;
+        }
+        .service-card p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.7; }
+
+        /* ── ABOUT ── */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-img-wrap { position: relative; }
+        .about-img {
+            width: 100%; border-radius: 20px; object-fit: cover; height: 450px;
+            box-shadow: var(--shadow-md);
+        }
+        .about-accent {
+            position: absolute; top: -15px; left: -15px; width: 120px; height: 120px;
+            border: 4px solid var(--accent); border-radius: 20px; z-index: -1;
+        }
+        .about-experience {
+            position: absolute; bottom: -15px; right: -15px;
+            background: var(--royal); color: var(--white); padding: 20px 28px;
+            border-radius: 16px; text-align: center;
+            box-shadow: 0 10px 40px rgba(26,58,122,0.3);
+        }
+        .about-experience strong {
+            display: block; font-family: var(--font-display); font-size: 2.2rem; color: var(--accent);
+        }
+        .about-experience span { font-size: 0.82rem; letter-spacing: 0.5px; }
+        .about-text p { color: var(--gray-600); margin-bottom: 20px; font-size: 1.02rem; }
+        .about-checks { list-style: none; margin: 24px 0 32px; }
+        .about-checks li {
+            display: flex; align-items: center; gap: 12px; padding: 8px 0;
+            font-weight: 500; color: var(--gray-800);
+        }
+        .about-checks li i { color: var(--accent); font-size: 1rem; }
+
+        /* ── WHY CHOOSE US ── */
+        .why-section {
+            background: linear-gradient(135deg, var(--royal-deep) 0%, var(--royal) 100%);
+            color: var(--white); position: relative; overflow: hidden;
+        }
+        .why-section::before {
+            content: ''; position: absolute; inset: 0; opacity: 0.05;
+            background-image: radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .why-section .container { position: relative; z-index: 2; }
+        .why-head { text-align: center; margin-bottom: 60px; }
+        .why-head .badge { background: rgba(232,169,40,0.15); color: var(--accent); }
+        .why-head .section-title { color: var(--white); }
+        .why-head .section-sub { color: rgba(255,255,255,0.7); margin: 0 auto; }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .why-card {
+            background: rgba(255,255,255,0.07); backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius);
+            padding: 36px 28px; text-align: center; transition: all 0.4s;
+        }
+        .why-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-5px); }
+        .why-icon {
+            width: 60px; height: 60px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #f5be45);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px; font-size: 1.3rem; color: var(--royal-deep);
+        }
+        .why-card h3 { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 10px; }
+        .why-card p { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.7; }
+
+        /* ── SERVICE AREAS ── */
+        .areas { background: var(--off-white); }
+        .areas-head { text-align: center; margin-bottom: 50px; }
+        .areas-head .section-sub { margin: 0 auto; }
+        .areas-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px; max-width: 900px; margin: 0 auto;
+        }
+        .area-tag {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            background: var(--white); padding: 16px 20px; border-radius: 10px;
+            font-weight: 500; color: var(--royal-deep); font-size: 0.95rem;
+            box-shadow: var(--shadow-sm); transition: all 0.3s; cursor: default;
+            border: 1px solid transparent;
+        }
+        .area-tag i { color: var(--royal); font-size: 0.85rem; }
+        .area-tag:hover {
+            border-color: var(--royal); transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ── CONTACT ── */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        .contact-info { padding-top: 10px; }
+        .contact-info p { color: var(--gray-600); margin-bottom: 30px; font-size: 1.02rem; }
+        .contact-item {
+            display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px;
+        }
+        .contact-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            background: linear-gradient(135deg, var(--royal), var(--royal-light));
+            display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-size: 1rem; flex-shrink: 0;
+        }
+        .contact-item strong { display: block; color: var(--royal-deep); margin-bottom: 2px; }
+        .contact-item span { color: var(--gray-600); font-size: 0.92rem; }
+        .form-card {
+            background: var(--white); padding: 40px; border-radius: 20px;
+            box-shadow: var(--shadow-lg); border: 1px solid var(--gray-100);
+        }
+        .form-card h3 {
+            font-family: var(--font-display); font-size: 1.5rem;
+            color: var(--royal-deep); margin-bottom: 6px;
+        }
+        .form-card > p { color: var(--gray-600); font-size: 0.9rem; margin-bottom: 28px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label {
+            display: block; font-weight: 600; font-size: 0.85rem;
+            color: var(--gray-800); margin-bottom: 6px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 13px 16px; border: 2px solid var(--gray-200);
+            border-radius: 10px; font-family: var(--font-body); font-size: 0.95rem;
+            transition: border-color 0.3s, box-shadow 0.3s; background: var(--off-white);
+            color: var(--text);
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none; border-color: var(--royal);
+            box-shadow: 0 0 0 4px rgba(26,58,122,0.1);
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-submit {
+            width: 100%; padding: 16px; border: none; border-radius: 10px;
+            background: linear-gradient(135deg, var(--royal), var(--royal-light));
+            color: var(--white); font-family: var(--font-body); font-weight: 700;
+            font-size: 1.05rem; cursor: pointer; transition: all 0.35s;
+            box-shadow: 0 4px 20px rgba(26,58,122,0.25);
+        }
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(26,58,122,0.4);
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--royal-deep); color: rgba(255,255,255,0.7);
+            padding: 60px 0 0;
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+            padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-brand .logo { color: var(--white); font-size: 1.4rem; margin-bottom: 16px; }
+        .footer-brand p { font-size: 0.9rem; line-height: 1.8; max-width: 300px; }
+        .footer-col h4 {
+            color: var(--white); font-family: var(--font-display); font-size: 1.05rem;
+            margin-bottom: 18px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul a {
+            color: rgba(255,255,255,0.6); text-decoration: none;
+            font-size: 0.9rem; transition: color 0.3s;
+        }
+        .footer-col ul a:hover { color: var(--accent); }
+        .footer-social { display: flex; gap: 12px; margin-top: 20px; }
+        .footer-social a {
+            width: 40px; height: 40px; border-radius: 10px;
+            background: rgba(255,255,255,0.08); display: flex; align-items: center;
+            justify-content: center; color: rgba(255,255,255,0.6);
+            transition: all 0.3s; text-decoration: none;
+        }
+        .footer-social a:hover { background: var(--accent); color: var(--royal-deep); }
+        .footer-bottom {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 24px 0; font-size: 0.84rem;
+        }
+
+        /* ── BACK TO TOP ── */
+        .back-top {
+            position: fixed; bottom: 30px; right: 30px; width: 48px; height: 48px;
+            border-radius: 50%; background: var(--royal); color: var(--white);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: var(--shadow-md); cursor: pointer; border: none;
+            opacity: 0; visibility: hidden; transition: all 0.4s;
+            z-index: 999; font-size: 1.1rem;
+        }
+        .back-top.show { opacity: 1; visibility: visible; }
+        .back-top:hover { background: var(--accent); color: var(--royal-deep); transform: translateY(-3px); }
+
+        /* ── MOBILE ── */
+        .mobile-menu {
+            display: none; position: fixed; inset: 0; z-index: 999;
+            background: rgba(15,38,84,0.98); backdrop-filter: blur(20px);
+            flex-direction: column; align-items: center; justify-content: center; gap: 0;
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a {
+            color: var(--white); text-decoration: none; font-size: 1.5rem;
+            font-family: var(--font-display); padding: 16px 0;
+            transition: color 0.3s;
+        }
+        .mobile-menu a:hover { color: var(--accent); }
+        .mobile-close {
+            position: absolute; top: 24px; right: 24px; background: none;
+            border: none; color: var(--white); font-size: 2rem; cursor: pointer;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-visual { display: none; }
+            .hero-desc { margin: 0 auto 36px; }
+            .hero-btns { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-img-wrap { max-width: 500px; margin: 0 auto; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .section-pad { padding: 70px 0; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .hero { min-height: 90vh; }
+            .hero-stats { gap: 24px; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+            .services-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+            .service-card { padding: 28px 20px; }
+            .form-card { padding: 28px 20px; }
+        }
+    </style>
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Renovator",
+        "description": "Professional house painter in Melbourne offering interior, exterior, residential and commercial painting services.",
+        "url": "https://www.renovator.com.au",
+        "telephone": "+61 3 9000 1234",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Melbourne",
+            "addressRegion": "VIC",
+            "addressCountry": "AU"
+        },
+        "areaServed": "Melbourne, Victoria, Australia",
+        "priceRange": "$$",
+        "openingHours": "Mo-Sa 07:00-18:00"
+    }
+    </script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <a href="#" class="logo"><i class="fa-solid fa-paint-roller"></i> Renovator</a>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#areas">Areas</a></li>
+            <li><a href="#contact" class="btn btn-primary nav-cta">Get Free Quote</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#why" onclick="closeMobile()">Why Us</a>
+    <a href="#areas" onclick="closeMobile()">Areas</a>
+    <a href="#contact" onclick="closeMobile()">Get Free Quote</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="hero">
+    <div class="hero-pattern"></div>
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fa-solid fa-star"></i> Melbourne's Trusted Painting Experts</div>
+                <h1>Premium <span>House Painting</span> in Melbourne</h1>
+                <p class="hero-desc">Transform your property with Renovator — Melbourne's top-rated residential and commercial painter. Expert interior &amp; exterior painting with flawless results, guaranteed.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Get Free Quote</a>
+                    <a href="tel:+61390001234" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Call Now</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-num">15+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num">2,500+</div>
+                        <div class="stat-label">Projects Done</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num">4.9★</div>
+                        <div class="stat-label">Google Rating</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=700&q=80" alt="Professional house painter Melbourne - Renovator interior painting" class="hero-img-main">
+                <div class="hero-floating-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div class="card-text">
+                        <strong>Fully Insured</strong>
+                        <span>Licensed &amp; Guaranteed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- SERVICES -->
+<section class="services section-pad" id="services">
+    <div class="container">
+        <div class="services-head reveal">
+            <div class="badge"><i class="fa-solid fa-brush"></i> Our Services</div>
+            <h2 class="section-title">Painting Services Across Melbourne</h2>
+            <p class="section-sub">From single rooms to full property makeovers — we deliver flawless finishes for every project, big or small.</p>
+        </div>
+        <div class="services-grid">
+            <article class="service-card reveal" style="transition-delay:0.1s">
+                <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
+                <h3>Interior Painting</h3>
+                <p>Walls, ceilings, trims &amp; feature walls. We use premium paints for a smooth, lasting finish inside your home.</p>
+            </article>
+            <article class="service-card reveal" style="transition-delay:0.2s">
+                <div class="service-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                <h3>Exterior Painting</h3>
+                <p>Weather-resistant exterior coatings that protect your property and boost kerb appeal across Melbourne's seasons.</p>
+            </article>
+            <article class="service-card reveal" style="transition-delay:0.3s">
+                <div class="service-icon"><i class="fa-solid fa-home"></i></div>
+                <h3>Residential Painting</h3>
+                <p>Complete house painting solutions for homeowners — new builds, renovations, and refresh projects throughout Melbourne.</p>
+            </article>
+            <article class="service-card reveal" style="transition-delay:0.4s">
+                <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+                <h3>Commercial Painting</h3>
+                <p>Offices, retail stores &amp; strata. Minimal disruption, professional results that reflect your brand image.</p>
+            </article>
+            <article class="service-card reveal" style="transition-delay:0.5s">
+                <div class="service-icon"><i class="fa-solid fa-border-all"></i></div>
+                <h3>Fence &amp; Deck Painting</h3>
+                <p>Restore and protect your fences, decks &amp; pergolas with durable stains and coatings built for Australian conditions.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-pad" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-img-wrap reveal-left">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=700&q=80" alt="Renovator Melbourne painting team at work" class="about-img">
+                <div class="about-accent"></div>
+                <div class="about-experience">
+                    <strong>15+</strong>
+                    <span>Years of Excellence</span>
+                </div>
+            </div>
+            <div class="about-text reveal-right">
+                <div class="badge"><i class="fa-solid fa-users"></i> About Us</div>
+                <h2 class="section-title">Melbourne's Most Trusted Painting Team</h2>
+                <p>At <strong>Renovator</strong>, we've been transforming Melbourne homes and businesses for over 15 years. Our skilled team of licensed painters combines meticulous craftsmanship with premium Australian paints to deliver results that stand the test of time.</p>
+                <p>Whether it's a single feature wall or a complete property repaint, we treat every project with the same care and attention to detail. That's why thousands of Melbourne homeowners trust Renovator for all their painting needs.</p>
+                <ul class="about-checks">
+                    <li><i class="fa-solid fa-circle-check"></i> Fully Licensed &amp; Insured</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Premium Dulux &amp; Taubmans Paints</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Clean, Punctual &amp; Professional</li>
+                    <li><i class="fa-solid fa-circle-check"></i> 5-Year Workmanship Warranty</li>
+                </ul>
+                <a href="#contact" class="btn btn-royal"><i class="fa-solid fa-paper-plane"></i> Request a Quote</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section section-pad" id="why">
+    <div class="container">
+        <div class="why-head reveal">
+            <div class="badge"><i class="fa-solid fa-award"></i> Why Renovator</div>
+            <h2 class="section-title">Why Melbourne Chooses Renovator</h2>
+            <p class="section-sub">We go beyond just painting — we deliver an experience built on trust, quality and reliability.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card reveal" style="transition-delay:0.1s">
+                <div class="why-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <h3>Transparent Pricing</h3>
+                <p>Honest, detailed quotes with no hidden fees. You know exactly what you're paying for before we start.</p>
+            </div>
+            <div class="why-card reveal" style="transition-delay:0.2s">
+                <div class="why-icon"><i class="fa-solid fa-palette"></i></div>
+                <h3>Free Colour Consult</h3>
+                <p>Not sure which colours to choose? Our team offers free colour consultations to help you find the perfect palette.</p>
+            </div>
+            <div class="why-card reveal" style="transition-delay:0.3s">
+                <div class="why-icon"><i class="fa-solid fa-clock"></i></div>
+                <h3>On-Time, Every Time</h3>
+                <p>We respect your schedule. Every project is completed on time with minimal disruption to your daily routine.</p>
+            </div>
+            <div class="why-card reveal" style="transition-delay:0.4s">
+                <div class="why-icon"><i class="fa-solid fa-broom"></i></div>
+                <h3>Clean Worksite</h3>
+                <p>We leave your property spotless. Full protection of furniture, floors and landscaping — every single time.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas section-pad" id="areas">
+    <div class="container">
+        <div class="areas-head reveal">
+            <div class="badge"><i class="fa-solid fa-map-location-dot"></i> Service Areas</div>
+            <h2 class="section-title">Painting All Across Melbourne</h2>
+            <p class="section-sub">We proudly serve homeowners and businesses across Melbourne's metro and surrounding suburbs.</p>
+        </div>
+        <div class="areas-grid">
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> Melbourne CBD</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> South Yarra</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> Brighton</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> Richmond</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> Hawthorn</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> Toorak</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> St Kilda</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> Fitzroy</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> Carlton</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> Kew</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> Doncaster</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> Glen Waverley</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> Camberwell</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> Footscray</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> Williamstown</div>
+            <div class="area-tag reveal"><i class="fa-solid fa-location-dot"></i> Essendon</div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section-pad" id="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info reveal-left">
+                <div class="badge"><i class="fa-solid fa-envelope"></i> Get In Touch</div>
+                <h2 class="section-title">Get Your Free Painting Quote Today</h2>
+                <p>Ready to transform your space? Contact Renovator for a free, no-obligation quote. We'll visit your Melbourne property, discuss your vision and provide a detailed estimate — all at no cost.</p>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <strong>Phone</strong>
+                        <span>(03) 9000 1234</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <strong>Email</strong>
+                        <span>info@renovator.com.au</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <strong>Location</strong>
+                        <span>Serving All Melbourne Metro Areas</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <strong>Hours</strong>
+                        <span>Mon – Sat: 7:00 AM – 6:00 PM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-card reveal-right">
+                <h3>Request a Free Quote</h3>
+                <p>Fill in the form and we'll get back to you within 24 hours.</p>
+                <form id="quoteForm" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="04XX XXX XXX" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="interior">Interior Painting</option>
+                                <option value="exterior">Exterior Painting</option>
+                                <option value="residential">Full Residential</option>
+                                <option value="commercial">Commercial Painting</option>
+                                <option value="fence-deck">Fence & Deck Painting</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="suburb">Suburb</label>
+                            <input type="text" id="suburb" name="suburb" placeholder="e.g. South Yarra">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your painting project..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">
+                        <i class="fa-solid fa-paper-plane"></i>&nbsp; Send My Free Quote Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo"><i class="fa-solid fa-paint-roller"></i> Renovator</a>
+                <p>Melbourne's trusted painting professionals. Delivering premium interior &amp; exterior painting services with 15+ years of experience and thousands of satisfied customers.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Google"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Interior Painting</a></li>
+                    <li><a href="#services">Exterior Painting</a></li>
+                    <li><a href="#services">Residential Painting</a></li>
+                    <li><a href="#services">Commercial Painting</a></li>
+                    <li><a href="#services">Fence &amp; Deck</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#why">Why Choose Us</a></li>
+                    <li><a href="#areas">Service Areas</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Free Quote</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+61390001234">(03) 9000 1234</a></li>
+                    <li><a href="mailto:info@renovator.com.au">info@renovator.com.au</a></li>
+                    <li><a href="#">Melbourne, VIC</a></li>
+                    <li><a href="#">Mon-Sat 7am-6pm</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Renovator Melbourne. All Rights Reserved.</span>
+            <span>House Painter Melbourne | Interior &amp; Exterior Painting</span>
+        </div>
+    </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+        document.getElementById('backTop').classList.toggle('show', window.scrollY > 400);
+    });
+
+    // Back to top
+    document.getElementById('backTop').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Mobile menu
+    document.getElementById('hamburger').addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', closeMobile);
+    function closeMobile() {
+        document.getElementById('mobileMenu').classList.remove('open');
+    }
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // Form submit
+    function handleSubmit(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('.form-submit');
+        const original = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-circle-check"></i>&nbsp; Quote Request Sent!';
+        btn.style.background = '#16a34a';
+        setTimeout(() => {
+            btn.innerHTML = original;
+            btn.style.background = '';
+            e.target.reset();
+        }, 3000);
+    }
+
+    // Counter animation for stats
+    const counters = document.querySelectorAll('.stat-num');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const text = el.textContent;
+                const num = parseInt(text.replace(/[^0-9]/g, ''));
+                const suffix = text.replace(/[0-9,]/g, '');
+                let count = 0;
+                const step = Math.ceil(num / 60);
+                const interval = setInterval(() => {
+                    count += step;
+                    if (count >= num) {
+                        count = num;
+                        clearInterval(interval);
+                    }
+                    el.textContent = count.toLocaleString() + suffix;
+                }, 25);
+                counterObserver.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+    counters.forEach(c => counterObserver.observe(c));
+</script>
+
+</body>
+</html>

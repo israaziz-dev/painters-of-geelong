@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heritage Home Exterior Repaint | Painters of Geelong</title>
+  <meta name="description" content="Restoring a Victorian-era weatherboard home in Geelong with heritage colours, timber repairs, and a full exterior repaint by Painters of Geelong." />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #fff; min-height: 100vh; }
+    .navbar { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 72px; background: #fff; }
+    .logo { display: flex; align-items: center; text-decoration: none; }
+    .logo-img { height: 160px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 38px; list-style: none; }
+    .nav-links a { text-decoration: none; font-size: 15px; font-weight: 500; color: #444; }
+    .nav-links a.active { color: #e8762d; font-weight: 600; }
+    .dropdown-link { display: flex; align-items: center; gap: 5px; cursor: pointer; color: #444; font-size: 15px; font-weight: 500; }
+    .dropdown-link i { font-size: 11px; color: #888; }
+    .nav-dropdown { position: relative; }
+    .services-mega-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px); background: #fff; border-radius: 16px; box-shadow: 0 12px 48px rgba(0,0,0,0.12); padding: 32px 36px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px; min-width: 860px; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; z-index: 200; }
+    .nav-dropdown:hover .services-mega-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+    .mega-col h4 { font-size: 15px; font-weight: 700; color: #1b3a5c; margin-bottom: 12px; }
+    .mega-col ul { list-style: none; padding: 0; margin: 0; }
+    .mega-col ul li { font-size: 13.5px; color: #555; padding: 5px 0; cursor: pointer; transition: color 0.2s; }
+    .mega-col ul li:hover { color: #e8762d; }
+    .nav-right { display: flex; align-items: center; gap: 10px; }
+    .nav-divider { width: 1px; height: 32px; background: #e5e5e5; margin: 0 6px; }
+    .phone-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #111; font-size: 15px; font-weight: 600; }
+    .phone-icon-wrap { width: 38px; height: 38px; background: #e8762d; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 15px; }
+    .btn-appointment { background: #e8762d; color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; }
+    .btn-appointment:hover { background: #d06825; transform: scale(1.05); box-shadow: 0 4px 20px rgba(232, 118, 45, 0.4); }
+    .menu-toggle { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: #111; }
+    .project-detail-hero { padding: 80px 64px 40px; text-align: center; }
+    .project-detail-hero h1 { font-size: 48px; font-weight: 700; color: #0f0f14; line-height: 1.2; }
+    .project-banner { padding: 0 64px 60px; }
+    .project-banner img { width: 100%; height: 480px; object-fit: cover; border-radius: 20px; display: block; }
+    .project-content-section { padding: 0 64px 80px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items: start; }
+    .project-content h2 { font-size: 32px; font-weight: 700; color: #0f0f14; margin: 32px 0 16px; }
+    .project-content h2:first-child { margin-top: 0; }
+    .project-content p { font-size: 16px; color: #555; line-height: 1.7; margin-bottom: 20px; }
+    .project-content ul { list-style: disc; padding-left: 24px; margin-bottom: 24px; }
+    .project-content ul li { font-size: 16px; color: #333; line-height: 1.8; }
+    .project-content ol { padding-left: 24px; margin-bottom: 24px; }
+    .project-content ol li { font-size: 16px; color: #333; line-height: 1.8; }
+    .project-content img { width: 100%; border-radius: 16px; margin: 24px 0; }
+    .project-content .img-caption { font-size: 14px; color: #888; text-align: center; margin-top: -16px; margin-bottom: 24px; }
+    .project-info-card { background: #f8f8fa; border-radius: 20px; padding: 36px 32px; position: sticky; top: 100px; }
+    .project-info-card h3 { font-size: 24px; font-weight: 700; color: #0f0f14; margin-bottom: 28px; }
+    .project-info-item { display: flex; align-items: center; gap: 16px; padding: 20px 0; border-bottom: 1px solid #e8e9ee; }
+    .project-info-item:last-child { border-bottom: none; }
+    .project-info-icon { width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid #1b3a5c; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #1b3a5c; flex-shrink: 0; }
+    .project-info-text span { display: block; font-size: 13px; color: #888; margin-bottom: 2px; }
+    .project-info-text strong { font-size: 16px; color: #0f0f14; font-weight: 700; }
+    .footer { background: linear-gradient(rgba(27, 58, 92, 0.9), rgba(27, 58, 92, 0.9)), url('images/Professional-wall-painting-Dubai-services-for-homes-and-offices-with-expert-painters-and-premium-finishes-500x500.webp') center/cover no-repeat; color: #fff; display: flex; flex-direction: column; justify-content: center; }
+    .footer-subscribe { padding: 80px 64px 60px; text-align: center; }
+    .footer-subscribe-heading { font-size: 42px; font-weight: 700; line-height: 1.2; margin-bottom: 32px; }
+    .subscribe-form { display: flex; align-items: center; justify-content: center; gap: 0; max-width: 560px; margin: 0 auto; }
+    .subscribe-input { flex: 1; padding: 18px 24px; border-radius: 50px 0 0 50px; border: 1.5px solid rgba(255,255,255,0.15); background: transparent; color: #fff; font-size: 15px; font-family: inherit; outline: none; }
+    .subscribe-input::placeholder { color: rgba(255,255,255,0.45); }
+    .btn-subscribe { padding: 18px 32px; border-radius: 0 50px 50px 0; background: #e8762d; color: #fff; border: none; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; }
+    .footer-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 0 64px; }
+    .footer-main { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 40px; padding: 60px 64px; }
+    .footer-brand-desc { font-size: 14.5px; color: rgba(255,255,255,0.65); line-height: 1.6; margin-top: 16px; margin-bottom: 28px; }
+    .footer-hours-title { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+    .footer-hours { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+    .footer-hours i { color: #e8762d; margin-top: 3px; }
+    .footer-col-title { font-size: 16px; font-weight: 700; margin-bottom: 20px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14.5px; transition: color 0.2s; }
+    .footer-links a:hover { color: #e8762d; }
+    .footer-contact { display: flex; flex-direction: column; gap: 14px; }
+    .footer-contact-item { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14.5px; transition: color 0.2s; }
+    .footer-contact-item:hover { color: #e8762d; }
+    .footer-address { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+    .footer-address i { color: #e8762d; margin-top: 3px; }
+    .footer-bottom { text-align: center; padding: 28px 64px; font-size: 13.5px; color: rgba(255,255,255,0.4); border-top: 1px solid rgba(255,255,255,0.08); }
+    .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    @media (max-width: 1024px) {
+      .project-detail-hero { padding: 60px 24px 30px; }
+      .project-banner { padding: 0 24px 40px; }
+      .project-content-section { padding: 0 24px 60px; }
+      .footer-subscribe { padding: 60px 24px 40px; }
+      .footer-main { padding: 40px 24px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; background: #fff; padding: 20px 24px; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); z-index: 100; }
+      .menu-toggle { display: block; }
+      .project-content-section { grid-template-columns: 1fr; }
+      .project-info-card { position: static; }
+      .footer-main { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .project-detail-hero { padding: 40px 16px 20px; }
+      .project-detail-hero h1 { font-size: 32px; }
+      .project-banner { padding: 0 16px 40px; }
+      .project-content-section { padding: 0 16px 60px; }
+      .footer-main { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index-2.html" class="logo"><img src="images/logo.png" alt="Painters of Geelong" class="logo-img" /></a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')"><i class="fa-solid fa-bars"></i></button>
+    <ul class="nav-links">
+      <li><a href="index-2.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Services <i class="fa-solid fa-chevron-down" style="font-size:11px;color:#888;margin-left:4px;"></i></a>
+        <div class="services-mega-menu">
+          <div class="mega-col"><a href="service-interior.html" style="text-decoration:none;color:inherit;"><h4>Interior House Painting</h4></a><ul><li><a href="service-interior.html" style="text-decoration:none;color:inherit;">Wall painting</a></li><li><a href="service-interior.html" style="text-decoration:none;color:inherit;">Ceiling painting</a></li><li><a href="service-interior.html" style="text-decoration:none;color:inherit;">Door and trim painting</a></li><li><a href="service-interior.html" style="text-decoration:none;color:inherit;">Feature walls</a></li><li><a href="service-interior.html" style="text-decoration:none;color:inherit;">Apartment painting</a></li></ul></div>
+          <div class="mega-col"><a href="service-exterior.html" style="text-decoration:none;color:inherit;"><h4>Exterior House Painting</h4></a><ul><li><a href="service-exterior.html" style="text-decoration:none;color:inherit;">Weatherboard painting</a></li><li><a href="service-exterior.html" style="text-decoration:none;color:inherit;">Brick painting</a></li><li><a href="service-exterior.html" style="text-decoration:none;color:inherit;">Fence painting</a></li><li><a href="service-exterior.html" style="text-decoration:none;color:inherit;">Garage doors and trims</a></li><li><a href="service-exterior.html" style="text-decoration:none;color:inherit;">Outdoor facades</a></li></ul></div>
+          <div class="mega-col"><a href="service-commercial.html" style="text-decoration:none;color:inherit;"><h4>Commercial Painting</h4></a><ul><li><a href="service-commercial.html" style="text-decoration:none;color:inherit;">Office painting</a></li><li><a href="service-commercial.html" style="text-decoration:none;color:inherit;">Shop and retail painting</a></li><li><a href="service-commercial.html" style="text-decoration:none;color:inherit;">Warehouse painting</a></li><li><a href="service-commercial.html" style="text-decoration:none;color:inherit;">Restaurant and caf&eacute; painting</a></li><li><a href="service-commercial.html" style="text-decoration:none;color:inherit;">Strata and property management</a></li></ul></div>
+          <div class="mega-col"><a href="service-deck.html" style="text-decoration:none;color:inherit;"><h4>Deck &amp; Timber Staining</h4></a><ul><li><a href="service-deck.html" style="text-decoration:none;color:inherit;">Deck staining</a></li><li><a href="service-deck.html" style="text-decoration:none;color:inherit;">Timber sealing</a></li><li><a href="service-deck.html" style="text-decoration:none;color:inherit;">Pergola painting</a></li><li><a href="service-deck.html" style="text-decoration:none;color:inherit;">Fence staining</a></li><li><a href="service-deck.html" style="text-decoration:none;color:inherit;">Timber restoration</a></li></ul></div>
+          <div class="mega-col"><a href="service-surface-prep.html" style="text-decoration:none;color:inherit;"><h4>Surface Prep &amp; Pressure Cleaning</h4></a><ul><li><a href="service-surface-prep.html" style="text-decoration:none;color:inherit;">Pressure washing</a></li><li><a href="service-surface-prep.html" style="text-decoration:none;color:inherit;">Surface cleaning</a></li><li><a href="service-surface-prep.html" style="text-decoration:none;color:inherit;">Sanding and priming</a></li><li><a href="service-surface-prep.html" style="text-decoration:none;color:inherit;">Crack and hole filling</a></li><li><a href="service-surface-prep.html" style="text-decoration:none;color:inherit;">Minor repairs and patching</a></li></ul></div>
+        </div>
+      </li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="areas-of-service.html">Areas of Service</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:3107674345" class="phone-link"><div class="phone-icon-wrap"><i class="fa-solid fa-phone"></i></div>(310) 767-4345</a>
+      <div class="nav-divider"></div>
+      <a href="#" class="btn-appointment">Book an Appointment <i class="fa-solid fa-arrow-up-right"></i></a>
+    </div>
+  </nav>
+
+  <section class="project-detail-hero">
+    <h1>Heritage Home Exterior Repaint</h1>
+  </section>
+
+  <section class="project-banner">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=85&auto=format&fit=crop" alt="Heritage Home Exterior Repaint project by Painters of Geelong" />
+  </section>
+
+  <section class="project-content-section">
+    <div class="project-content">
+      <p>The Geelong Heritage Trust entrusted us with one of the most rewarding projects in our portfolio — the complete exterior restoration and repaint of a stunning Victorian-era weatherboard home on Moorabool Street. This property, built in the 1890s, is a significant piece of Geelong's architectural history and required a delicate balance between preservation and protection.</p>
+
+      <p>Our team brought decades of experience in heritage painting to ensure every detail was handled with the care and precision this landmark property deserved. We worked closely with the Heritage Trust to select an authentic colour palette that honoured the home's original character.</p>
+
+      <ul>
+        <li>Full exterior strip-back of deteriorated paint layers</li>
+        <li>Timber repair and replacement of rotted weatherboards</li>
+        <li>Heritage-approved colour palette application</li>
+        <li>Decorative trim and fretwork restoration</li>
+        <li>Verandah posts and balustrade refinishing</li>
+      </ul>
+
+      <h2>Problem</h2>
+      <p>Years of exposure to Geelong's coastal weather had taken a severe toll on the property. The exterior paint was peeling extensively across all elevations, exposing the raw timber beneath to further moisture damage. Several weatherboards had begun to rot, the decorative fretwork was crumbling, and the verandah posts showed deep cracks. Previous paint layers — some dating back decades — had built up unevenly, creating a rough and unsightly surface that detracted from the home's architectural beauty.</p>
+
+      <h2>Solution</h2>
+      <p>We developed a meticulous restoration plan that addressed both the structural and aesthetic needs of this heritage property, ensuring compliance with local heritage guidelines throughout.</p>
+
+      <ol>
+        <li>Carefully stripped all existing paint layers back to bare timber using low-impact methods to protect the original wood</li>
+        <li>Replaced rotted weatherboards with period-appropriate timber, matched and milled to the original profile</li>
+        <li>Filled cracks, repaired fretwork, and stabilised all decorative elements</li>
+        <li>Applied a premium timber primer designed for heritage properties to ensure maximum adhesion</li>
+        <li>Applied two coats of exterior acrylic in a heritage colour palette — deep green body, cream trims, and burgundy accents</li>
+        <li>Sealed all joints and edges with flexible caulk to prevent future moisture ingress</li>
+      </ol>
+
+      <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=85&auto=format&fit=crop" alt="Heritage home exterior detail" />
+      <p class="img-caption">Restored heritage trims and weatherboards showcase the authentic Victorian colour palette.</p>
+
+      <p>The completed restoration brought this magnificent Victorian home back to its former glory. The Heritage Trust was delighted with the attention to detail and the faithful reproduction of the original colour scheme. The project took two weeks to complete, and the results have been praised by the local heritage community as an exemplary restoration. The premium exterior coatings used will protect the property for the next 15 to 20 years.</p>
+    </div>
+
+    <div class="project-info-card">
+      <h3>Project Info</h3>
+      <div class="project-info-item">
+        <div class="project-info-icon"><i class="fa-solid fa-user"></i></div>
+        <div class="project-info-text"><span>Client Name</span><strong>Geelong Heritage Trust</strong></div>
+      </div>
+      <div class="project-info-item">
+        <div class="project-info-icon"><i class="fa-solid fa-tag"></i></div>
+        <div class="project-info-text"><span>Category</span><strong>Exterior Painting</strong></div>
+      </div>
+      <div class="project-info-item">
+        <div class="project-info-icon"><i class="fa-solid fa-calendar"></i></div>
+        <div class="project-info-text"><span>Date</span><strong>November 20, 2025</strong></div>
+      </div>
+      <div class="project-info-item">
+        <div class="project-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="project-info-text"><span>Address</span><strong>18 Moorabool St, Geelong</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-subscribe">
+      <h2 class="footer-subscribe-heading">Stay Updated With Expert Painting<br>Tips — Subscribe Now!</h2>
+      <form class="subscribe-form" onsubmit="return false;">
+        <input type="email" class="subscribe-input" placeholder="Enter Your Email..." />
+        <button type="submit" class="btn-subscribe">Subscribe Now</button>
+      </form>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-main">
+      <div>
+        <a href="index-2.html" class="logo" style="margin-bottom: 0;"><img src="images/logo.png" alt="Painters of Geelong" class="logo-img" style="filter: brightness(0) invert(1); height: 58px;" /></a>
+        <p class="footer-brand-desc">Professional painting services across Geelong — residential, commercial, and everything in between.</p>
+        <h4 class="footer-hours-title">Working Hours</h4>
+        <div class="footer-hours"><i class="fa-regular fa-clock"></i><span>Monday to Saturday: 9 am - 7 pm<br>Sunday is closed</span></div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Pages</h4>
+        <ul class="footer-links"><li><a href="about-us.html">About Us</a></li><li><a href="#">Services</a></li><li><a href="#">Pricing</a></li><li><a href="#">Blog</a></li><li><a href="#">Portfolio</a></li><li><a href="#">Contact Us</a></li></ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Areas We Service</h4>
+        <ul class="footer-links"><li><a href="#">Geelong</a></li><li><a href="#">Newtown</a></li><li><a href="#">Belmont</a></li><li><a href="#">Grovedale</a></li><li><a href="#">Highton</a></li><li><a href="#">Waurn Ponds</a></li><li><a href="#">Lara</a></li><li><a href="#">Torquay</a></li><li><a href="#">Armstrong Creek</a></li><li><a href="#">Ocean Grove</a></li></ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Contact Links</h4>
+        <div class="footer-contact">
+          <a href="tel:3107674345" class="footer-contact-item">(310) 767-4345</a>
+          <a href="mailto:info@paintersofgeelong.com.au" class="footer-contact-item">info@paintersofgeelong.com.au</a>
+          <div class="footer-address"><i class="fa-solid fa-location-dot"></i><span>Geelong, Victoria, Australia</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">Copyright &copy; Painters of Geelong</div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from('.project-detail-hero h1', { scale: 0.6, opacity: 0, y: 40, duration: 1, ease: 'power3.out' });
+    gsap.from('.project-banner img', { clipPath: 'inset(0% 0 100% 0)', scrollTrigger: { trigger: '.project-banner', start: 'top 80%' }, duration: 1.2, ease: 'power3.inOut' });
+    gsap.from('.project-content', { opacity: 0, y: 50, scrollTrigger: { trigger: '.project-content-section', start: 'top 75%' }, duration: 0.9, ease: 'power2.out' });
+    gsap.from('.project-info-card', { opacity: 0, y: 50, scrollTrigger: { trigger: '.project-content-section', start: 'top 75%' }, duration: 0.9, ease: 'power2.out', delay: 0.2 });
+  </script>
+</body>
+</html>

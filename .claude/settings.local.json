@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xxd /Users/israaziz/renovator/index-2.html)"
+    ]
+  }
+}
