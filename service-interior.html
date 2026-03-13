@@ -39,7 +39,31 @@
     .phone-icon-wrap { width: 38px; height: 38px; background: #e8762d; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 15px; }
     .btn-appointment { background: #e8762d; color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; }
     .btn-appointment:hover { background: #d06825; transform: scale(1.05); box-shadow: 0 4px 20px rgba(232, 118, 45, 0.4); }
-    .menu-toggle { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: #111; }
+/* MOBILE MENU */
+    .menu-toggle { display: none; border: none; font-size: 22px; color: #fff; cursor: pointer; width: 44px; height: 44px; border-radius: 12px; background: #1b2030; align-items: center; justify-content: center; }
+
+    /* Mobile menu overlay */
+    .mobile-menu-overlay { display: none; position: fixed; inset: 0; background: #fff; z-index: 1000; flex-direction: column; overflow-y: auto; }
+    .mobile-menu-overlay.open { display: flex; }
+    .mobile-menu-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; min-height: 72px; }
+    .mobile-menu-close { border: none; background: none; font-size: 28px; color: #1b2030; cursor: pointer; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; }
+    .mobile-menu-cta { background: #e8762d; color: #fff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+    .mobile-menu-links { list-style: none; padding: 0; margin: 0; border-top: 1px solid #eee; }
+    .mobile-menu-links > li { border-bottom: 1px solid #eee; }
+    .mobile-menu-links > li > a { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; text-decoration: none; color: #1b2030; font-size: 16px; font-weight: 500; }
+    .mobile-menu-links > li > a i { font-size: 14px; color: #999; }
+
+    /* Mobile services sub-menu */
+    .mobile-services-panel { display: none; position: fixed; inset: 0; background: #fff; z-index: 1001; flex-direction: column; overflow-y: auto; }
+    .mobile-services-panel.open { display: flex; }
+    .mobile-services-back { display: flex; align-items: center; gap: 10px; padding: 18px 24px; border: 1px solid #1b2030; border-radius: 8px; margin: 16px 20px 0; background: none; font-size: 16px; font-weight: 600; color: #1b2030; cursor: pointer; }
+    .mobile-services-back i { font-size: 14px; }
+    .mobile-services-list { list-style: none; padding: 0; margin: 8px 0 0; }
+    .mobile-services-list > li { padding: 0 24px; }
+    .mobile-services-list > li h4 a { display: block; padding: 14px 0 6px; text-decoration: none; color: #1b2030; font-size: 15px; font-weight: 700; }
+    .mobile-services-list > li ul { list-style: none; padding: 0 0 14px; margin: 0; border-bottom: 1px solid #eee; }
+    .mobile-services-list > li:last-child ul { border-bottom: none; }
+    .mobile-services-list > li ul li a { display: block; padding: 7px 0; text-decoration: none; color: #666; font-size: 14px; font-weight: 400; }
     .section-badge { display: flex; align-items: center; gap: 8px; justify-content: center; margin-bottom: 16px; }
     .section-badge i { color: #e8762d; font-size: 16px; }
     .section-badge span { font-size: 13px; font-weight: 700; color: #e8762d; letter-spacing: 1.5px; text-transform: uppercase; }
@@ -144,20 +168,29 @@
     }
 
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .nav-links.open { display: flex; position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; background: #fff; padding: 20px 24px; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); z-index: 100; }
-      .menu-toggle { display: block; }
+      .menu-toggle { display: flex; order: 3; }
+      .nav-links { display: none !important; }
+      .services-mega-menu { display: none !important; }
+      .nav-right { display: none; }
+      .navbar { position: relative; padding: 0 20px; }
       .service-hero-heading { font-size: 34px; }
-      .service-detail-card { min-width: calc(50% - 14px); }
+      .service-details-grid { grid-template-columns: 1fr; gap: 20px; }
+      .service-detail-card img { height: 320px; }
       .service-list-inner { grid-template-columns: 1fr; gap: 32px; }
       .service-list-img { height: 300px; }
       .cta-banner-inner { grid-template-columns: 1fr; }
       .cta-primary { flex-direction: column; align-items: flex-start; gap: 24px; }
       .faq-heading { font-size: 32px; }
       .footer-main { grid-template-columns: 1fr 1fr; }
+          .footer-subscribe { padding: 48px 20px 40px; }
+      .footer-subscribe-heading { font-size: 28px; }
+      .subscribe-form { flex-direction: column; gap: 12px; }
+      .subscribe-input { width: 100%; border-radius: 50px; }
+      .btn-subscribe { width: 100%; text-align: center; border-radius: 50px; }
     }
 
     @media (max-width: 480px) {
+      .navbar { padding: 0 16px; height: 64px; }
       .service-hero { padding: 40px 16px 30px; }
       .service-hero-heading { font-size: 28px; }
       .service-banner { padding: 0 16px 30px; }
@@ -171,6 +204,9 @@
       .faq-section { padding: 40px 16px; }
       .faq-heading { font-size: 26px; }
       .footer-main { grid-template-columns: 1fr; }
+          .footer-subscribe { padding: 40px 16px 36px; }
+      .footer-subscribe-heading { font-size: 24px; }
+      .footer-main { padding: 36px 16px; gap: 28px; }
     }
   </style>
 </head>
@@ -182,7 +218,7 @@
       <img src="images/logo.png" alt="Painters of Geelong" class="logo-img" />
     </a>
 
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-menu-overlay').classList.add('open')">
       <i class="fa-solid fa-bars"></i>
     </button>
 
@@ -255,9 +291,93 @@
         (310) 767-4345
       </a>
       <div class="nav-divider"></div>
-      <a href="#" class="btn-appointment">Book an Appointment <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="index.html#appointment" class="btn-appointment">Book an Appointment <i class="fa-solid fa-arrow-up-right"></i></a>
     </div>
   </nav>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu-header">
+      <button class="mobile-menu-close" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open')">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <a href="index.html#appointment" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="#" onclick="event.preventDefault(); document.querySelector('.mobile-services-panel').classList.add('open');">Services <i class="fa-solid fa-chevron-right"></i></a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="areas-of-service.html">Areas of Service</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="index.html#appointment" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open');" style="color:#e8762d; font-weight:600;">Book an Appointment</a></li>
+    </ul>
+  </div>
+
+  <!-- MOBILE SERVICES PANEL -->
+  <div class="mobile-services-panel">
+    <div class="mobile-menu-header">
+      <button class="mobile-menu-close" onclick="document.querySelector('.mobile-services-panel').classList.remove('open'); document.querySelector('.mobile-menu-overlay').classList.remove('open');">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <a href="index.html#appointment" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+    </div>
+    <button class="mobile-services-back" onclick="document.querySelector('.mobile-services-panel').classList.remove('open');">
+      <i class="fa-solid fa-chevron-left"></i> Services
+    </button>
+    <ul class="mobile-services-list">
+      <li>
+        <h4><a href="service-interior.html">Interior House Painting</a></h4>
+        <ul>
+          <li><a href="service-interior.html">Wall painting</a></li>
+          <li><a href="service-interior.html">Ceiling painting</a></li>
+          <li><a href="service-interior.html">Door and trim painting</a></li>
+          <li><a href="service-interior.html">Feature walls</a></li>
+          <li><a href="service-interior.html">Apartment painting</a></li>
+        </ul>
+      </li>
+      <li>
+        <h4><a href="service-exterior.html">Exterior House Painting</a></h4>
+        <ul>
+          <li><a href="service-exterior.html">Weatherboard painting</a></li>
+          <li><a href="service-exterior.html">Brick painting</a></li>
+          <li><a href="service-exterior.html">Fence painting</a></li>
+          <li><a href="service-exterior.html">Garage doors and trims</a></li>
+          <li><a href="service-exterior.html">Outdoor facades</a></li>
+        </ul>
+      </li>
+      <li>
+        <h4><a href="service-commercial.html">Commercial Painting</a></h4>
+        <ul>
+          <li><a href="service-commercial.html">Office painting</a></li>
+          <li><a href="service-commercial.html">Shop and retail painting</a></li>
+          <li><a href="service-commercial.html">Warehouse painting</a></li>
+          <li><a href="service-commercial.html">Restaurant and caf&eacute; painting</a></li>
+          <li><a href="service-commercial.html">Strata and property management</a></li>
+        </ul>
+      </li>
+      <li>
+        <h4><a href="service-deck.html">Deck &amp; Timber Staining</a></h4>
+        <ul>
+          <li><a href="service-deck.html">Deck staining</a></li>
+          <li><a href="service-deck.html">Timber sealing</a></li>
+          <li><a href="service-deck.html">Pergola painting</a></li>
+          <li><a href="service-deck.html">Fence staining</a></li>
+          <li><a href="service-deck.html">Timber restoration</a></li>
+        </ul>
+      </li>
+      <li>
+        <h4><a href="service-surface-prep.html">Surface Prep &amp; Pressure Cleaning</a></h4>
+        <ul>
+          <li><a href="service-surface-prep.html">Pressure washing</a></li>
+          <li><a href="service-surface-prep.html">Surface cleaning</a></li>
+          <li><a href="service-surface-prep.html">Sanding and priming</a></li>
+          <li><a href="service-surface-prep.html">Crack and hole filling</a></li>
+          <li><a href="service-surface-prep.html">Minor repairs and patching</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 
   <!-- SERVICE HERO -->
   <section class="service-hero">
