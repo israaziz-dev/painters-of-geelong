@@ -8,6 +8,9 @@
       "Bash(python3 -c \":*)",
       "Bash(git commit:*)",
       "Bash(git add:*)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
     ]
   }
 }
