@@ -660,13 +660,11 @@
         <div style="display:flex;flex-direction:column;align-items:flex-start;gap:4px;">
           <span class="material-label">Best Quality Paint</span>
           <img src="images/dulux.png" alt="Dulux" class="material-logo" />
-          <span class="material-name">Paint</span>
         </div>
         <div style="width:1px;height:52px;background:#d5d5e0;"></div>
         <div style="display:flex;flex-direction:column;align-items:flex-start;gap:4px;">
           <span class="material-label">Warranty</span>
-          <span style="font-size:28px;font-weight:800;color:#1b3a5c;line-height:1;">10 Year</span>
-          <span class="material-name">Guarantee</span>
+          <span style="font-size:28px;font-weight:800;color:#1b3a5c;line-height:1;">10 Years</span>
         </div>
       </div>
     </div>
@@ -925,20 +923,23 @@
           <span>Get a Free Quote</span>
         </div>
         <h2 class="appointment-heading">Get a Free Painting<br>Quote Today</h2>
-        <form onsubmit="return false;">
+        <form action="https://formsubmit.co/isra.azizunnisa1@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Quote Request - Painters of Geelong">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="">
           <div class="form-row">
-            <input type="text" class="form-input" placeholder="Your Name" />
-            <input type="tel" class="form-input" placeholder="Phone Number" />
+            <input type="text" name="name" class="form-input" placeholder="Your Name" required />
+            <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required />
           </div>
           <div class="form-row">
-            <select class="form-select"><option>Choose a Service</option><option>Interior Painting</option><option>Exterior Painting</option><option>Commercial Painting</option><option>Deck & Timber Staining</option><option>Pressure Cleaning</option></select>
-            <select class="form-select"><option>Preferred Date</option><option>This Week</option><option>Next Week</option><option>This Month</option></select>
+            <select name="service" class="form-select"><option value="">Choose a Service</option><option>Interior Painting</option><option>Exterior Painting</option><option>Commercial Painting</option><option>Deck & Timber Staining</option><option>Pressure Cleaning</option></select>
+            <select name="preferred_date" class="form-select"><option value="">Preferred Date</option><option>This Week</option><option>Next Week</option><option>This Month</option></select>
           </div>
           <div class="form-row full">
-            <input type="text" class="form-input" placeholder="Property Size (approx sqm)" />
+            <input type="text" name="property_size" class="form-input" placeholder="Property Size (approx sqm)" />
           </div>
           <div class="form-row full">
-            <textarea class="form-textarea" placeholder="Write Your Message Here..."></textarea>
+            <textarea name="message" class="form-textarea" placeholder="Write Your Message Here..."></textarea>
           </div>
           <button type="submit" class="btn-contact">Contact Now</button>
         </form>
