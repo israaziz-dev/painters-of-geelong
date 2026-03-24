@@ -11,13 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    :root, html, body { color-scheme: light only !important; }
+    :root { color-scheme: light only; }
+    html, body {
+      background-color: #ffffff !important;
+      color: #1b2030 !important;
+    }
     @media (prefers-color-scheme: dark) {
-      html, body, *, *::before, *::after {
-        color-scheme: light only !important;
-        forced-color-adjust: none !important;
-        -webkit-text-fill-color: initial !important;
-      }
+      html, body { background-color: #ffffff !important; color: #1b2030 !important; }
+      img, video { filter: none !important; }
     }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
