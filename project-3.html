@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light" data-theme="light" style="color-scheme: light only;">
 <head>
   <meta charset="UTF-8" />
   <meta name="color-scheme" content="light only">
+  <meta name="supported-color-schemes" content="light only">
+  <meta name="theme-color" content="#ffffff">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contemporary Kitchen Makeover | Painters of Geelong</title>
   <meta name="description" content="See how Painters of Geelong modernised a dated kitchen with clean whites, cabinet spray painting, and washable satin finishes in Highton." />
@@ -10,6 +12,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     :root, html, body { color-scheme: light only !important; }
+    @media (prefers-color-scheme: dark) {
+      html, body, *, *::before, *::after {
+        color-scheme: light only !important;
+        forced-color-adjust: none !important;
+        -webkit-text-fill-color: initial !important;
+      }
+    }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #fff; min-height: 100vh; }
     .navbar { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 72px; background: #fff; }
