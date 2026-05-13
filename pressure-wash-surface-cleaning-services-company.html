@@ -233,7 +233,10 @@
   <meta property="og:description" content="Pressure washing in Geelong for homes & businesses driveways, walls, roofs & more. Book affordable power washing near you for fast, reliable, stain-free results.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.paintersofgeelong.com.au/pressure-wash-surface-cleaning-services-company.html">
-  <meta property="og:image" content="https://www.paintersofgeelong.com.au/images/logo.png">
+  <meta property="og:image" content="https://www.paintersofgeelong.com.au/images/surface-prep-og.webp">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:image:width" content="1731">
+  <meta property="og:image:height" content="909">
   <meta property="og:image:alt" content="High pressure cleaning services for outdoor surfaces in Geelong">
   <meta property="og:site_name" content="Painters of Geelong">
   <meta property="og:locale" content="en_AU">
@@ -248,7 +251,7 @@
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <a href="index.html" class="logo">
+    <a href="/" class="logo">
       <img src="images/logo.png" alt="Painters of Geelong" class="logo-img" />
     </a>
 
@@ -257,7 +260,7 @@
     </button>
 
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="about-us.html">About Us</a></li>
       <li class="nav-dropdown">
         <a href="#" class="active" onclick="event.preventDefault()">Services <i class="fa-solid fa-chevron-down" style="font-size:11px;color:#888;margin-left:4px;"></i></a>
@@ -325,7 +328,7 @@
         0431 261 281
       </a>
       <div class="nav-divider"></div>
-      <a href="index.html#appointment" class="btn-appointment">Book an Appointment <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="/#appointment" class="btn-appointment">Book an Appointment <i class="fa-solid fa-arrow-up-right"></i></a>
     </div>
   </nav>
 
@@ -335,16 +338,16 @@
       <button class="mobile-menu-close" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open')">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <a href="index.html#appointment" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="/#appointment" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
     </div>
     <ul class="mobile-menu-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="about-us.html">About Us</a></li>
       <li><a href="#" onclick="event.preventDefault(); document.querySelector('.mobile-services-panel').classList.add('open');">Services <i class="fa-solid fa-chevron-right"></i></a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="areas-of-service.html">Areas of Service</a></li>
       <li><a href="blogs.html">Blogs</a></li>
-      <li><a href="index.html#appointment" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open');" style="color:#e8762d; font-weight:600;">Book an Appointment</a></li>
+      <li><a href="/#appointment" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open');" style="color:#e8762d; font-weight:600;">Book an Appointment</a></li>
     </ul>
   </div>
 
@@ -354,7 +357,7 @@
       <button class="mobile-menu-close" onclick="document.querySelector('.mobile-services-panel').classList.remove('open'); document.querySelector('.mobile-menu-overlay').classList.remove('open');">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <a href="index.html#appointment" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="/#appointment" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
     </div>
     <button class="mobile-services-back" onclick="document.querySelector('.mobile-services-panel').classList.remove('open');">
       <i class="fa-solid fa-chevron-left"></i> Services
@@ -425,7 +428,11 @@
 
   <!-- BANNER IMAGE -->
   <section class="service-banner">
-    <img src="images/paint-shades.jpg" alt="Surface preparation and pressure cleaning services in Geelong" />
+    <picture>
+      <source media="(max-width: 768px)" srcset="images/surface-prep-mobile.webp" type="image/webp">
+      <source srcset="images/surface-prep-desktop.webp" type="image/webp">
+      <img src="images/surface-prep-desktop.webp" alt="Surface preparation and pressure cleaning services in Geelong" loading="eager" decoding="async" />
+    </picture>
   </section>
 
   <!-- SERVICE DESCRIPTION -->
@@ -436,7 +443,7 @@
         <p>We provide <strong>professional high pressure cleaning services in Geelong</strong> for residential and commercial properties. Our team thoroughly cleans timber, concrete, and other outdoor surfaces, removing dirt, grime, mould, algae, and weathered buildup. Using specialised <strong>power washing services</strong>, we restore surfaces to their best condition, ensuring a smooth, clean base ready for any finishing or maintenance work while extending the life of your surfaces.</p>
         <p>In addition to general surface prep, we specialise in preparing areas for <a href="best-deck-painting-services-company.html"><strong>deck staining services</strong></a> and work with the <a href="exterior-painting-services-company.html"><strong>best fence painters</strong></a> to ensure every surface is properly cleaned, repaired, and ready for a flawless finish. Our careful preparation helps coatings adhere better, last longer, and maintain their appearance, giving you durable and high-quality results every time.</p>
       </div>
-      <img src="images/paint-shades.jpg" alt="Professional power washing services in Geelong" class="service-list-img" />
+      <img src="images/surface-prep-info.webp" alt="Professional power washing services in Geelong" class="service-list-img" loading="lazy" decoding="async" />
     </div>
   </section>
 
@@ -445,7 +452,7 @@
     <div class="service-details-grid">
       <div class="service-detail-card">
         <div class="service-detail-img-wrap">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=85&auto=format&fit=crop" alt="Pressure washing service Geelong" />
+          <img src="images/pressure-washing.webp" alt="High-pressure water jet cleaning a timber deck" loading="lazy" decoding="async" />
         </div>
         <div class="service-detail-card-body">
           <h2>Pressure Washing</h2>
@@ -454,7 +461,7 @@
       </div>
       <div class="service-detail-card">
         <div class="service-detail-img-wrap">
-          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=85&auto=format&fit=crop" alt="Surface cleaning Geelong" />
+          <img src="images/surface-cleaning.webp" alt="Wiping a kitchen surface clean with a microfibre cloth and gloves" loading="lazy" decoding="async" />
         </div>
         <div class="service-detail-card-body">
           <h2>Surface Cleaning</h2>
@@ -463,7 +470,7 @@
       </div>
       <div class="service-detail-card">
         <div class="service-detail-img-wrap">
-          <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=85&auto=format&fit=crop" alt="Sanding and priming Geelong" />
+          <img src="images/us-door-trim-interior.webp" alt="Sanding and priming Geelong" />
         </div>
         <div class="service-detail-card-body">
           <h2>Sanding & Priming</h2>
@@ -472,7 +479,7 @@
       </div>
       <div class="service-detail-card">
         <div class="service-detail-img-wrap">
-          <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=600&q=85&auto=format&fit=crop" alt="Crack and hole filling Geelong" />
+          <img src="images/us-ceiling-commercial.webp" alt="Crack and hole filling Geelong" />
           <div class="service-detail-icon"><i class="fa-solid fa-fill-drip"></i></div>
         </div>
         <div class="service-detail-card-body">
@@ -482,7 +489,7 @@
       </div>
       <div class="service-detail-card">
         <div class="service-detail-img-wrap">
-          <img src="https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=600&q=85&auto=format&fit=crop" alt="Minor repairs and patching Geelong" />
+          <img src="images/us-minor-repairs-timber.webp" alt="Minor repairs and patching Geelong" />
           <div class="service-detail-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
         </div>
         <div class="service-detail-card-body">
@@ -492,7 +499,7 @@
       </div>
       <div class="service-detail-card">
         <div class="service-detail-img-wrap">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=85&auto=format&fit=crop" alt="Mould and stain treatment Geelong" />
+          <img src="images/us-weatherboard-restored.webp" alt="Mould and stain treatment Geelong" />
           <div class="service-detail-icon"><i class="fa-solid fa-shield-halved"></i></div>
         </div>
         <div class="service-detail-card-body">
@@ -511,7 +518,7 @@
         <span class="cta-sparkle">&#10022;</span>
         <span class="cta-sparkle">&#10022;</span>
         <h2>Ready for Professional Surface Preparation?</h2>
-        <a href="index.html#appointment" class="btn-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+        <a href="/#appointment" class="btn-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
       </div>
       <div class="cta-secondary">
         <div class="cta-avatars">
@@ -597,7 +604,7 @@
     <div class="footer-divider"></div>
     <div class="footer-main">
       <div>
-        <a href="index.html" class="logo" style="margin-bottom: 0;">
+        <a href="/" class="logo" style="margin-bottom: 0;">
           <img src="images/logo.png" alt="Painters of Geelong" class="logo-img" style="filter: brightness(0) invert(1); height: 58px;" />
         </a>
         <p class="footer-brand-desc">Professional painting services across Geelong — residential, commercial, and everything in between.</p>
@@ -610,9 +617,9 @@
       <div>
                 <h4 class="footer-col-title">Pages</h4>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="about-us.html">About Us</a></li>
-          <li><a href="index.html#services">Services</a></li>
+          <li><a href="/#services">Services</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="areas-of-service.html">Areas of Service</a></li>
           <li><a href="blogs.html">Blogs</a></li>

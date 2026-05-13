@@ -268,7 +268,10 @@
   <meta property="og:description" content="Painting contractors in Geelong for residential and commercial projects. Get customized 3D wall painting and multi-surface paint solutions from expert painters.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.paintersofgeelong.com.au/about-us.html">
-  <meta property="og:image" content="https://www.paintersofgeelong.com.au/images/logo.png">
+  <meta property="og:image" content="https://www.paintersofgeelong.com.au/images/about-us-og.webp">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:image:width" content="1730">
+  <meta property="og:image:height" content="909">
   <meta property="og:image:alt" content="Professional painting contractors in Geelong working on residential and commercial projects">
   <meta property="og:site_name" content="Painters of Geelong">
   <meta property="og:locale" content="en_AU">
@@ -281,7 +284,7 @@
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <a href="index.html" class="logo">
+    <a href="/" class="logo">
       <img src="images/logo.png" alt="Painters of Geelong" class="logo-img" />
     </a>
 
@@ -290,7 +293,7 @@
     </button>
 
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="about-us.html" class="active">About Us</a></li>
       <li class="nav-dropdown">
         <a href="#" onclick="event.preventDefault()">Services <i class="fa-solid fa-chevron-down" style="font-size:11px;color:#888;margin-left:4px;"></i></a>
@@ -358,7 +361,7 @@
         0431 261 281
       </a>
       <div class="nav-divider"></div>
-      <a href="index.html#appointment" class="btn-appointment">Book an Appointment <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="/#appointment" class="btn-appointment">Book an Appointment <i class="fa-solid fa-arrow-up-right"></i></a>
     </div>
   </nav>
 
@@ -368,16 +371,16 @@
       <button class="mobile-menu-close" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open')">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <a href="index.html#appointment" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="/#appointment" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
     </div>
     <ul class="mobile-menu-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="about-us.html">About Us</a></li>
       <li><a href="#" onclick="event.preventDefault(); document.querySelector('.mobile-services-panel').classList.add('open');">Services <i class="fa-solid fa-chevron-right"></i></a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="areas-of-service.html">Areas of Service</a></li>
       <li><a href="blogs.html">Blogs</a></li>
-      <li><a href="index.html#appointment" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open');" style="color:#e8762d; font-weight:600;">Book an Appointment</a></li>
+      <li><a href="/#appointment" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open');" style="color:#e8762d; font-weight:600;">Book an Appointment</a></li>
     </ul>
   </div>
 
@@ -387,7 +390,7 @@
       <button class="mobile-menu-close" onclick="document.querySelector('.mobile-services-panel').classList.remove('open'); document.querySelector('.mobile-menu-overlay').classList.remove('open');">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <a href="index.html#appointment" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="/#appointment" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
     </div>
     <button class="mobile-services-back" onclick="document.querySelector('.mobile-services-panel').classList.remove('open');">
       <i class="fa-solid fa-chevron-left"></i> Services
@@ -453,13 +456,17 @@
       <span>About Us</span>
     </div>
     <h1 class="about-hero-heading">Expert Residential and Commercial Painting Contractors in Geelong</h1>
-    <img src="https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=1200&q=85&auto=format&fit=crop" alt="Professional painting services in Geelong" class="about-hero-banner" />
+    <picture>
+      <source media="(max-width: 768px)" srcset="images/about-us-mobile.webp" type="image/webp">
+      <source srcset="images/about-us-desktop.webp" type="image/webp">
+      <img src="images/about-us-desktop.webp" alt="Professional painting services in Geelong" class="about-hero-banner" loading="eager" decoding="async" />
+    </picture>
   </section>
 
   <!-- OUR STORY -->
   <section class="our-story">
     <div class="our-story-grid">
-      <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=85&auto=format&fit=crop" alt="Our painting story" class="our-story-img" />
+      <img src="images/about-us-our-story.webp" alt="Our painting story" class="our-story-img" loading="lazy" decoding="async" />
       <div class="our-story-content">
         <div class="our-story-badge">
           <i class="fa-solid fa-star"></i>
@@ -562,14 +569,14 @@
           </div>
         </div>
       </div>
-      <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&q=85&auto=format&fit=crop" alt="Professional painting quality" class="why-choose-img" />
+      <img src="images/us-ceiling-commercial.webp" alt="Professional painting quality" class="why-choose-img" />
     </div>
   </section>
 
   <!-- STATS BANNER -->
   <section class="stats-banner">
     <div class="stats-banner-grid">
-      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=85&auto=format&fit=crop" alt="Painted homes in Geelong" class="stats-banner-img" />
+      <img src="images/us-feature-wall.webp" alt="Painted homes in Geelong" class="stats-banner-img" />
       <div class="stats-cards">
         <div class="stats-card">
           <span class="stats-card-number counter" data-target="450" data-suffix="+">0</span>
@@ -595,7 +602,7 @@
         <span class="cta-sparkle">&#10022;</span>
         <span class="cta-sparkle">&#10022;</span>
         <h2>Ready to Transform Your Property?</h2>
-        <a href="index.html#appointment" class="btn-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+        <a href="/#appointment" class="btn-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
       </div>
       <div class="cta-secondary">
         <div class="cta-avatars">
@@ -620,7 +627,7 @@
     <div class="footer-divider"></div>
     <div class="footer-main">
       <div>
-        <a href="index.html" class="logo" style="margin-bottom: 0;">
+        <a href="/" class="logo" style="margin-bottom: 0;">
           <img src="images/logo.png" alt="Painters of Geelong" class="logo-img" style="filter: brightness(0) invert(1); height: 58px;" />
         </a>
         <p class="footer-brand-desc">Professional painting services across Geelong — residential, commercial, and everything in between.</p>
@@ -633,9 +640,9 @@
       <div>
                 <h4 class="footer-col-title">Pages</h4>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="about-us.html">About Us</a></li>
-          <li><a href="index.html#services">Services</a></li>
+          <li><a href="/#services">Services</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="areas-of-service.html">Areas of Service</a></li>
           <li><a href="blogs.html">Blogs</a></li>

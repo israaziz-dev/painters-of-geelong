@@ -233,7 +233,10 @@
   <meta property="og:description" content="Exterior house painters in Geelong, from brick and garage door painting to trims and full repaints, using careful prep, quality coatings, and a workmanship warranty.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.paintersofgeelong.com.au/exterior-painting-services-company.html">
-  <meta property="og:image" content="https://www.paintersofgeelong.com.au/images/logo.png">
+  <meta property="og:image" content="https://www.paintersofgeelong.com.au/images/exterior-og.webp">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:image:width" content="1730">
+  <meta property="og:image:height" content="909">
   <meta property="og:image:alt" content="Exterior house painting services in Geelong with professional finish">
   <meta property="og:site_name" content="Painters of Geelong">
   <meta property="og:locale" content="en_AU">
@@ -248,7 +251,7 @@
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <a href="index.html" class="logo">
+    <a href="/" class="logo">
       <img src="images/logo.png" alt="Painters of Geelong" class="logo-img" />
     </a>
 
@@ -257,7 +260,7 @@
     </button>
 
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="about-us.html">About Us</a></li>
       <li class="nav-dropdown">
         <a href="#" class="active" onclick="event.preventDefault()">Services <i class="fa-solid fa-chevron-down" style="font-size:11px;color:#888;margin-left:4px;"></i></a>
@@ -325,7 +328,7 @@
         0431 261 281
       </a>
       <div class="nav-divider"></div>
-      <a href="index.html#appointment" class="btn-appointment">Book an Appointment <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="/#appointment" class="btn-appointment">Book an Appointment <i class="fa-solid fa-arrow-up-right"></i></a>
     </div>
   </nav>
 
@@ -335,16 +338,16 @@
       <button class="mobile-menu-close" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open')">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <a href="index.html#appointment" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="/#appointment" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
     </div>
     <ul class="mobile-menu-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="about-us.html">About Us</a></li>
       <li><a href="#" onclick="event.preventDefault(); document.querySelector('.mobile-services-panel').classList.add('open');">Services <i class="fa-solid fa-chevron-right"></i></a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="areas-of-service.html">Areas of Service</a></li>
       <li><a href="blogs.html">Blogs</a></li>
-      <li><a href="index.html#appointment" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open');" style="color:#e8762d; font-weight:600;">Book an Appointment</a></li>
+      <li><a href="/#appointment" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open');" style="color:#e8762d; font-weight:600;">Book an Appointment</a></li>
     </ul>
   </div>
 
@@ -354,7 +357,7 @@
       <button class="mobile-menu-close" onclick="document.querySelector('.mobile-services-panel').classList.remove('open'); document.querySelector('.mobile-menu-overlay').classList.remove('open');">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <a href="index.html#appointment" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="/#appointment" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
     </div>
     <button class="mobile-services-back" onclick="document.querySelector('.mobile-services-panel').classList.remove('open');">
       <i class="fa-solid fa-chevron-left"></i> Services
@@ -425,7 +428,11 @@
 
   <!-- BANNER IMAGE -->
   <section class="service-banner">
-    <img src="images/paint-shades.jpg" alt="Exterior house painting services in Geelong" />
+    <picture>
+      <source media="(max-width: 768px)" srcset="images/exterior-mobile.webp" type="image/webp">
+      <source srcset="images/exterior-desktop.webp" type="image/webp">
+      <img src="images/exterior-desktop.webp" alt="Exterior house painting services in Geelong" loading="eager" decoding="async" />
+    </picture>
   </section>
 
   <!-- SERVICE LIST -->
@@ -436,7 +443,7 @@
         <p>We provide <strong>professional exterior house painting services in Geelong</strong> for residential properties, apartments, and rental homes. Our approach to <em>exterior painting</em> focuses on proper preparation and durable finishes that can withstand harsh weather conditions. This includes cleaning exterior surfaces, addressing cracks or damage, and applying high-quality coatings designed to protect against sun exposure, moisture, and wear over time.</p>
         <p>From small exterior areas to complete property repaints, our team of experienced <strong>exterior house painters</strong> delivers a well-organised and reliable process from start to finish. As one of the <a href="affordable-interior-house-painters.html"><strong>best interior house painters</strong></a>, we also provide complete painting solutions for your property. We take care of surface protection, preparation, and careful application to ensure consistent coverage and clean results across all exterior surfaces. Whether it's refreshing a worn facade or maintaining the overall condition of your property, we also help guide you on <em>exterior painting cost</em> so you can plan your project while achieving long-lasting finishes with minimal disruption.</p>
       </div>
-      <img src="images/paint-shades.jpg" alt="Expert exterior house painters in Geelong" class="service-list-img" />
+      <img src="images/exterior-info.webp" alt="Expert exterior house painters in Geelong" class="service-list-img" loading="lazy" decoding="async" />
     </div>
   </section>
 
@@ -445,7 +452,7 @@
     <div class="service-details-grid">
       <div class="service-detail-card">
         <div class="service-detail-img-wrap">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=85&auto=format&fit=crop" alt="Weatherboard painting service Geelong" />
+          <img src="images/us-weatherboard-restored.webp" alt="Weatherboard painting service Geelong" />
         </div>
         <div class="service-detail-card-body">
           <h2>Weatherboard Painting</h2>
@@ -454,7 +461,7 @@
       </div>
       <div class="service-detail-card">
         <div class="service-detail-img-wrap">
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=85&auto=format&fit=crop" alt="Brick painting Geelong" />
+          <img src="images/us-brick-kitchen.webp" alt="Brick painting Geelong" />
         </div>
         <div class="service-detail-card-body">
           <h2>Brick Painting</h2>
@@ -463,7 +470,7 @@
       </div>
       <div class="service-detail-card">
         <div class="service-detail-img-wrap">
-          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=85&auto=format&fit=crop" alt="Fence painting Geelong" />
+          <img src="images/us-weatherboard-fence.webp" alt="Fence painting Geelong" />
         </div>
         <div class="service-detail-card-body">
           <h2>Fence Painting</h2>
@@ -472,7 +479,7 @@
       </div>
       <div class="service-detail-card">
         <div class="service-detail-img-wrap">
-          <img src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?w=600&q=85&auto=format&fit=crop" alt="Garage doors and trims painting Geelong" />
+          <img src="images/us-garage-doors-trims.webp" alt="Garage doors and trims painting Geelong" />
           <div class="service-detail-icon"><i class="fa-solid fa-warehouse"></i></div>
         </div>
         <div class="service-detail-card-body">
@@ -482,7 +489,7 @@
       </div>
       <div class="service-detail-card">
         <div class="service-detail-img-wrap">
-          <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=85&auto=format&fit=crop" alt="Outdoor facades painting Geelong" />
+          <img src="images/us-outdoor-facade.webp" alt="Outdoor facades painting Geelong" />
           <div class="service-detail-icon"><i class="fa-solid fa-building-columns"></i></div>
         </div>
         <div class="service-detail-card-body">
@@ -492,7 +499,7 @@
       </div>
       <div class="service-detail-card">
         <div class="service-detail-img-wrap">
-          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=85&auto=format&fit=crop" alt="Full exterior repaint Geelong" />
+          <img src="images/us-exterior-repaint.webp" alt="Full exterior repaint Geelong" />
           <div class="service-detail-icon"><i class="fa-solid fa-house"></i></div>
         </div>
         <div class="service-detail-card-body">
@@ -511,7 +518,7 @@
         <span class="cta-sparkle">&#10022;</span>
         <span class="cta-sparkle">&#10022;</span>
         <h2>Time to Refresh Your Home's Exterior?</h2>
-        <a href="index.html#appointment" class="btn-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+        <a href="/#appointment" class="btn-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
       </div>
       <div class="cta-secondary">
         <div class="cta-avatars">
@@ -597,7 +604,7 @@
     <div class="footer-divider"></div>
     <div class="footer-main">
       <div>
-        <a href="index.html" class="logo" style="margin-bottom: 0;">
+        <a href="/" class="logo" style="margin-bottom: 0;">
           <img src="images/logo.png" alt="Painters of Geelong" class="logo-img" style="filter: brightness(0) invert(1); height: 58px;" />
         </a>
         <p class="footer-brand-desc">Professional painting services across Geelong — residential, commercial, and everything in between.</p>
@@ -610,9 +617,9 @@
       <div>
                 <h4 class="footer-col-title">Pages</h4>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="about-us.html">About Us</a></li>
-          <li><a href="index.html#services">Services</a></li>
+          <li><a href="/#services">Services</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="areas-of-service.html">Areas of Service</a></li>
           <li><a href="blogs.html">Blogs</a></li>

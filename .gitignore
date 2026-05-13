@@ -1,0 +1,8 @@
+# Local-only backup of original Unsplash JPGs (we ship the .webp copies in images/)
+images/stock/
+
+# macOS / editor crud
+.DS_Store
+Thumbs.db
+*.swp
+*~
