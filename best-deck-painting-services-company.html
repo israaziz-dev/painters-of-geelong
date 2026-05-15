@@ -46,10 +46,10 @@
     .nav-dropdown { position: relative; }
     .services-mega-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px); background: #fff; border-radius: 16px; box-shadow: 0 12px 48px rgba(0,0,0,0.12); padding: 32px 36px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px; min-width: 860px; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; z-index: 200; }
     .nav-dropdown:hover .services-mega-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-    .mega-col-heading { display: block; font-size: 15px; font-weight: 700; color: #1b3a5c; margin-bottom: 12px; text-decoration: none; }
-    .mega-col ul { list-style: none; padding: 0; margin: 0; }
-    .mega-col ul li { font-size: 13.5px; color: #555; padding: 5px 0; cursor: pointer; transition: color 0.2s; }
-    .mega-col ul li:hover { color: #e8762d; }
+    .mega-col a.mega-col-heading { display: block; font-size: 15px; font-weight: 700; color: #e8762d; margin-bottom: 12px; text-decoration: none; }
+    .mega-col p { font-size: 13.5px; color: #555; padding: 5px 0; margin: 0; cursor: pointer; transition: color 0.2s; }
+    .mega-col p a { text-decoration: none; color: inherit; }
+    .mega-col p:hover { color: #e8762d; }
     .nav-right { display: flex; align-items: center; gap: 10px; }
     .nav-divider { width: 1px; height: 32px; background: #e5e5e5; margin: 0 6px; }
     .phone-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #111; font-size: 15px; font-weight: 600; }
@@ -267,53 +267,43 @@
         <div class="services-mega-menu">
           <div class="mega-col">
             <a href="affordable-interior-house-painters.html" class="mega-col-heading">Interior House Painting</a>
-            <ul>
-              <li><a href="affordable-interior-house-painters.html" style="text-decoration:none;color:inherit;">Wall painting</a></li>
-              <li><a href="affordable-interior-house-painters.html" style="text-decoration:none;color:inherit;">Ceiling painting</a></li>
-              <li><a href="affordable-interior-house-painters.html" style="text-decoration:none;color:inherit;">Door and trim painting</a></li>
-              <li><a href="affordable-interior-house-painters.html" style="text-decoration:none;color:inherit;">Feature walls</a></li>
-              <li><a href="affordable-interior-house-painters.html" style="text-decoration:none;color:inherit;">Apartment painting</a></li>
-            </ul>
+            <p><a href="affordable-interior-house-painters.html">Wall painting</a></p>
+            <p><a href="affordable-interior-house-painters.html">Ceiling painting</a></p>
+            <p><a href="affordable-interior-house-painters.html">Door and trim painting</a></p>
+            <p><a href="affordable-interior-house-painters.html">Feature walls</a></p>
+            <p><a href="affordable-interior-house-painters.html">Apartment painting</a></p>
           </div>
           <div class="mega-col">
             <a href="exterior-painting-services-company.html" class="mega-col-heading">Exterior House Painting</a>
-            <ul>
-              <li><a href="exterior-painting-services-company.html" style="text-decoration:none;color:inherit;">Weatherboard painting</a></li>
-              <li><a href="exterior-painting-services-company.html" style="text-decoration:none;color:inherit;">Brick painting</a></li>
-              <li><a href="exterior-painting-services-company.html" style="text-decoration:none;color:inherit;">Fence painting</a></li>
-              <li><a href="exterior-painting-services-company.html" style="text-decoration:none;color:inherit;">Garage doors and trims</a></li>
-              <li><a href="exterior-painting-services-company.html" style="text-decoration:none;color:inherit;">Outdoor facades</a></li>
-            </ul>
+            <p><a href="exterior-painting-services-company.html">Weatherboard painting</a></p>
+            <p><a href="exterior-painting-services-company.html">Brick painting</a></p>
+            <p><a href="exterior-painting-services-company.html">Fence painting</a></p>
+            <p><a href="exterior-painting-services-company.html">Garage doors and trims</a></p>
+            <p><a href="exterior-painting-services-company.html">Outdoor facades</a></p>
           </div>
           <div class="mega-col">
             <a href="commercial-building-painting-services-company.html" class="mega-col-heading">Commercial Painting</a>
-            <ul>
-              <li><a href="commercial-building-painting-services-company.html" style="text-decoration:none;color:inherit;">Office painting</a></li>
-              <li><a href="commercial-building-painting-services-company.html" style="text-decoration:none;color:inherit;">Shop and retail painting</a></li>
-              <li><a href="commercial-building-painting-services-company.html" style="text-decoration:none;color:inherit;">Warehouse painting</a></li>
-              <li><a href="commercial-building-painting-services-company.html" style="text-decoration:none;color:inherit;">Restaurant and caf&eacute; painting</a></li>
-              <li><a href="commercial-building-painting-services-company.html" style="text-decoration:none;color:inherit;">Strata and property management</a></li>
-            </ul>
+            <p><a href="commercial-building-painting-services-company.html">Office painting</a></p>
+            <p><a href="commercial-building-painting-services-company.html">Shop and retail painting</a></p>
+            <p><a href="commercial-building-painting-services-company.html">Warehouse painting</a></p>
+            <p><a href="commercial-building-painting-services-company.html">Restaurant and caf&eacute; painting</a></p>
+            <p><a href="commercial-building-painting-services-company.html">Strata and property management</a></p>
           </div>
           <div class="mega-col">
             <a href="best-deck-painting-services-company.html" class="mega-col-heading">Deck & Timber Staining</a>
-            <ul>
-              <li><a href="best-deck-painting-services-company.html" style="text-decoration:none;color:inherit;">Deck staining</a></li>
-              <li><a href="best-deck-painting-services-company.html" style="text-decoration:none;color:inherit;">Timber sealing</a></li>
-              <li><a href="best-deck-painting-services-company.html" style="text-decoration:none;color:inherit;">Pergola painting</a></li>
-              <li><a href="best-deck-painting-services-company.html" style="text-decoration:none;color:inherit;">Fence staining</a></li>
-              <li><a href="best-deck-painting-services-company.html" style="text-decoration:none;color:inherit;">Timber restoration</a></li>
-            </ul>
+            <p><a href="best-deck-painting-services-company.html">Deck staining</a></p>
+            <p><a href="best-deck-painting-services-company.html">Timber sealing</a></p>
+            <p><a href="best-deck-painting-services-company.html">Pergola painting</a></p>
+            <p><a href="best-deck-painting-services-company.html">Fence staining</a></p>
+            <p><a href="best-deck-painting-services-company.html">Timber restoration</a></p>
           </div>
           <div class="mega-col">
             <a href="pressure-wash-surface-cleaning-services-company.html" class="mega-col-heading">Surface Prep & Pressure Cleaning</a>
-            <ul>
-              <li><a href="pressure-wash-surface-cleaning-services-company.html" style="text-decoration:none;color:inherit;">Pressure washing</a></li>
-              <li><a href="pressure-wash-surface-cleaning-services-company.html" style="text-decoration:none;color:inherit;">Surface cleaning</a></li>
-              <li><a href="pressure-wash-surface-cleaning-services-company.html" style="text-decoration:none;color:inherit;">Sanding and priming</a></li>
-              <li><a href="pressure-wash-surface-cleaning-services-company.html" style="text-decoration:none;color:inherit;">Crack and hole filling</a></li>
-              <li><a href="pressure-wash-surface-cleaning-services-company.html" style="text-decoration:none;color:inherit;">Minor repairs and patching</a></li>
-            </ul>
+            <p><a href="pressure-wash-surface-cleaning-services-company.html">Pressure washing</a></p>
+            <p><a href="pressure-wash-surface-cleaning-services-company.html">Surface cleaning</a></p>
+            <p><a href="pressure-wash-surface-cleaning-services-company.html">Sanding and priming</a></p>
+            <p><a href="pressure-wash-surface-cleaning-services-company.html">Crack and hole filling</a></p>
+            <p><a href="pressure-wash-surface-cleaning-services-company.html">Minor repairs and patching</a></p>
           </div>
         </div>
       </li>
@@ -365,53 +355,43 @@
     <ul class="mobile-services-list">
       <li>
         <a href="affordable-interior-house-painters.html" class="mobile-services-heading">Interior House Painting</a>
-        <ul>
-          <li><a href="affordable-interior-house-painters.html">Wall painting</a></li>
-          <li><a href="affordable-interior-house-painters.html">Ceiling painting</a></li>
-          <li><a href="affordable-interior-house-painters.html">Door and trim painting</a></li>
-          <li><a href="affordable-interior-house-painters.html">Feature walls</a></li>
-          <li><a href="affordable-interior-house-painters.html">Apartment painting</a></li>
-        </ul>
+            <p><a href="affordable-interior-house-painters.html">Wall painting</a></p>
+            <p><a href="affordable-interior-house-painters.html">Ceiling painting</a></p>
+            <p><a href="affordable-interior-house-painters.html">Door and trim painting</a></p>
+            <p><a href="affordable-interior-house-painters.html">Feature walls</a></p>
+            <p><a href="affordable-interior-house-painters.html">Apartment painting</a></p>
       </li>
       <li>
         <a href="exterior-painting-services-company.html" class="mobile-services-heading">Exterior House Painting</a>
-        <ul>
-          <li><a href="exterior-painting-services-company.html">Weatherboard painting</a></li>
-          <li><a href="exterior-painting-services-company.html">Brick painting</a></li>
-          <li><a href="exterior-painting-services-company.html">Fence painting</a></li>
-          <li><a href="exterior-painting-services-company.html">Garage doors and trims</a></li>
-          <li><a href="exterior-painting-services-company.html">Outdoor facades</a></li>
-        </ul>
+            <p><a href="exterior-painting-services-company.html">Weatherboard painting</a></p>
+            <p><a href="exterior-painting-services-company.html">Brick painting</a></p>
+            <p><a href="exterior-painting-services-company.html">Fence painting</a></p>
+            <p><a href="exterior-painting-services-company.html">Garage doors and trims</a></p>
+            <p><a href="exterior-painting-services-company.html">Outdoor facades</a></p>
       </li>
       <li>
         <a href="commercial-building-painting-services-company.html" class="mobile-services-heading">Commercial Painting</a>
-        <ul>
-          <li><a href="commercial-building-painting-services-company.html">Office painting</a></li>
-          <li><a href="commercial-building-painting-services-company.html">Shop and retail painting</a></li>
-          <li><a href="commercial-building-painting-services-company.html">Warehouse painting</a></li>
-          <li><a href="commercial-building-painting-services-company.html">Restaurant and caf&eacute; painting</a></li>
-          <li><a href="commercial-building-painting-services-company.html">Strata and property management</a></li>
-        </ul>
+            <p><a href="commercial-building-painting-services-company.html">Office painting</a></p>
+            <p><a href="commercial-building-painting-services-company.html">Shop and retail painting</a></p>
+            <p><a href="commercial-building-painting-services-company.html">Warehouse painting</a></p>
+            <p><a href="commercial-building-painting-services-company.html">Restaurant and caf&eacute; painting</a></p>
+            <p><a href="commercial-building-painting-services-company.html">Strata and property management</a></p>
       </li>
       <li>
         <a href="best-deck-painting-services-company.html" class="mobile-services-heading">Deck &amp; Timber Staining</a>
-        <ul>
-          <li><a href="best-deck-painting-services-company.html">Deck staining</a></li>
-          <li><a href="best-deck-painting-services-company.html">Timber sealing</a></li>
-          <li><a href="best-deck-painting-services-company.html">Pergola painting</a></li>
-          <li><a href="best-deck-painting-services-company.html">Fence staining</a></li>
-          <li><a href="best-deck-painting-services-company.html">Timber restoration</a></li>
-        </ul>
+            <p><a href="best-deck-painting-services-company.html">Deck staining</a></p>
+            <p><a href="best-deck-painting-services-company.html">Timber sealing</a></p>
+            <p><a href="best-deck-painting-services-company.html">Pergola painting</a></p>
+            <p><a href="best-deck-painting-services-company.html">Fence staining</a></p>
+            <p><a href="best-deck-painting-services-company.html">Timber restoration</a></p>
       </li>
       <li>
         <a href="pressure-wash-surface-cleaning-services-company.html" class="mobile-services-heading">Surface Prep &amp; Pressure Cleaning</a>
-        <ul>
-          <li><a href="pressure-wash-surface-cleaning-services-company.html">Pressure washing</a></li>
-          <li><a href="pressure-wash-surface-cleaning-services-company.html">Surface cleaning</a></li>
-          <li><a href="pressure-wash-surface-cleaning-services-company.html">Sanding and priming</a></li>
-          <li><a href="pressure-wash-surface-cleaning-services-company.html">Crack and hole filling</a></li>
-          <li><a href="pressure-wash-surface-cleaning-services-company.html">Minor repairs and patching</a></li>
-        </ul>
+            <p><a href="pressure-wash-surface-cleaning-services-company.html">Pressure washing</a></p>
+            <p><a href="pressure-wash-surface-cleaning-services-company.html">Surface cleaning</a></p>
+            <p><a href="pressure-wash-surface-cleaning-services-company.html">Sanding and priming</a></p>
+            <p><a href="pressure-wash-surface-cleaning-services-company.html">Crack and hole filling</a></p>
+            <p><a href="pressure-wash-surface-cleaning-services-company.html">Minor repairs and patching</a></p>
       </li>
     </ul>
   </div>

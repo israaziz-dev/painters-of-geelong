@@ -30,7 +30,12 @@ RewriteRule ^ /%1 [R=301,L,NE]
 DirectoryIndex index.html
 
 # -----------------------------------------------------------------------------
-# 5. Long cache for image assets (helps Core Web Vitals / repeat-visit speed)
+# 5. Custom 404 page
+# -----------------------------------------------------------------------------
+ErrorDocument 404 /404.html
+
+# -----------------------------------------------------------------------------
+# 6. Long cache for image assets (helps Core Web Vitals / repeat-visit speed)
 # -----------------------------------------------------------------------------
 <IfModule mod_expires.c>
   ExpiresActive On

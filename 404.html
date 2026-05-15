@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" data-theme="light" style="color-scheme: light only;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="color-scheme" content="light only">
+  <meta name="supported-color-schemes" content="light only">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+  <title>Page Not Found (404) | Painters of Geelong</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Browse our painting services, projects and areas we serve, or get in touch with Painters of Geelong." />
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://www.paintersofgeelong.com.au/404.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root { color-scheme: light only; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { background-color: #ffffff !important; color: #1b2030 !important; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NAVBAR — minimal version (logo + Home link) */
+    .navbar { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 72px; background: #fff; border-bottom: 1px solid #f0f0f0; }
+    .logo { display: flex; align-items: center; text-decoration: none; }
+    .logo-img { height: 64px; width: auto; }
+    .nav-back { display: inline-flex; align-items: center; gap: 8px; color: #1b2030; text-decoration: none; font-size: 15px; font-weight: 600; padding: 10px 20px; border-radius: 50px; border: 1.5px solid #1b2030; transition: background 0.2s, color 0.2s; }
+    .nav-back:hover { background: #1b2030; color: #fff; }
+
+    /* MAIN 404 SECTION */
+    .notfound { flex: 1; display: flex; align-items: center; justify-content: center; padding: 60px 24px; background: linear-gradient(180deg, #fff 0%, #f8f9fc 100%); }
+    .notfound-inner { max-width: 720px; width: 100%; text-align: center; }
+    .notfound-code { font-size: 180px; font-weight: 800; line-height: 1; color: #e8762d; letter-spacing: -8px; margin-bottom: 4px; }
+    .notfound-icon { font-size: 56px; color: #1b3a5c; margin-bottom: 28px; }
+    .notfound-heading { font-size: 40px; font-weight: 700; color: #0f0f14; line-height: 1.2; margin-bottom: 16px; }
+    .notfound-sub { font-size: 17px; color: #555; line-height: 1.65; max-width: 540px; margin: 0 auto 36px; }
+
+    .notfound-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+    .btn-primary, .btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-size: 15px; font-weight: 600; transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
+    .btn-primary { background: #e8762d; color: #fff; }
+    .btn-primary:hover { background: #d06825; transform: scale(1.05); box-shadow: 0 4px 20px rgba(232, 118, 45, 0.4); }
+    .btn-secondary { background: #fff; color: #1b2030; border: 1.5px solid #1b2030; }
+    .btn-secondary:hover { background: #1b2030; color: #fff; }
+
+    /* QUICK LINKS GRID */
+    .notfound-links-title { font-size: 13px; font-weight: 700; color: #888; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+    .notfound-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; max-width: 600px; margin: 0 auto; }
+    .notfound-links a { display: block; padding: 18px 16px; background: #fff; border: 1px solid #eee; border-radius: 12px; text-decoration: none; color: #1b2030; font-size: 14px; font-weight: 600; transition: all 0.2s ease; }
+    .notfound-links a:hover { border-color: #e8762d; color: #e8762d; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+    .notfound-links a i { color: #e8762d; margin-right: 8px; }
+
+    /* MINIMAL FOOTER */
+    .footer-mini { background: #1b3a5c; color: rgba(255,255,255,0.55); padding: 24px 40px; text-align: center; font-size: 14px; }
+    .footer-mini a { color: rgba(255,255,255,0.85); text-decoration: none; font-weight: 600; }
+    .footer-mini a:hover { color: #e8762d; }
+
+    @media (max-width: 768px) {
+      .navbar { padding: 0 20px; }
+      .logo-img { height: 48px; }
+      .notfound-code { font-size: 110px; letter-spacing: -4px; }
+      .notfound-icon { font-size: 44px; margin-bottom: 20px; }
+      .notfound-heading { font-size: 28px; }
+      .notfound-sub { font-size: 15px; margin-bottom: 28px; }
+      .btn-primary, .btn-secondary { padding: 12px 22px; font-size: 14px; }
+      .notfound-links { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MINIMAL NAVBAR -->
+  <nav class="navbar">
+    <a href="/" class="logo">
+      <img src="images/logo.png" alt="Painters of Geelong" class="logo-img" />
+    </a>
+    <a href="/" class="nav-back"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+  </nav>
+
+  <!-- MAIN 404 -->
+  <main class="notfound">
+    <div class="notfound-inner">
+      <div class="notfound-code">404</div>
+      <div class="notfound-icon"><i class="fa-solid fa-paint-roller"></i></div>
+      <h1 class="notfound-heading">Looks like this wall hasn't been painted yet.</h1>
+      <p class="notfound-sub">The page you're looking for doesn't exist or may have moved. Don't worry — you can head back to our homepage or browse one of our popular sections below.</p>
+
+      <div class="notfound-cta">
+        <a href="/" class="btn-primary"><i class="fa-solid fa-house"></i> Back to Home</a>
+        <a href="/#appointment" class="btn-secondary">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+      </div>
+
+      <div class="notfound-links-title">Popular pages</div>
+      <div class="notfound-links">
+        <a href="affordable-interior-house-painters.html"><i class="fa-solid fa-house-chimney"></i>Interior Painting</a>
+        <a href="exterior-painting-services-company.html"><i class="fa-solid fa-paint-roller"></i>Exterior Painting</a>
+        <a href="commercial-building-painting-services-company.html"><i class="fa-solid fa-building"></i>Commercial</a>
+        <a href="best-deck-painting-services-company.html"><i class="fa-solid fa-tree"></i>Deck Staining</a>
+        <a href="pressure-wash-surface-cleaning-services-company.html"><i class="fa-solid fa-spray-can-sparkles"></i>Surface Prep</a>
+        <a href="projects.html"><i class="fa-solid fa-images"></i>Our Projects</a>
+        <a href="areas-of-service.html"><i class="fa-solid fa-location-dot"></i>Areas We Serve</a>
+        <a href="about-us.html"><i class="fa-solid fa-circle-info"></i>About Us</a>
+        <a href="blogs.html"><i class="fa-solid fa-newspaper"></i>Blog</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- MINIMAL FOOTER -->
+  <footer class="footer-mini">
+    Need help? Call <a href="tel:0431261281">0431 261 281</a> or email <a href="mailto:Paintersofgeelong@outlook.com">Paintersofgeelong@outlook.com</a>
+  </footer>
+
+</body>
+</html>
