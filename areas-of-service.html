@@ -13,6 +13,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
+    /* link color override */
+    a { color: #e8762d; }
+
     :root { color-scheme: light only; }
     html, body {
       background-color: #ffffff !important;
@@ -78,6 +81,11 @@
     .section-badge { display: flex; align-items: center; gap: 8px; justify-content: center; margin-bottom: 16px; }
     .section-badge i { color: #e8762d; font-size: 16px; }
     .section-badge span { font-size: 13px; font-weight: 700; color: #e8762d; letter-spacing: 1.5px; text-transform: uppercase; }
+    .page-breadcrumb { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+    .page-breadcrumb a { font-size: 13px; font-weight: 700; color: #e8762d; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; transition: opacity 0.2s; }
+    .page-breadcrumb a:hover { opacity: 0.75; }
+    .page-breadcrumb .crumb-sep { font-size: 13px; font-weight: 700; color: #e8762d; }
+    .page-breadcrumb .crumb-current { font-size: 13px; font-weight: 700; color: #e8762d; letter-spacing: 1.5px; text-transform: uppercase; }
 
     /* HERO */
     .areas-hero { padding: 80px 64px 20px; text-align: center; background: #fff; }
@@ -219,7 +227,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="about-us.html">About Us</a></li>
       <li class="nav-dropdown">
-        <a href="#" onclick="event.preventDefault()">Services <i class="fa-solid fa-chevron-down" style="font-size:11px;color:#888;margin-left:4px;"></i></a>
+        <a href="/#services">Services <i class="fa-solid fa-chevron-down" style="font-size:11px;color:#888;margin-left:4px;"></i></a>
         <div class="services-mega-menu">
           <div class="mega-col">
             <a href="affordable-interior-house-painters.html" class="mega-col-heading">Interior House Painting</a>
@@ -354,10 +362,11 @@
 
   <!-- HERO -->
   <section class="areas-hero">
-    <div class="section-badge">
-      <i class="fa-solid fa-star"></i>
-      <span>SERVICE AREAS</span>
-    </div>
+        <nav class="page-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="crumb-sep">&gt;</span>
+      <span class="crumb-current">Areas of Service</span>
+    </nav>
     <h1 class="areas-hero-heading">Areas We Service<br>Across Geelong</h1>
     <p class="areas-hero-sub">From the heart of Geelong to the Surf Coast, our professional painters deliver quality results across the region. Wherever you are, we've got you covered.</p>
   </section>
@@ -602,6 +611,14 @@
       { opacity: 0, y: 50 },
       { opacity: 1, y: 0, scrollTrigger: { trigger: '.areas-cta', start: 'top 80%' }, duration: 0.9, ease: 'power3.out' }
     );
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-988ZG4DRG6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-988ZG4DRG6');
   </script>
 </body>
 </html>

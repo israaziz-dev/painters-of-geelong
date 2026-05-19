@@ -26,7 +26,9 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     strong { font-weight: inherit; color: inherit; }
     em { font-style: normal; color: inherit; }
-    p a { color: inherit; text-decoration: none; font-weight: inherit; }
+    /* link color override */
+    a { color: #e8762d; }
+    p a { color: #e8762d; text-decoration: none; font-weight: inherit; }
 
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -84,6 +86,11 @@
     .section-badge { display: flex; align-items: center; gap: 8px; justify-content: center; margin-bottom: 16px; }
     .section-badge i { color: #e8762d; font-size: 16px; }
     .section-badge span { font-size: 13px; font-weight: 700; color: #e8762d; letter-spacing: 1.5px; text-transform: uppercase; }
+    .page-breadcrumb { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+    .page-breadcrumb a { font-size: 13px; font-weight: 700; color: #e8762d; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; transition: opacity 0.2s; }
+    .page-breadcrumb a:hover { opacity: 0.75; }
+    .page-breadcrumb .crumb-sep { font-size: 13px; font-weight: 700; color: #e8762d; }
+    .page-breadcrumb .crumb-current { font-size: 13px; font-weight: 700; color: #e8762d; letter-spacing: 1.5px; text-transform: uppercase; }
 
     /* SERVICE HERO */
     .service-hero { padding: 80px 64px 60px; text-align: center; background: #fff; }
@@ -263,7 +270,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="about-us.html">About Us</a></li>
       <li class="nav-dropdown">
-        <a href="#" class="active" onclick="event.preventDefault()">Services <i class="fa-solid fa-chevron-down" style="font-size:11px;color:#888;margin-left:4px;"></i></a>
+        <a href="/#services" class="active">Services <i class="fa-solid fa-chevron-down" style="font-size:11px;color:#888;margin-left:4px;"></i></a>
         <div class="services-mega-menu">
           <div class="mega-col">
             <a href="affordable-interior-house-painters.html" class="mega-col-heading">Interior House Painting</a>
@@ -398,10 +405,11 @@
 
   <!-- SERVICE HERO -->
   <section class="service-hero">
-    <div class="section-badge">
-      <i class="fa-solid fa-sparkles"></i>
-      <span>Services</span>
-    </div>
+        <nav class="page-breadcrumb" aria-label="Breadcrumb">
+      <a href="/#services">Services</a>
+      <span class="crumb-sep">&gt;</span>
+      <span class="crumb-current">Interior House Painting</span>
+    </nav>
     <h1 class="service-hero-heading">Interior House Painting<br>in Geelong</h1>
     <p class="service-hero-sub">Transform the inside of your home with <strong>professional interior painting services</strong>. Our experienced team carefully prepares walls, ceilings, doors, and trims to ensure smooth, clean, and long-lasting results using premium quality paints.</p>
   </section>
@@ -653,7 +661,7 @@
       opacity: 0, y: 30,
       duration: 0.8, delay: 0.3, ease: 'power2.out'
     });
-    gsap.from('.section-badge', {
+    gsap.from('.section-badge, .page-breadcrumb', {
       opacity: 0, y: 20,
       duration: 0.6, ease: 'power2.out'
     });
@@ -705,6 +713,14 @@
         duration: 0.5, ease: 'power2.out', delay: i * 0.1
       });
     });
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-988ZG4DRG6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-988ZG4DRG6');
   </script>
 </body>
 </html>
