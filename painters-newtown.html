@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-bs-theme="light" data-theme="light" style="color-scheme: light only;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="color-scheme" content="light only">
+  <meta name="supported-color-schemes" content="light only">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+  <title>Painters in Newtown 3220 | Heritage & Modern Home Painting | Painters of Geelong</title>
+  <meta name="description" content="Trusted painters in Newtown, 3220. Heritage weatherboard repaints, interior makeovers, commercial shopfronts & deck staining — free quotes and a 10-year workmanship warranty." />
+  <meta name="keywords" content="painters Newtown, house painters Newtown, heritage painters Newtown, interior painters Newtown, exterior painters Newtown, commercial painters Newtown, weatherboard painters Newtown, deck staining Newtown" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root { color-scheme: light only; }
+    html, body { background-color: #ffffff !important; color: #1b2030 !important; }
+    @media (prefers-color-scheme: dark) {
+      html, body { background-color: #ffffff !important; color: #1b2030 !important; }
+      img, video { filter: none !important; }
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    strong { font-weight: inherit; color: inherit; }
+    em { font-style: normal; color: inherit; }
+    a { color: #e8762d; }
+    p a { color: #e8762d; text-decoration: none; font-weight: inherit; }
+    .text-accent { color: #e8762d; }
+
+    body { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #fff; min-height: 100vh; }
+
+    /* NAVBAR */
+    .navbar { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 72px; background: #fff; }
+    .logo { display: flex; align-items: center; text-decoration: none; }
+    .logo-img { height: 160px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 38px; list-style: none; }
+    .nav-links a { text-decoration: none; font-size: 15px; font-weight: 500; color: #444; }
+    .nav-links a.active { color: #e8762d; font-weight: 600; }
+    .dropdown-link { display: flex; align-items: center; gap: 5px; cursor: pointer; color: #444; font-size: 15px; font-weight: 500; }
+    .dropdown-link i { font-size: 11px; color: #888; }
+    .nav-dropdown { position: relative; }
+    .services-mega-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px); background: #fff; border-radius: 16px; box-shadow: 0 12px 48px rgba(0,0,0,0.12); padding: 32px 36px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px; min-width: 860px; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; z-index: 200; }
+    .nav-dropdown:hover .services-mega-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+    .mega-col a.mega-col-heading { display: block; font-size: 15px; font-weight: 700; color: #e8762d; margin-bottom: 12px; text-decoration: none; }
+    .mega-col p { font-size: 13.5px; color: #555; padding: 5px 0; margin: 0; cursor: pointer; transition: color 0.2s; }
+    .mega-col p a { text-decoration: none; color: inherit; }
+    .mega-col p:hover { color: #e8762d; }
+    .nav-right { display: flex; align-items: center; gap: 10px; }
+    .nav-divider { width: 1px; height: 32px; background: #e5e5e5; margin: 0 6px; }
+    .phone-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #111; font-size: 15px; font-weight: 600; }
+    .phone-icon-wrap { width: 38px; height: 38px; background: #e8762d; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 15px; }
+    .btn-appointment { background: #e8762d; color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; }
+    .btn-appointment:hover { background: #d06825; transform: scale(1.05); box-shadow: 0 4px 20px rgba(232, 118, 45, 0.4); }
+
+    /* MOBILE MENU */
+    .menu-toggle { display: none; border: none; font-size: 22px; color: #fff; cursor: pointer; width: 44px; height: 44px; border-radius: 12px; background: #1b2030; align-items: center; justify-content: center; }
+    .mobile-menu-overlay { display: none; position: fixed; inset: 0; background: #fff; z-index: 1000; flex-direction: column; overflow-y: auto; }
+    .mobile-menu-overlay.open { display: flex; }
+    .mobile-menu-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; min-height: 72px; }
+    .mobile-menu-close { border: none; background: none; font-size: 28px; color: #1b2030; cursor: pointer; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; }
+    .mobile-menu-cta { background: #e8762d; color: #fff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+    .mobile-menu-links { list-style: none; padding: 0; margin: 0; border-top: 1px solid #eee; }
+    .mobile-menu-links > li { border-bottom: 1px solid #eee; }
+    .mobile-menu-links > li > a { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; text-decoration: none; color: #1b2030; font-size: 16px; font-weight: 500; }
+    .mobile-menu-links > li > a i { font-size: 14px; color: #999; }
+    .mobile-services-panel { display: none; position: fixed; inset: 0; background: #fff; z-index: 1001; flex-direction: column; overflow-y: auto; }
+    .mobile-services-panel.open { display: flex; }
+    .mobile-services-back { display: flex; align-items: center; gap: 10px; padding: 18px 24px; border: 1px solid #1b2030; border-radius: 8px; margin: 16px 20px 0; background: none; font-size: 16px; font-weight: 600; color: #1b2030; cursor: pointer; }
+    .mobile-services-back i { font-size: 14px; }
+    .mobile-services-list { list-style: none; padding: 0; margin: 8px 0 0; }
+    .mobile-services-list > li { padding: 0 24px; }
+    .mobile-services-list > li > .mobile-services-heading { display: block; padding: 14px 0 6px; text-decoration: none; color: #1b2030; font-size: 15px; font-weight: 700; }
+    .mobile-services-list > li ul { list-style: none; padding: 0 0 14px; margin: 0; border-bottom: 1px solid #eee; }
+    .mobile-services-list > li:last-child ul { border-bottom: none; }
+    .mobile-services-list > li ul li a { display: block; padding: 7px 0; text-decoration: none; color: #666; font-size: 14px; font-weight: 400; }
+
+    /* SHARED HEADINGS / BADGES */
+    .section-badge { display: flex; align-items: center; gap: 8px; justify-content: center; margin-bottom: 16px; }
+    .section-badge i { color: #e8762d; font-size: 16px; }
+    .section-badge span { font-size: 13px; font-weight: 700; color: #e8762d; letter-spacing: 1.5px; text-transform: uppercase; }
+    .page-breadcrumb { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+    .page-breadcrumb a { font-size: 13px; font-weight: 700; color: #e8762d; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; transition: opacity 0.2s; }
+    .page-breadcrumb a:hover { opacity: 0.75; }
+    .page-breadcrumb .crumb-sep { font-size: 13px; font-weight: 700; color: #e8762d; }
+    .page-breadcrumb .crumb-current { font-size: 13px; font-weight: 700; color: #e8762d; letter-spacing: 1.5px; text-transform: uppercase; }
+
+    /* SERVICE HERO (used for suburb hero) */
+    .service-hero { padding: 60px 64px 40px; text-align: center; background: #fff; }
+    .service-hero-heading { font-size: 52px; font-weight: 700; color: #0f0f14; line-height: 1.2; margin-bottom: 20px; }
+    .service-hero-sub { font-size: 17px; color: #555; line-height: 1.7; max-width: 720px; margin: 0 auto 28px; }
+    .service-hero-ctas { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
+    .btn-primary-hero { background: #e8762d; color: #fff; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: transform .3s, box-shadow .3s; }
+    .btn-primary-hero:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(232,118,45,.35); }
+    .btn-secondary-hero { background: #1b3a5c; color: #fff; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: transform .3s, box-shadow .3s; }
+    .btn-secondary-hero:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(27,58,92,.35); }
+    .hero-trust-list { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; list-style: none; margin: 0 0 28px; }
+    .hero-trust-list li { font-size: 14px; color: #555; display: inline-flex; align-items: center; gap: 8px; }
+    .hero-trust-list li i { color: #e8762d; font-size: 13px; }
+    .hero-stats-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; max-width: 720px; margin: 0 auto; }
+    .hero-stat-tile { background: #f3f4f8; border-radius: 16px; padding: 22px 18px; text-align: center; }
+    .hero-stat-tile .num { font-size: 36px; font-weight: 700; color: #e8762d; line-height: 1; margin-bottom: 6px; }
+    .hero-stat-tile .label { font-size: 13px; color: #555; line-height: 1.4; }
+
+    /* SERVICE BANNER IMAGE */
+    .service-banner { padding: 0 64px 60px; }
+    .service-banner img { width: 100%; height: 480px; object-fit: cover; border-radius: 20px; display: block; }
+
+    /* TRUST STRIP */
+    .trust-strip { padding: 28px 64px; background: #f3f4f8; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; }
+    .trust-strip-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px 36px; max-width: 1240px; margin: 0 auto; }
+    .trust-item { display: inline-flex; align-items: center; gap: 10px; color: #333; font-size: 14px; font-weight: 500; }
+    .trust-item i { color: #e8762d; font-size: 15px; }
+    .trust-item strong { color: #0f0f14; font-weight: 700; }
+
+    /* INTRO SECTION */
+    .intro-section { padding: 70px 64px; background: #fff; }
+    .intro-inner { max-width: 880px; margin: 0 auto; text-align: center; }
+    .intro-inner h2 { font-size: 38px; font-weight: 700; color: #0f0f14; line-height: 1.2; margin-bottom: 28px; }
+    .intro-body { text-align: left; font-size: 16px; line-height: 1.75; color: #555; }
+    .intro-body p { margin-bottom: 1.1em; }
+
+    /* SERVICES DEEP — category accordion */
+    .services-deep-section { padding: 70px 64px; background: #f3f4f8; }
+    .services-deep-head { max-width: 760px; margin: 0 auto 48px; text-align: center; }
+    .services-deep-head h2 { font-size: 38px; font-weight: 700; color: #0f0f14; line-height: 1.2; margin-bottom: 16px; }
+    .services-deep-head p { font-size: 16px; color: #555; line-height: 1.65; }
+    .cat-nav-wrap { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
+    .cat-nav-wrap a { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 50px; background: #fff; color: #0f0f14; font-size: 13px; font-weight: 600; text-decoration: none; border: 1px solid #e5e5e5; transition: all .3s; }
+    .cat-nav-wrap a:hover { background: #e8762d; color: #fff; border-color: #e8762d; }
+    .cat-nav-wrap a .num { color: #e8762d; font-weight: 700; transition: color .3s; }
+    .cat-nav-wrap a:hover .num { color: #fff; }
+    .service-category { background: #fff; border-radius: 20px; padding: 40px 40px; margin-bottom: 24px; scroll-margin-top: 80px; box-shadow: 0 2px 12px rgba(0,0,0,.04); }
+    .cat-head-row { display: flex; align-items: center; gap: 18px; margin-bottom: 14px; }
+    .cat-icon-circle { width: 56px; height: 56px; border-radius: 50%; background: #fff5ec; color: #e8762d; display: inline-flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; border: 1px solid #fbe2cf; }
+    .cat-num-pill { display: inline-block; background: #fff5ec; color: #e8762d; padding: 4px 12px; border-radius: 50px; font-size: 12px; font-weight: 700; letter-spacing: 1px; }
+    .cat-title { font-size: 28px; font-weight: 700; color: #0f0f14; line-height: 1.2; margin: 0; }
+    .cat-intro { font-size: 15.5px; color: #555; line-height: 1.7; margin: 12px 0 28px; max-width: 880px; }
+    .cat-sub-header { font-size: 12px; font-weight: 700; color: #888; letter-spacing: 1.6px; text-transform: uppercase; margin: 0 0 18px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+    .sub-services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 28px; }
+    .sub-card { background: #fafafa; border: 1px solid #eee; border-left: 3px solid #e8762d; border-radius: 10px; padding: 18px 20px; transition: transform .3s, box-shadow .3s; }
+    .sub-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,.06); }
+    .sub-card h5 { font-size: 16px; font-weight: 700; color: #0f0f14; margin: 0 0 6px; }
+    .sub-card p { font-size: 14px; color: #555; line-height: 1.55; margin: 0; }
+    .cat-cta { display: inline-flex; align-items: center; gap: 8px; color: #e8762d; font-size: 14.5px; font-weight: 600; text-decoration: none; border-bottom: 1px solid #e8762d; padding-bottom: 3px; transition: gap .3s; }
+    .cat-cta:hover { gap: 12px; }
+
+    /* CONTEXT */
+    .context-section { padding: 70px 64px; background: #fff; }
+    .context-head { text-align: center; max-width: 760px; margin: 0 auto 48px; }
+    .context-head h2 { font-size: 38px; font-weight: 700; color: #0f0f14; line-height: 1.2; }
+    .context-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1240px; margin: 0 auto; }
+    .context-card { background: #f3f4f8; border-radius: 16px; padding: 32px 28px; }
+    .context-numeral { font-size: 48px; font-weight: 700; color: #e8762d; line-height: 1; margin-bottom: 18px; }
+    .context-card h3 { font-size: 20px; font-weight: 700; color: #0f0f14; margin-bottom: 12px; line-height: 1.3; }
+    .context-card p { font-size: 14.5px; color: #555; line-height: 1.65; margin: 0; }
+
+    /* PROJECTS */
+    .projects-section { padding: 70px 64px; background: #f3f4f8; }
+    .projects-head { max-width: 1240px; margin: 0 auto 40px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+    .projects-head h2 { font-size: 38px; font-weight: 700; color: #0f0f14; line-height: 1.2; }
+    .projects-head .meta { max-width: 420px; color: #666; font-size: 15px; line-height: 1.65; }
+    .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 1240px; margin: 0 auto; }
+    .project-card { background: #fff; border-radius: 16px; overflow: hidden; text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform .3s, box-shadow .3s; }
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .project-image { aspect-ratio: 4 / 3; position: relative; overflow: hidden; background: linear-gradient(135deg,#d4c9b5 0%,#a89880 100%); }
+    .project-card:nth-child(1) .project-image { background: linear-gradient(135deg, rgba(0,0,0,0), rgba(0,0,0,.3)), repeating-linear-gradient(0deg, #a07050 0, #a07050 14px, #8a5d40 14px, #8a5d40 16px, #b88058 16px, #b88058 30px, #8a5d40 30px, #8a5d40 32px); }
+    .project-card:nth-child(2) .project-image { background: linear-gradient(135deg, rgba(0,0,0,0), rgba(0,0,0,.25)), radial-gradient(circle at 30% 30%, #c4b094 0%, #8a7860 100%); }
+    .project-card:nth-child(3) .project-image { background: linear-gradient(135deg, rgba(0,0,0,0), rgba(0,0,0,.3)), linear-gradient(180deg, #6b7b5c 0%, #4a5a3d 100%); }
+    .project-tag { position: absolute; top: 16px; left: 16px; padding: 5px 12px; background: rgba(255,255,255,.92); backdrop-filter: blur(6px); border-radius: 50px; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #0f0f14; }
+    .project-body { padding: 22px 22px 26px; }
+    .project-body h3 { font-size: 18px; font-weight: 700; color: #0f0f14; margin-bottom: 8px; line-height: 1.3; }
+    .project-body p { font-size: 14px; color: #666; line-height: 1.6; margin: 0; }
+    .projects-foot { max-width: 1240px; margin: 32px auto 0; text-align: center; font-size: 15px; color: #666; }
+    .projects-foot a { color: #e8762d; font-weight: 600; text-decoration: none; border-bottom: 1px solid #e8762d; padding-bottom: 2px; }
+
+    /* TESTIMONIAL */
+    .testimonial-section { padding: 80px 64px; background: #1b3a5c; color: #fff; text-align: center; position: relative; overflow: hidden; }
+    .testimonial-section::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 12% 18%, rgba(232,118,45,.15) 0, transparent 35%), radial-gradient(circle at 88% 82%, rgba(232,118,45,.10) 0, transparent 40%); }
+    .testimonial-inner { max-width: 880px; margin: 0 auto; position: relative; z-index: 2; }
+    .testimonial-quote-mark { font-size: 72px; line-height: 1; color: #e8762d; margin-bottom: 16px; }
+    .testimonial-text { font-size: 26px; font-weight: 500; line-height: 1.45; color: #fff; font-style: italic; margin: 0 0 28px; }
+    .testimonial-attr { display: inline-flex; align-items: center; gap: 14px; font-size: 13px; letter-spacing: 1.6px; text-transform: uppercase; color: rgba(255,255,255,.7); }
+    .testimonial-attr strong { color: #fff; font-weight: 700; }
+    .testimonial-attr .sep { width: 28px; height: 1px; background: #e8762d; display: inline-block; }
+
+    /* FAQ */
+    .faq-section { padding: 80px 64px; background: #fff; }
+    .faq-heading { font-size: 38px; font-weight: 700; color: #0f0f14; line-height: 1.2; text-align: center; margin-bottom: 16px; }
+    .faq-intro { text-align: center; color: #666; max-width: 640px; margin: 0 auto 40px; font-size: 15.5px; line-height: 1.65; }
+    .faq-list { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+    .faq-item { background: #f3f4f8; border-radius: 12px; overflow: hidden; }
+    .faq-question { display: flex; align-items: center; justify-content: space-between; padding: 20px 26px; cursor: pointer; font-size: 16.5px; font-weight: 600; color: #0f0f14; line-height: 1.4; gap: 18px; }
+    .faq-question i { font-size: 18px; color: #888; transition: transform .3s; flex-shrink: 0; }
+    .faq-item.open .faq-question i { transform: rotate(45deg); color: #e8762d; }
+    .faq-answer { padding: 0 26px; max-height: 0; overflow: hidden; transition: max-height .4s ease, padding .4s ease; }
+    .faq-item.open .faq-answer { max-height: 400px; padding: 0 26px 22px; }
+    .faq-answer p { font-size: 14.5px; color: #555; line-height: 1.7; margin: 0; }
+
+    /* NEARBY */
+    .nearby-section { padding: 70px 64px; background: #f3f4f8; }
+    .nearby-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; max-width: 1240px; margin: 0 auto; align-items: stretch; }
+    .nearby-left h2 { font-size: 34px; font-weight: 700; color: #0f0f14; line-height: 1.2; margin-bottom: 14px; }
+    .nearby-left > p { color: #555; margin-bottom: 24px; font-size: 15.5px; }
+    .nearby-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid #d8d8d8; }
+    .nearby-list li { border-bottom: 1px solid #d8d8d8; }
+    .nearby-list a { display: flex; justify-content: space-between; align-items: center; padding: 16px 6px; color: #0f0f14; font-size: 17px; font-weight: 600; text-decoration: none; transition: padding-left .3s, color .3s; }
+    .nearby-list a:hover { color: #e8762d; padding-left: 16px; }
+    .nearby-list a i { color: #999; transition: transform .3s, color .3s; }
+    .nearby-list a:hover i { transform: translateX(6px); color: #e8762d; }
+    .nearby-foot { margin-top: 22px; font-size: 14px; color: #666; }
+    .nearby-foot a { color: #e8762d; font-weight: 600; text-decoration: none; border-bottom: 1px solid #e8762d; padding-bottom: 1px; }
+    .map-frame { border-radius: 20px; overflow: hidden; border: 1px solid #d8d8d8; background: #fff; min-height: 420px; box-shadow: 0 2px 12px rgba(0,0,0,.04); }
+    .map-frame iframe { width: 100%; height: 100%; min-height: 420px; border: 0; display: block; }
+
+    /* CTA BANNER */
+    .cta-banner { padding: 60px 64px; background: #fff; }
+    .cta-banner-inner { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+    .cta-primary { background: #e8762d; border-radius: 20px; padding: 48px 52px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; }
+    .cta-sparkle { position: absolute; color: rgba(255,255,255,0.45); font-style: normal; line-height: 1; }
+    .cta-sparkle:nth-child(1) { top: 18px; left: 20px; font-size: 36px; }
+    .cta-sparkle:nth-child(2) { bottom: 22px; right: 72px; font-size: 40px; }
+    .cta-sparkle:nth-child(3) { bottom: 18px; right: 32px; font-size: 24px; }
+    .cta-primary h2 { font-size: 34px; font-weight: 700; color: #fff; line-height: 1.3; max-width: 460px; }
+    .cta-primary .btn-cta { background: #fff; color: #0f0f14; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: transform .3s, box-shadow .3s; flex-shrink: 0; }
+    .cta-primary .btn-cta:hover { transform: scale(1.05); box-shadow: 0 4px 20px rgba(0,0,0,.15); }
+    .cta-secondary { background: #1b3a5c; border-radius: 20px; padding: 40px 36px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+    .cta-secondary p { font-size: 17px; font-weight: 600; color: #fff; line-height: 1.4; margin-bottom: 18px; }
+    .cta-secondary .btn-call { background: #fff; color: #0f0f14; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: transform .3s; }
+    .cta-secondary .btn-call:hover { transform: scale(1.05); }
+
+    /* FOOTER */
+    .footer { background: linear-gradient(rgba(27, 58, 92, 0.9), rgba(27, 58, 92, 0.9)), url('images/Professional-wall-painting-Dubai-services-for-homes-and-offices-with-expert-painters-and-premium-finishes-500x500.webp') center/cover no-repeat; color: #fff; display: flex; flex-direction: column; justify-content: center; }
+    .footer-subscribe { padding: 80px 64px 60px; text-align: center; }
+    .footer-subscribe-heading { font-size: 42px; font-weight: 700; line-height: 1.2; margin-bottom: 32px; }
+    .subscribe-form { display: flex; align-items: center; justify-content: center; gap: 0; max-width: 560px; margin: 0 auto; }
+    .subscribe-input { flex: 1; padding: 18px 24px; border-radius: 50px 0 0 50px; border: 1.5px solid rgba(255,255,255,0.15); background: transparent; color: #fff; font-size: 15px; font-family: inherit; outline: none; }
+    .subscribe-input::placeholder { color: rgba(255,255,255,0.45); }
+    .btn-subscribe { padding: 18px 32px; border-radius: 0 50px 50px 0; background: #e8762d; color: #fff; border: none; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; }
+    .footer-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 0 64px; }
+    .footer-main { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 40px; padding: 60px 64px; }
+    .footer-brand-desc { font-size: 14.5px; color: rgba(255,255,255,0.65); line-height: 1.6; margin-top: 16px; margin-bottom: 28px; }
+    .footer-hours-title { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+    .footer-hours { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+    .footer-hours i { color: #e8762d; margin-top: 3px; }
+    .footer-col-title { font-size: 16px; font-weight: 700; margin-bottom: 20px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14.5px; transition: color 0.2s; }
+    .footer-links a:hover { color: #e8762d; }
+    .footer-contact { display: flex; flex-direction: column; gap: 14px; }
+    .footer-contact-item { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14.5px; transition: color 0.2s; }
+    .footer-contact-item:hover { color: #e8762d; }
+    .footer-address { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+    .footer-address i { color: #e8762d; margin-top: 3px; }
+    .footer-bottom { text-align: center; padding: 28px 64px; font-size: 13.5px; color: rgba(255,255,255,0.4); border-top: 1px solid rgba(255,255,255,0.08); }
+    .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .service-hero { padding: 60px 24px 40px; }
+      .service-hero-heading { font-size: 40px; }
+      .service-banner { padding: 0 24px 40px; }
+      .trust-strip { padding: 22px 24px; }
+      .intro-section { padding: 50px 24px; }
+      .services-deep-section { padding: 50px 24px; }
+      .service-category { padding: 32px 28px; }
+      .context-section { padding: 50px 24px; }
+      .projects-section { padding: 50px 24px; }
+      .testimonial-section { padding: 60px 24px; }
+      .faq-section { padding: 60px 24px; }
+      .nearby-section { padding: 50px 24px; }
+      .cta-banner { padding: 40px 24px; }
+      .footer-subscribe { padding: 60px 24px 40px; }
+      .footer-main { padding: 40px 24px; }
+    }
+    @media (max-width: 880px) {
+      .nearby-grid { grid-template-columns: 1fr; }
+      .map-frame { min-height: 320px; }
+    }
+    @media (max-width: 768px) {
+      .menu-toggle { display: flex; order: 3; }
+      .nav-links { display: none !important; }
+      .services-mega-menu { display: none !important; }
+      .nav-right { display: none; }
+      .navbar { position: relative; padding: 0 20px; }
+      .service-hero-heading { font-size: 34px; }
+      .service-hero-sub { font-size: 16px; }
+      .hero-stats-row { grid-template-columns: 1fr; max-width: 360px; }
+      .intro-inner h2 { font-size: 30px; }
+      .services-deep-head h2 { font-size: 30px; }
+      .service-category { padding: 28px 20px; }
+      .cat-title { font-size: 22px; }
+      .sub-services-grid { grid-template-columns: 1fr; }
+      .context-head h2 { font-size: 30px; }
+      .context-grid { grid-template-columns: 1fr; }
+      .projects-head h2 { font-size: 30px; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .testimonial-text { font-size: 20px; }
+      .faq-heading { font-size: 30px; }
+      .nearby-left h2 { font-size: 28px; }
+      .cta-banner-inner { grid-template-columns: 1fr; }
+      .cta-primary { flex-direction: column; align-items: flex-start; gap: 24px; padding: 36px 28px; }
+      .cta-primary h2 { font-size: 26px; }
+      .footer-main { grid-template-columns: 1fr 1fr; }
+      .footer-subscribe { padding: 48px 20px 40px; }
+      .footer-subscribe-heading { font-size: 28px; }
+      .subscribe-form { flex-direction: column; gap: 12px; }
+      .subscribe-input { width: 100%; border-radius: 50px; }
+      .btn-subscribe { width: 100%; text-align: center; border-radius: 50px; }
+    }
+    @media (max-width: 480px) {
+      .navbar { padding: 0 16px; height: 64px; }
+      .logo-img { height: 96px; }
+      .service-hero { padding: 36px 16px 24px; }
+      .service-hero-heading { font-size: 28px; }
+      .service-banner { padding: 0 16px 30px; }
+      .service-banner img { height: 280px; }
+      .footer-main { grid-template-columns: 1fr; }
+      .footer-subscribe { padding: 40px 16px 36px; }
+      .footer-subscribe-heading { font-size: 24px; }
+      .footer-main { padding: 36px 16px; gap: 28px; }
+    }
+  </style>
+  <meta name="author" content="Painters of Geelong">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.paintersofgeelong.com.au/painters-newtown.html">
+  <meta property="og:title" content="Painters in Newtown | Painters of Geelong">
+  <meta property="og:description" content="Heritage weatherboard specialists serving Newtown, 3220. Free quotes, 10-year warranty, 25+ years' experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.paintersofgeelong.com.au/painters-newtown.html">
+  <meta property="og:image" content="https://www.paintersofgeelong.com.au/images/newtown.avif">
+  <meta property="og:site_name" content="Painters of Geelong">
+  <meta property="og:locale" content="en_AU">
+  <meta name="geo.region" content="AU-VIC" />
+  <meta name="geo.placename" content="Newtown, Victoria" />
+  <meta name="geo.position" content="-38.1496;144.3398" />
+  <meta name="ICBM" content="-38.1496, 144.3398" />
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://www.paintersofgeelong.com.au/"},
+  {"@type":"ListItem","position":2,"name":"Areas of Service","item":"https://www.paintersofgeelong.com.au/areas-of-service.html"},
+  {"@type":"ListItem","position":3,"name":"Newtown","item":"https://www.paintersofgeelong.com.au/painters-newtown.html"}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":["LocalBusiness","HomeAndConstructionBusiness"],
+"@id":"https://www.paintersofgeelong.com.au/#business",
+"name":"Painters of Geelong",
+"image":"https://www.paintersofgeelong.com.au/images/logo.png",
+"url":"https://www.paintersofgeelong.com.au/painters-newtown.html",
+"telephone":"+61431261281","email":"Paintersofgeelong@outlook.com","priceRange":"$$",
+"address":{"@type":"PostalAddress","addressLocality":"Geelong","addressRegion":"VIC","postalCode":"3220","addressCountry":"AU"},
+"geo":{"@type":"GeoCoordinates","latitude":-38.234118,"longitude":144.370951},
+"areaServed":{"@type":"Place","name":"Newtown","address":{"@type":"PostalAddress","addressLocality":"Newtown","addressRegion":"VIC","postalCode":"3220","addressCountry":"AU"},"geo":{"@type":"GeoCoordinates","latitude":-38.1496,"longitude":144.3398}},
+"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"19:00"}],
+"sameAs":["https://hipages.com.au/connect/paintersofgeelong"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","serviceType":"House Painting",
+"name":"Painting Services in Newtown",
+"description":"Professional interior, exterior, commercial, deck & timber staining, and surface prep painting services across Newtown, Geelong (VIC 3220) — specialising in heritage weatherboard homes and Pakington Street commercial properties.",
+"provider":{"@id":"https://www.paintersofgeelong.com.au/#business"},
+"areaServed":{"@type":"Place","name":"Newtown, VIC 3220"},
+"hasOfferCatalog":{"@type":"OfferCatalog","name":"Painting Services Offered in Newtown","itemListElement":[
+  {"@type":"Offer","itemOffered":{"@type":"Service","name":"Interior House Painting","url":"https://www.paintersofgeelong.com.au/affordable-interior-house-painters.html","description":"Wall painting, ceiling painting, door and trim painting, feature walls, apartment painting for Newtown homes."}},
+  {"@type":"Offer","itemOffered":{"@type":"Service","name":"Exterior House Painting","url":"https://www.paintersofgeelong.com.au/exterior-painting-services-company.html","description":"Weatherboard painting, brick painting, fence painting, garage doors and trims, outdoor facades for Newtown."}},
+  {"@type":"Offer","itemOffered":{"@type":"Service","name":"Commercial Painting","url":"https://www.paintersofgeelong.com.au/commercial-building-painting-services-company.html","description":"Office painting, shop and retail painting, warehouse painting, restaurant and cafe painting, strata property management in Newtown."}},
+  {"@type":"Offer","itemOffered":{"@type":"Service","name":"Deck & Timber Staining","url":"https://www.paintersofgeelong.com.au/best-deck-painting-services-company.html","description":"Deck staining, timber sealing, pergola painting, fence staining, timber restoration for Newtown."}},
+  {"@type":"Offer","itemOffered":{"@type":"Service","name":"Surface Prep & Pressure Cleaning","url":"https://www.paintersofgeelong.com.au/pressure-wash-surface-cleaning-services-company.html","description":"Pressure washing, surface cleaning, sanding and priming, crack and hole filling, minor repairs and patching."}}
+]}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Do you paint heritage and period homes in Newtown?","acceptedAnswer":{"@type":"Answer","text":"Yes. Newtown's Federation, Edwardian and Victorian-era weatherboards are a significant part of our work. We follow heritage-compatible prep methods including lead-paint encapsulation where required, hand-sanding to preserve original mouldings, careful gap-filling, and approved heritage colour palettes using Dulux Weathershield."}},
+  {"@type":"Question","name":"How much does it cost to repaint a Newtown weatherboard home?","acceptedAnswer":{"@type":"Answer","text":"A full exterior repaint on a single-storey weatherboard in Newtown typically ranges from $8,000 to $18,000 depending on condition, prep required, paint system and access. We provide free, on-site quotes with a detailed scope."}},
+  {"@type":"Question","name":"Do you service all of Newtown including Pakington Street and surrounds?","acceptedAnswer":{"@type":"Answer","text":"Yes. We cover all of Newtown 3220, including the Pakington Street precinct, the streets around Queens Park, and the heritage strip between Aphrasia Street and Skene Street. Our base is in Geelong, about 5 minutes from Newtown CBD."}},
+  {"@type":"Question","name":"How long does it take to paint a typical Newtown home?","acceptedAnswer":{"@type":"Answer","text":"A full interior repaint of a 3-bedroom home usually takes 5-8 working days. A full exterior repaint of a weatherboard heritage home, including thorough prep, generally takes 8-14 working days depending on the level of restoration required."}},
+  {"@type":"Question","name":"Do you offer free quotes in Newtown?","acceptedAnswer":{"@type":"Answer","text":"Yes. All quotes in Newtown are free and provided on-site. We assess condition, substrate, scope and access in person, then send a written quote — typically within 24 hours. Call 0431 261 281 or use our online form to book."}}
+]}
+</script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+<nav class="navbar">
+  <a href="/" class="logo">
+    <img src="images/logo.png" alt="Painters of Geelong" class="logo-img" />
+  </a>
+
+  <button class="menu-toggle" onclick="document.querySelector('.mobile-menu-overlay').classList.add('open')">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+    <li class="nav-dropdown">
+      <a href="services.html">Services <i class="fa-solid fa-chevron-down" style="font-size:11px;color:#888;margin-left:4px;"></i></a>
+      <div class="services-mega-menu">
+        <div class="mega-col">
+          <a href="affordable-interior-house-painters.html" class="mega-col-heading">Interior House Painting</a>
+          <p><a href="affordable-interior-house-painters.html">Wall painting</a></p>
+          <p><a href="affordable-interior-house-painters.html">Ceiling painting</a></p>
+          <p><a href="affordable-interior-house-painters.html">Door and trim painting</a></p>
+          <p><a href="affordable-interior-house-painters.html">Feature walls</a></p>
+          <p><a href="affordable-interior-house-painters.html">Apartment painting</a></p>
+        </div>
+        <div class="mega-col">
+          <a href="exterior-painting-services-company.html" class="mega-col-heading">Exterior House Painting</a>
+          <p><a href="exterior-painting-services-company.html">Weatherboard painting</a></p>
+          <p><a href="exterior-painting-services-company.html">Brick painting</a></p>
+          <p><a href="exterior-painting-services-company.html">Fence painting</a></p>
+          <p><a href="exterior-painting-services-company.html">Garage doors and trims</a></p>
+          <p><a href="exterior-painting-services-company.html">Outdoor facades</a></p>
+        </div>
+        <div class="mega-col">
+          <a href="commercial-building-painting-services-company.html" class="mega-col-heading">Commercial Painting</a>
+          <p><a href="commercial-building-painting-services-company.html">Office painting</a></p>
+          <p><a href="commercial-building-painting-services-company.html">Shop and retail painting</a></p>
+          <p><a href="commercial-building-painting-services-company.html">Warehouse painting</a></p>
+          <p><a href="commercial-building-painting-services-company.html">Restaurant and café painting</a></p>
+          <p><a href="commercial-building-painting-services-company.html">Strata and property management</a></p>
+        </div>
+        <div class="mega-col">
+          <a href="best-deck-painting-services-company.html" class="mega-col-heading">Deck & Timber Staining</a>
+          <p><a href="best-deck-painting-services-company.html">Deck staining</a></p>
+          <p><a href="best-deck-painting-services-company.html">Timber sealing</a></p>
+          <p><a href="best-deck-painting-services-company.html">Pergola painting</a></p>
+          <p><a href="best-deck-painting-services-company.html">Fence staining</a></p>
+          <p><a href="best-deck-painting-services-company.html">Timber restoration</a></p>
+        </div>
+        <div class="mega-col">
+          <a href="pressure-wash-surface-cleaning-services-company.html" class="mega-col-heading">Surface Prep & Pressure Cleaning</a>
+          <p><a href="pressure-wash-surface-cleaning-services-company.html">Pressure washing</a></p>
+          <p><a href="pressure-wash-surface-cleaning-services-company.html">Surface cleaning</a></p>
+          <p><a href="pressure-wash-surface-cleaning-services-company.html">Sanding and priming</a></p>
+          <p><a href="pressure-wash-surface-cleaning-services-company.html">Crack and hole filling</a></p>
+          <p><a href="pressure-wash-surface-cleaning-services-company.html">Minor repairs and patching</a></p>
+        </div>
+      </div>
+    </li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="areas-of-service.html" class="active">Areas of Service</a></li>
+    <li><a href="blogs.html">Blogs</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <a href="tel:0431261281" class="phone-link">
+      <div class="phone-icon-wrap"><i class="fa-solid fa-phone"></i></div>
+      0431 261 281
+    </a>
+    <div class="nav-divider"></div>
+    <a href="contact-us.html" class="btn-appointment">Book an Appointment <i class="fa-solid fa-arrow-up-right"></i></a>
+  </div>
+</nav>
+
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-menu-overlay">
+  <div class="mobile-menu-header">
+    <button class="mobile-menu-close" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open')">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <a href="contact-us.html" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+  </div>
+  <ul class="mobile-menu-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="#" onclick="event.preventDefault(); document.querySelector('.mobile-services-panel').classList.add('open');">Services <i class="fa-solid fa-chevron-right"></i></a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="areas-of-service.html">Areas of Service</a></li>
+    <li><a href="blogs.html">Blogs</a></li>
+    <li><a href="contact-us.html" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open');" style="color:#e8762d; font-weight:600;">Book an Appointment</a></li>
+  </ul>
+</div>
+
+<!-- MOBILE SERVICES PANEL -->
+<div class="mobile-services-panel">
+  <div class="mobile-menu-header">
+    <button class="mobile-menu-close" onclick="document.querySelector('.mobile-services-panel').classList.remove('open'); document.querySelector('.mobile-menu-overlay').classList.remove('open');">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <a href="contact-us.html" class="mobile-menu-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+  </div>
+  <button class="mobile-services-back" onclick="document.querySelector('.mobile-services-panel').classList.remove('open');">
+    <i class="fa-solid fa-chevron-left"></i> Services
+  </button>
+  <ul class="mobile-services-list">
+    <li>
+      <a href="affordable-interior-house-painters.html" class="mobile-services-heading">Interior House Painting</a>
+          <p><a href="affordable-interior-house-painters.html">Wall painting</a></p>
+          <p><a href="affordable-interior-house-painters.html">Ceiling painting</a></p>
+          <p><a href="affordable-interior-house-painters.html">Door and trim painting</a></p>
+          <p><a href="affordable-interior-house-painters.html">Feature walls</a></p>
+          <p><a href="affordable-interior-house-painters.html">Apartment painting</a></p>
+    </li>
+    <li>
+      <a href="exterior-painting-services-company.html" class="mobile-services-heading">Exterior House Painting</a>
+          <p><a href="exterior-painting-services-company.html">Weatherboard painting</a></p>
+          <p><a href="exterior-painting-services-company.html">Brick painting</a></p>
+          <p><a href="exterior-painting-services-company.html">Fence painting</a></p>
+          <p><a href="exterior-painting-services-company.html">Garage doors and trims</a></p>
+          <p><a href="exterior-painting-services-company.html">Outdoor facades</a></p>
+    </li>
+    <li>
+      <a href="commercial-building-painting-services-company.html" class="mobile-services-heading">Commercial Painting</a>
+          <p><a href="commercial-building-painting-services-company.html">Office painting</a></p>
+          <p><a href="commercial-building-painting-services-company.html">Shop and retail painting</a></p>
+          <p><a href="commercial-building-painting-services-company.html">Warehouse painting</a></p>
+          <p><a href="commercial-building-painting-services-company.html">Restaurant and caf&eacute; painting</a></p>
+          <p><a href="commercial-building-painting-services-company.html">Strata and property management</a></p>
+    </li>
+    <li>
+      <a href="best-deck-painting-services-company.html" class="mobile-services-heading">Deck &amp; Timber Staining</a>
+          <p><a href="best-deck-painting-services-company.html">Deck staining</a></p>
+          <p><a href="best-deck-painting-services-company.html">Timber sealing</a></p>
+          <p><a href="best-deck-painting-services-company.html">Pergola painting</a></p>
+          <p><a href="best-deck-painting-services-company.html">Fence staining</a></p>
+          <p><a href="best-deck-painting-services-company.html">Timber restoration</a></p>
+    </li>
+    <li>
+      <a href="pressure-wash-surface-cleaning-services-company.html" class="mobile-services-heading">Surface Prep &amp; Pressure Cleaning</a>
+          <p><a href="pressure-wash-surface-cleaning-services-company.html">Pressure washing</a></p>
+          <p><a href="pressure-wash-surface-cleaning-services-company.html">Surface cleaning</a></p>
+          <p><a href="pressure-wash-surface-cleaning-services-company.html">Sanding and priming</a></p>
+          <p><a href="pressure-wash-surface-cleaning-services-company.html">Crack and hole filling</a></p>
+          <p><a href="pressure-wash-surface-cleaning-services-company.html">Minor repairs and patching</a></p>
+    </li>
+  </ul>
+</div>
+
+
+  <!-- HERO -->
+  <section class="service-hero">
+    <nav class="page-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="crumb-sep">&gt;</span>
+      <a href="areas-of-service.html">Areas of Service</a>
+      <span class="crumb-sep">&gt;</span>
+      <span class="crumb-current">Newtown</span>
+    </nav>
+    <div class="section-badge">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>Servicing Newtown &middot; 3220</span>
+    </div>
+    <h1 class="service-hero-heading">Heritage painters for <span class="text-accent">Newtown's</span> oldest streets.</h1>
+    <p class="service-hero-sub">From Federation weatherboards on Aphrasia Street to Pakington Street shopfronts — we've spent 25 years repainting Newtown's most loved buildings.</p>
+    <div class="service-hero-ctas">
+      <a href="contact-us.html" class="btn-primary-hero">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="tel:0431261281" class="btn-secondary-hero"><i class="fa-solid fa-phone"></i> Call 0431 261 281</a>
+    </div>
+    <ul class="hero-trust-list">
+      <li><i class="fa-solid fa-check"></i> 25+ years' experience</li>
+      <li><i class="fa-solid fa-check"></i> 10-year workmanship warranty</li>
+      <li><i class="fa-solid fa-check"></i> Free on-site quotes</li>
+      <li><i class="fa-solid fa-check"></i> 5-star Hipages reviews</li>
+    </ul>
+    <div class="hero-stats-row">
+      <div class="hero-stat-tile"><div class="num">25+</div><div class="label">years painting<br>Newtown homes</div></div>
+      <div class="hero-stat-tile"><div class="num">300+</div><div class="label">repaints across<br>Geelong &amp; Bellarine</div></div>
+      <div class="hero-stat-tile"><div class="num">10yr</div><div class="label">workmanship<br>warranty</div></div>
+    </div>
+  </section>
+
+  <!-- BANNER IMAGE -->
+  <section class="service-banner">
+    <img src="images/newtown.avif" alt="Painters of Geelong working in Newtown" loading="eager" decoding="async" />
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="trust-strip">
+    <div class="trust-strip-inner">
+      <div class="trust-item"><i class="fa-solid fa-shield-halved"></i><span><strong>Fully insured</strong> &amp; certified</span></div>
+      <div class="trust-item"><i class="fa-solid fa-award"></i><span><strong>Dulux</strong> Accredited</span></div>
+      <div class="trust-item"><i class="fa-solid fa-medal"></i><span><strong>10-year</strong> warranty</span></div>
+      <div class="trust-item"><i class="fa-solid fa-star"></i><span><strong>5-star</strong> Hipages reviews</span></div>
+      <div class="trust-item"><i class="fa-regular fa-clock"></i><span><strong>Free quotes</strong> in 24hrs</span></div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro-section">
+    <div class="intro-inner">
+      <div class="section-badge">
+        <i class="fa-solid fa-sparkles"></i>
+        <span>About painting in Newtown</span>
+      </div>
+      <h2>Painters you can trust in <span class="text-accent">Newtown</span>, 3220.</h2>
+      <div class="intro-body">
+        <p>Newtown is one of Geelong's most distinctive suburbs — leafy Federation and Edwardian streetscapes, the boutique strip of Pakington Street, and the historic surrounds of Queens Park. Over the past 25 years we've repainted dozens of period weatherboard cottages, double-fronted Federation homes, and renovated workers' terraces between Aphrasia Street and Skene Street — work that demands a careful eye for original detailing and a respect for heritage-appropriate colour palettes.</p>
+        <p>Painting in Newtown isn't the same as painting in a new estate. Many homes have older lath-and-plaster interiors, original timber weatherboards, lead-paint substrates from earlier eras, and intricate eaves, fretwork and verandah detail. We specialise in the prep work these homes need: lead-paint encapsulation, hand-sanding, gap-filling, primer systems for aged timber, and finishes that hold up to the freeze-thaw cycles of a Geelong winter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES DEEP -->
+  <section class="services-deep-section" id="services">
+    <header class="services-deep-head">
+      <div class="section-badge">
+        <i class="fa-solid fa-paintbrush"></i>
+        <span>What we paint</span>
+      </div>
+      <h2>Our painting services in <span class="text-accent">Newtown</span>.</h2>
+      <p>Five service categories, twenty-five specialised offerings — every one tailored to Newtown's mix of heritage homes, period commercial properties and modern apartments. Browse by category or jump straight to what you need.</p>
+    </header>
+
+    <div class="cat-nav-wrap" role="navigation" aria-label="Service categories">
+      <a href="#interior"><span class="num">01</span>Interior</a>
+      <a href="#exterior"><span class="num">02</span>Exterior</a>
+      <a href="#commercial"><span class="num">03</span>Commercial</a>
+      <a href="#deck-timber"><span class="num">04</span>Deck & Timber</a>
+      <a href="#surface-prep"><span class="num">05</span>Surface Prep</a>
+    </div>
+
+    <article class="service-category" id="interior">
+      <div class="cat-head-row">
+        <span class="cat-icon-circle"><i class="fa-solid fa-couch"></i></span>
+        <div>
+          <span class="cat-num-pill">Category 01</span>
+          <h3 class="cat-title">Interior House Painting <span class="text-accent">in Newtown</span></h3>
+        </div>
+      </div>
+      <p class="cat-intro">Interior painters Newtown families call on for heritage-aware work. We handle lath-and-plaster walls, period mouldings, Federation cornices and ornate picture rails, from 1900s weatherboard cottages off Pakington Street to renovated apartments on Shannon Avenue — low-VOC paints, refined finishes, and the right system for each substrate.</p>
+      <h4 class="cat-sub-header">Specialised interior work</h4>
+      <div class="sub-services-grid">
+        <div class="sub-card"><h5>Wall painting</h5><p>Smooth, low-VOC wall finishes for Newtown's lath-and-plaster and gyprock walls. Skim-coat repair where needed, with heritage-appropriate matte and low-sheen Dulux Wash&Wear systems.</p></div>
+        <div class="sub-card"><h5>Ceiling painting</h5><p>Decorative pressed-tin ceilings, ornate plaster roses and original cornices in older Newtown homes need a careful hand. Cut-in with low-spatter rollers and dedicated ceiling-white systems.</p></div>
+        <div class="sub-card"><h5>Door and trim painting</h5><p>Restoring solid-timber doors, period architraves, skirting boards and window frames — sanded, primed and finished in enamel or low-sheen acrylic for a hard-wearing heritage look.</p></div>
+        <div class="sub-card"><h5>Feature walls</h5><p>Heritage-toned accent walls — deep greens, terracottas, ochres and charcoals — that complement Newtown's period interiors. Colour consultation included, with sample patches before commit.</p></div>
+        <div class="sub-card"><h5>Apartment painting</h5><p>Quick-turnaround interior repaints for the newer apartments and townhouses around Pakington Street and Shannon Avenue. Move-in-ready finishes, weekend scheduling, minimal disruption.</p></div>
+      </div>
+      <a href="affordable-interior-house-painters.html" class="cat-cta">View all interior painting services <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+    <article class="service-category" id="exterior">
+      <div class="cat-head-row">
+        <span class="cat-icon-circle"><i class="fa-solid fa-house"></i></span>
+        <div>
+          <span class="cat-num-pill">Category 02</span>
+          <h3 class="cat-title">Exterior House Painting <span class="text-accent">in Newtown</span></h3>
+        </div>
+      </div>
+      <p class="cat-intro">Exterior painters Newtown homeowners trust for heritage weatherboard work. Federation, Edwardian and Victorian-era timber treated with lead-paint protocols, masonry-grade primers and finishes engineered for Geelong's coastal-temperate climate. Full envelope: weatherboards, brick, render, fences, garage doors, eaves, fascias, verandah detail and outdoor facades — Dulux Weathershield as standard.</p>
+      <h4 class="cat-sub-header">Specialised exterior work</h4>
+      <div class="sub-services-grid">
+        <div class="sub-card"><h5>Weatherboard painting</h5><p>The signature Newtown job. Repainting timber weatherboards on Federation and Edwardian homes — with lead-paint encapsulation where required, wood filler, full primer and two top-coats of Dulux Weathershield.</p></div>
+        <div class="sub-card"><h5>Brick painting</h5><p>Painting and re-painting brick and rendered exteriors on Newtown's interwar and post-war homes. Masonry-grade primers and acrylic membrane coatings that bond to old porous brick.</p></div>
+        <div class="sub-card"><h5>Fence painting</h5><p>Restoring picket, paling and slatted timber fences along Newtown's leafy streets. Heritage-appropriate dark greens, charcoals and off-whites; oil-based or acrylic finishes matched to substrate.</p></div>
+        <div class="sub-card"><h5>Garage doors and trims</h5><p>Repainting tilt-doors, panel-lift doors and original timber garage doors common in Newtown's older properties. Plus eaves, fascias, gutters, downpipes, barge boards and weatherboard trims.</p></div>
+        <div class="sub-card"><h5>Outdoor facades</h5><p>Full-house external repaints — render, weatherboard, brick, trims, verandahs and decorative timberwork treated as one cohesive job with a single heritage colour palette and consistent finish.</p></div>
+      </div>
+      <a href="exterior-painting-services-company.html" class="cat-cta">View all exterior painting services <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+    <article class="service-category" id="commercial">
+      <div class="cat-head-row">
+        <span class="cat-icon-circle"><i class="fa-solid fa-building"></i></span>
+        <div>
+          <span class="cat-num-pill">Category 03</span>
+          <h3 class="cat-title">Commercial Painting <span class="text-accent">in Newtown</span></h3>
+        </div>
+      </div>
+      <p class="cat-intro">Commercial painters Newtown businesses rely on along Pakington Street. Scheduled around your trade with out-of-hours and weekend windows, brand-colour matching, high-traffic-grade finishes, food-safe systems where required, and a single point of contact across multi-stage fitouts. Boutique retail, allied health, cafés, restaurants, professional offices and apartment buildings.</p>
+      <h4 class="cat-sub-header">Specialised commercial work</h4>
+      <div class="sub-services-grid">
+        <div class="sub-card"><h5>Office painting</h5><p>Office and consulting-room repaints for the professional offices along Pakington Street and Aberdeen Street. After-hours and weekend scheduling to avoid disrupting clients.</p></div>
+        <div class="sub-card"><h5>Shop and retail painting</h5><p>Shopfronts, retail interiors, fitting rooms and display walls for Newtown's boutique strip. Brand-colour matching, high-traffic-grade finishes, signage panel painting and after-trade scheduling.</p></div>
+        <div class="sub-card"><h5>Warehouse painting</h5><p>Larger commercial premises on the outer edges of Newtown. Line-marking, safety colours, epoxy floor coatings, high-bay walls and ceilings, dock and loading-bay finishes.</p></div>
+        <div class="sub-card"><h5>Restaurant and café painting</h5><p>Heritage café fitouts along Pakington Street need finishes that survive moisture, oil and constant traffic. Low-VOC, food-safe systems with overnight or split-shift scheduling.</p></div>
+        <div class="sub-card"><h5>Strata &amp; property management</h5><p>Common-area, hallway, foyer and stairwell painting for Newtown's apartment buildings and strata-managed properties. Single contact, scheduled maintenance cycles, owners-corporation invoicing.</p></div>
+      </div>
+      <a href="commercial-building-painting-services-company.html" class="cat-cta">View all commercial painting services <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+    <article class="service-category" id="deck-timber">
+      <div class="cat-head-row">
+        <span class="cat-icon-circle"><i class="fa-solid fa-bars-staggered"></i></span>
+        <div>
+          <span class="cat-num-pill">Category 04</span>
+          <h3 class="cat-title">Deck &amp; Timber Staining <span class="text-accent">in Newtown</span></h3>
+        </div>
+      </div>
+      <p class="cat-intro">Deck staining Newtown homeowners trust for heritage hardwood and verandah work. We sand back, repair and seal decks, verandahs and pergolas in the 30–100-year range — hardwood decks, jarrah verandahs, treated pine pergolas, fences and feature timber, all substrates handled with weather-grade stains in heritage tones.</p>
+      <h4 class="cat-sub-header">Specialised timber work</h4>
+      <div class="sub-services-grid">
+        <div class="sub-card"><h5>Deck staining</h5><p>Stripping, sanding and re-staining hardwood decks on Newtown's older homes — including the elevated rear decks common on terraced and Federation properties. Oil-based and water-based stains in heritage tones.</p></div>
+        <div class="sub-card"><h5>Timber sealing</h5><p>Sealing and protecting exposed timber — handrails, balustrades, pergola beams, feature posts and bullnose verandahs — with UV-resistant, weather-grade clear sealers or lightly-tinted finishes.</p></div>
+        <div class="sub-card"><h5>Pergola painting</h5><p>Painting and staining outdoor pergola structures and verandah posts common on Newtown's Federation cottages. Includes bullnose ceilings, decorative fretwork, brackets and corbels.</p></div>
+        <div class="sub-card"><h5>Fence staining</h5><p>Re-staining hardwood paling, slatted and feature fences. Includes pre-treatment, oil-based or water-based stain systems, and gap-and-knot sealing to prevent moisture penetration.</p></div>
+        <div class="sub-card"><h5>Timber restoration</h5><p>Bringing back grey, weathered, water-damaged or paint-failed timber surfaces. Hand-sanding, gap-filling, structural repair where needed, then seal-and-finish in a heritage-appropriate tone.</p></div>
+      </div>
+      <a href="best-deck-painting-services-company.html" class="cat-cta">View all deck & timber services <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+    <article class="service-category" id="surface-prep">
+      <div class="cat-head-row">
+        <span class="cat-icon-circle"><i class="fa-solid fa-spray-can-sparkles"></i></span>
+        <div>
+          <span class="cat-num-pill">Category 05</span>
+          <h3 class="cat-title">Surface Prep &amp; Pressure Cleaning <span class="text-accent">in Newtown</span></h3>
+        </div>
+      </div>
+      <p class="cat-intro">Pressure washing Newtown homes is where every quality repaint starts. Older substrates (lead-paint, weathered weatherboard, cracked render, aged brick) need methodical prep before a brush touches them. Pressure washing, encapsulation, sanding, primer matching, crack filling and minor carpentry — handled by the same crew that does the painting. The work that makes a 10-year warranty possible.</p>
+      <h4 class="cat-sub-header">Specialised prep work</h4>
+      <div class="sub-services-grid">
+        <div class="sub-card"><h5>Pressure washing</h5><p>High-pressure cleaning of weatherboards, eaves, rendered walls, brick facades, paths, decks and driveways. Removes lichen, oxidised paint, dust and biological growth before priming.</p></div>
+        <div class="sub-card"><h5>Surface cleaning</h5><p>Detail cleaning of substrates pressure-washing can't reach — interior plaster, ornate cornices, picture rails, mouldings, original timber and metal hardware. Sugar-soap and TSP washes where needed.</p></div>
+        <div class="sub-card"><h5>Sanding and priming</h5><p>Hand-sanding, mechanical sanding and full primer systems matched to substrate — oil-based timber primers, masonry sealers, stain blockers and bonding primers for difficult surfaces.</p></div>
+        <div class="sub-card"><h5>Crack and hole filling</h5><p>Filling cracks, gaps, splits, nail holes and damage in timber, plaster and render — flexible exterior caulks, two-pack timber fillers, plaster patch and lime mortar where heritage-appropriate.</p></div>
+        <div class="sub-card"><h5>Minor repairs and patching</h5><p>Replacing damaged timber sections, repairing rotten weatherboard ends, patching plaster and re-securing loose mouldings before they're painted. Saves the cost of a separate carpenter call-out.</p></div>
+      </div>
+      <a href="pressure-wash-surface-cleaning-services-company.html" class="cat-cta">View all surface prep services <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+  </section>
+
+  <!-- CONTEXT -->
+  <section class="context-section">
+    <div class="context-head">
+      <div class="section-badge">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <span>Why painting Newtown is different</span>
+      </div>
+      <h2>Three things <span class="text-accent">Newtown homes</span> teach us every job.</h2>
+    </div>
+    <div class="context-grid">
+      <div class="context-card"><div class="context-numeral">01</div><h3>Heritage weatherboard stock</h3><p>A large share of Newtown's homes are Federation, Edwardian or Victorian-era timber weatherboards with intricate detailing, original mouldings and sometimes lead-paint substrates. They need slower, more careful prep than modern brick veneers — and the right paint system to last 10+ years.</p></div>
+      <div class="context-card"><div class="context-numeral">02</div><h3>Coastal-temperate climate</h3><p>Newtown sits inland from Corio Bay but still gets coastal humidity, UV-heavy summers and frost-prone winter mornings. We use Dulux Weathershield and equivalent systems engineered for these conditions, with primers chosen specifically for aged timber.</p></div>
+      <div class="context-card"><div class="context-numeral">03</div><h3>Local crew, 5 minutes away</h3><p>Our base in central Geelong is around 5 minutes' drive from Newtown CBD — which means same-day site visits, free quotes, and faster turnaround if minor touch-ups are needed during your warranty period.</p></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects-section">
+    <div class="projects-head">
+      <div>
+        <div class="section-badge" style="justify-content:flex-start;">
+          <i class="fa-solid fa-image"></i>
+          <span>Recent work</span>
+        </div>
+        <h2>Painting projects in <span class="text-accent">Newtown</span>.</h2>
+      </div>
+      <div class="meta">A small selection of homes and businesses we've painted in Newtown recently. Replace the placeholder treatments with real photos when ready.</div>
+    </div>
+    <div class="projects-grid">
+      <a href="projects.html" class="project-card">
+        <div class="project-image"><span class="project-tag">Heritage Exterior</span></div>
+        <div class="project-body"><h3>Complete Federation repaint — Newtown</h3><p>Full exterior repaint of a double-fronted Federation weatherboard near Queens Park. Lead-paint encapsulation, hand-sanding, gap-filling and primer. Two top coats of Dulux Weathershield in heritage colours. 9 working days.</p></div>
+      </a>
+      <a href="projects.html" class="project-card">
+        <div class="project-image"><span class="project-tag">Interior</span></div>
+        <div class="project-body"><h3>Renovated cottage — off Pakington Street</h3><p>Full interior repaint of a renovated 2-bedroom worker's cottage. Walls, ceilings, doors and skirting in low-VOC paint, with a deep-green feature wall in the living room. Move-in ready in 6 working days.</p></div>
+      </a>
+      <a href="projects.html" class="project-card">
+        <div class="project-image"><span class="project-tag">Commercial</span></div>
+        <div class="project-body"><h3>Café repaint — Pakington Street</h3><p>Out-of-hours shopfront and interior repaint for a Newtown café. Brand-colour-matched signage panel, full interior refresh and trim work, completed across two overnight shifts with no trading days lost.</p></div>
+      </a>
+    </div>
+    <p class="projects-foot">See more of our work in our <a href="projects.html">full project portfolio</a>.</p>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial-section">
+    <div class="testimonial-inner">
+      <div class="testimonial-quote-mark">&ldquo;</div>
+      <blockquote class="testimonial-text">We had our Federation home in Newtown repainted from top to bottom. The team handled the original timber and lead paint properly, matched the heritage palette we wanted, and finished on schedule. Best paint job the house has had in 30 years.</blockquote>
+      <div class="testimonial-attr"><strong>Anna T.</strong><span class="sep"></span>Homeowner · Newtown VIC</div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="section-badge">
+      <i class="fa-solid fa-sparkles"></i>
+      <span>FAQ</span>
+    </div>
+    <h2 class="faq-heading">Newtown painting <span class="text-accent">FAQs</span>.</h2>
+    <p class="faq-intro">Quick answers to the things Newtown homeowners ask us most often. Don't see what you need? Just call — we're a quick chat away.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Do you paint heritage and period homes in Newtown?
+          <i class="fa-solid fa-plus"></i>
+        </h3>
+        <div class="faq-answer">
+          <p>Yes. Newtown's Federation, Edwardian and Victorian-era weatherboards are a significant part of our work. We follow heritage-compatible prep methods including lead-paint encapsulation where required, hand-sanding to preserve original mouldings, careful gap-filling, and approved heritage colour palettes using Dulux Weathershield.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How much does it cost to repaint a Newtown weatherboard home?
+          <i class="fa-solid fa-plus"></i>
+        </h3>
+        <div class="faq-answer">
+          <p>A full exterior repaint on a single-storey weatherboard in Newtown typically ranges from <strong>$8,000 to $18,000</strong> depending on condition, prep required, paint system and access. <a href="/#appointment">Request a free quote</a> for an accurate price for your home.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Do you service all of Newtown including Pakington Street and surrounds?
+          <i class="fa-solid fa-plus"></i>
+        </h3>
+        <div class="faq-answer">
+          <p>Yes. We cover all of Newtown 3220, including the Pakington Street precinct, the streets around Queens Park, and the heritage strip between Aphrasia Street and Skene Street. Our base is in Geelong, about 5 minutes from Newtown CBD.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How long does it take to paint a typical Newtown home?
+          <i class="fa-solid fa-plus"></i>
+        </h3>
+        <div class="faq-answer">
+          <p>A full interior repaint of a 3-bedroom home usually takes <strong>5–8 working days</strong>. A full exterior repaint of a weatherboard heritage home, including thorough prep, generally takes <strong>8–14 working days</strong> depending on the level of restoration required.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Do you offer free quotes in Newtown?
+          <i class="fa-solid fa-plus"></i>
+        </h3>
+        <div class="faq-answer">
+          <p>Yes. All quotes in Newtown are free and provided on-site. We assess condition, substrate, scope and access in person, then send a written quote &mdash; typically within 24 hours. Call <a href="tel:0431261281">0431 261 281</a> or use our online form to book.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEARBY -->
+  <section class="nearby-section">
+    <div class="nearby-grid">
+      <div class="nearby-left">
+        <div class="section-badge" style="justify-content:flex-start;">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Nearby suburbs</span>
+        </div>
+        <h2>We also paint <span class="text-accent">around</span> Newtown.</h2>
+        <p>Looking for painters in a neighbouring area? We service the streets and surrounds of:</p>
+        <ul class="nearby-list">
+          <li><a href="areas-of-service.html"><span>Painters in Geelong</span><i class="fa-solid fa-arrow-right"></i></a></li>
+          <li><a href="painters-highton.html"><span>Painters in Highton</span><i class="fa-solid fa-arrow-right"></i></a></li>
+          <li><a href="painters-belmont.html"><span>Painters in Belmont</span><i class="fa-solid fa-arrow-right"></i></a></li>
+          <li><a href="areas-of-service.html"><span>Painters in Hamlyn Heights</span><i class="fa-solid fa-arrow-right"></i></a></li>
+        </ul>
+        <p class="nearby-foot">Or see <a href="areas-of-service.html">all the Geelong suburbs we service</a>.</p>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=Newtown+VIC+3220&output=embed" title="Map of Newtown VIC 3220 — service area for Painters of Geelong" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="cta-banner-inner">
+      <div class="cta-primary">
+        <span class="cta-sparkle">&#10022;</span>
+        <span class="cta-sparkle">&#10022;</span>
+        <span class="cta-sparkle">&#10022;</span>
+        <h2>Get a free painting quote in <span class="text-accent">Newtown</span>.</h2>
+        <a href="contact-us.html" class="btn-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
+      </div>
+      <div class="cta-secondary">
+        <p>Call us on 0431 261 281 or book a free, no-obligation on-site quote. Most quotes returned within 24 hours.</p>
+        <a href="tel:0431261281" class="btn-call"><i class="fa-solid fa-phone"></i> 0431 261 281</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-subscribe">
+    <h2 class="footer-subscribe-heading">Stay Updated With Expert Painting<br>Tips — Subscribe Now!</h2>
+    <form class="subscribe-form" onsubmit="return false;">
+      <input type="email" class="subscribe-input" placeholder="Enter Your Email..." />
+      <button type="submit" class="btn-subscribe">Subscribe Now</button>
+    </form>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-main">
+    <div>
+      <a href="/" class="logo" style="margin-bottom: 0;">
+        <img src="images/logo.png" alt="Painters of Geelong" class="logo-img" style="filter: brightness(0) invert(1); height: 58px;" />
+      </a>
+      <p class="footer-brand-desc">Professional painting services across Geelong — residential, commercial, and everything in between.</p>
+      <h4 class="footer-hours-title">Working Hours</h4>
+      <div class="footer-hours">
+        <i class="fa-regular fa-clock"></i>
+        <span>Monday to Saturday: 7 am - 7 pm<br>Sunday is closed</span>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer-col-title">Pages</h4>
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="areas-of-service.html">Areas of Service</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="footer-col-title">Areas We Service</h4>
+      <ul class="footer-links">
+        <li><a href="areas-of-service.html">Geelong</a></li>
+        <li><a href="painters-newtown.html">Newtown</a></li>
+        <li><a href="painters-belmont.html">Belmont</a></li>
+        <li><a href="painters-grovedale.html">Grovedale</a></li>
+        <li><a href="painters-highton.html">Highton</a></li>
+        <li><a href="painters-waurn-ponds.html">Waurn Ponds</a></li>
+        <li><a href="painters-lara.html">Lara</a></li>
+        <li><a href="painters-torquay.html">Torquay</a></li>
+        <li><a href="painters-armstrong-creek.html">Armstrong Creek</a></li>
+        <li><a href="painters-ocean-grove.html">Ocean Grove</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="footer-col-title">Contact Links</h4>
+      <div class="footer-contact">
+        <a href="tel:0431261281" class="footer-contact-item">0431 261 281</a>
+        <a href="mailto:Paintersofgeelong@outlook.com" class="footer-contact-item">Paintersofgeelong@outlook.com</a>
+        <div class="footer-address">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Geelong, Victoria, Australia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    Copyright &copy; Painters of Geelong | Designed and Powered by <a href="https://www.linkedin.com/company/novareachsolutions/posts/?feedView=all" target="_blank">Novareach Solutions</a>
+  </div>
+</footer>
+
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-988ZG4DRG6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-988ZG4DRG6');
+</script>
+</body>
+</html>
