@@ -1,0 +1,11 @@
+# ===========================================
+# robots.txt for paintersofgeelong.com.au/
+# ===========================================
+
+User-agent: *
+Allow: /
+Disallow: /function/
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://www.paintersofgeelong.com.au/sitemap.xml
