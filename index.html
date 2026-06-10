@@ -234,6 +234,10 @@
     .form-textarea { border-radius: 20px; min-height: 120px; resize: vertical; }
     .btn-contact { width: 100%; background: #e8762d; color: #fff; border: none; padding: 18px; border-radius: 50px; font-size: 16px; font-weight: 600; font-family: inherit; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
     .btn-contact:hover { background: #d06825; }
+    .form-field { display: flex; flex-direction: column; }
+    .form-error { display: none; color: #ffc9c0; font-size: 12.5px; margin-top: 5px; padding-left: 4px; }
+    .form-field.invalid .form-error { display: block; }
+    .form-field.invalid .form-input, .form-field.invalid .form-select, .form-field.invalid .form-textarea { border-color: #ff8a80; }
 
     /* TESTIMONIALS */
     .testimonials-section { padding: 80px 64px; background: #fff; }
@@ -1118,23 +1122,45 @@
           <span>Get a Free Quote</span>
         </div>
         <h2 class="appointment-heading">Get a Free Painting<br>Quote Today</h2>
-        <form action="https://formsubmit.co/isra.azizunnisa1@gmail.com" method="POST">
+        <form id="homeQuoteForm" action="https://formsubmit.co/isra.azizunnisa1@gmail.com" method="POST" novalidate>
           <input type="hidden" name="_subject" value="New Quote Request - Painters of Geelong">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_next" value="">
           <div class="form-row">
-            <input type="text" name="name" class="form-input" placeholder="Your Name" required />
-            <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required />
+            <div class="form-field">
+              <input type="text" name="name" class="form-input" placeholder="Your Name *" required />
+              <span class="form-error" data-error-for="name"></span>
+            </div>
+            <div class="form-field">
+              <input type="tel" name="phone" class="form-input" placeholder="Phone Number *" required />
+              <span class="form-error" data-error-for="phone"></span>
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="form-field">
+              <input type="email" name="email" class="form-input" placeholder="Email Address (optional)" />
+              <span class="form-error" data-error-for="email"></span>
+            </div>
           </div>
           <div class="form-row">
-            <select name="service" class="form-select"><option value="">Choose a Service</option><option>Interior Painting</option><option>Exterior Painting</option><option>Commercial Painting</option><option>Deck & Timber Staining</option><option>Pressure Cleaning</option></select>
-            <select name="preferred_date" class="form-select"><option value="">Preferred Date</option><option>This Week</option><option>Next Week</option><option>This Month</option></select>
+            <div class="form-field">
+              <select name="service" class="form-select" required><option value="">Choose a Service *</option><option>Interior Painting</option><option>Exterior Painting</option><option>Commercial Painting</option><option>Deck & Timber Staining</option><option>Pressure Cleaning</option></select>
+              <span class="form-error" data-error-for="service"></span>
+            </div>
+            <div class="form-field">
+              <select name="preferred_date" class="form-select" required><option value="">Preferred Date *</option><option>This Week</option><option>Next Week</option><option>This Month</option></select>
+              <span class="form-error" data-error-for="preferred_date"></span>
+            </div>
           </div>
           <div class="form-row full">
-            <input type="text" name="property_size" class="form-input" placeholder="Property Size (approx sqm)" />
+            <div class="form-field">
+              <input type="text" name="property_size" class="form-input" placeholder="Property Size (approx sqm) (optional)" />
+            </div>
           </div>
           <div class="form-row full">
-            <textarea name="message" class="form-textarea" placeholder="Write Your Message Here..."></textarea>
+            <div class="form-field">
+              <textarea name="message" class="form-textarea" placeholder="Write Your Message Here... (optional)"></textarea>
+            </div>
           </div>
           <button type="submit" class="btn-contact">Contact Now</button>
         </form>
@@ -1482,6 +1508,74 @@
       c.scrollTo({ left: target, behavior: 'smooth' });
     }
 
+  </script>
+  <script>
+    (function () {
+      var form = document.getElementById('homeQuoteForm');
+      if (!form) return;
+
+      var rules = {
+        name:           { required: true,  msg: 'Please enter your name.' },
+        phone:          { required: true,  msg: 'Please enter your phone number.',
+                          test: function (v) { return /^[0-9+()\s-]{6,}$/.test(v); },
+                          testMsg: 'Please enter a valid phone number.' },
+        service:        { required: true,  msg: 'Please choose a service.' },
+        preferred_date: { required: true,  msg: 'Please choose a preferred date.' },
+        email:          { required: false,
+                          test: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); },
+                          testMsg: 'Please enter a valid email address.' }
+      };
+
+      function fieldOf(el) { return el.closest('.form-field'); }
+      function errorEl(name) { return form.querySelector('[data-error-for="' + name + '"]'); }
+
+      function setError(name, message) {
+        var el = form.elements[name];
+        if (!el) return;
+        var wrap = fieldOf(el), err = errorEl(name);
+        if (message) {
+          if (wrap) wrap.classList.add('invalid');
+          if (err) err.textContent = message;
+        } else {
+          if (wrap) wrap.classList.remove('invalid');
+          if (err) err.textContent = '';
+        }
+      }
+
+      function validateField(name) {
+        var el = form.elements[name];
+        if (!el) return true;
+        var rule = rules[name] || { required: true };
+        var value = (el.value || '').trim();
+        if (!value) {
+          if (rule.required) { setError(name, rule.msg || 'This field is required.'); return false; }
+          setError(name, ''); return true;
+        }
+        if (rule.test && !rule.test(value)) { setError(name, rule.testMsg || 'Please check this field.'); return false; }
+        setError(name, ''); return true;
+      }
+
+      form.addEventListener('submit', function (e) {
+        var firstInvalid = null;
+        Object.keys(rules).forEach(function (name) {
+          if (!validateField(name) && !firstInvalid) firstInvalid = form.elements[name];
+        });
+        if (firstInvalid) {
+          e.preventDefault();
+          firstInvalid.focus();
+        }
+      });
+
+      Object.keys(rules).forEach(function (name) {
+        var el = form.elements[name];
+        if (!el) return;
+        var ev = (el.tagName === 'SELECT') ? 'change' : 'input';
+        el.addEventListener(ev, function () {
+          if (fieldOf(el) && fieldOf(el).classList.contains('invalid')) validateField(name);
+        });
+        el.addEventListener('blur', function () { validateField(name); });
+      });
+    })();
   </script>
 
   <!-- Google tag (gtag.js) -->
