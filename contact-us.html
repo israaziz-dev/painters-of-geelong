@@ -114,6 +114,11 @@
     .btn-submit:hover { background: #d06825; transform: scale(1.01); box-shadow: 0 6px 20px rgba(232, 118, 45, 0.3); }
     .form-success { display: none; padding: 14px 16px; background: #e7f6ec; color: #1b6a39; border-radius: 10px; font-size: 14px; margin-bottom: 16px; }
     .form-success.show { display: block; }
+    .req { color: #e8762d; font-weight: 700; }
+    .opt { color: #9aa0ad; font-weight: 500; font-size: 12.5px; }
+    .form-error { display: none; color: #c0392b; font-size: 13px; margin-top: 2px; }
+    .form-field.invalid .form-error { display: block; }
+    .form-field.invalid .form-input, .form-field.invalid .form-select, .form-field.invalid .form-textarea { border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1); }
 
     /* FOOTER */
     .footer { background: linear-gradient(rgba(27, 58, 92, 0.9), rgba(27, 58, 92, 0.9)), url('images/Professional-wall-painting-Dubai-services-for-homes-and-offices-with-expert-painters-and-premium-finishes-500x500.webp') center/cover no-repeat; color: #fff; display: flex; flex-direction: column; justify-content: center; }
@@ -395,25 +400,35 @@
           <div class="form-success" id="formSuccess">
             <i class="fa-solid fa-circle-check"></i>&nbsp; Thanks &mdash; your message has been received. We'll get back to you within 1&ndash;2 business days.
           </div>
-          <form action="https://formsubmit.co/isra.azizunnisa1@gmail.com" method="POST">
+          <form id="quoteForm" action="https://formsubmit.co/isra.azizunnisa1@gmail.com" method="POST" novalidate>
             <input type="hidden" name="_subject" value="New Quote Request - Painters of Geelong">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="">
 
             <div class="form-row">
               <div class="form-field">
-                <label class="form-label" for="name">Your Name</label>
+                <label class="form-label" for="name">Your Name <span class="req">*</span></label>
                 <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required />
+                <span class="form-error" data-error-for="name"></span>
               </div>
               <div class="form-field">
-                <label class="form-label" for="phone">Phone Number</label>
+                <label class="form-label" for="phone">Phone Number <span class="req">*</span></label>
                 <input type="tel" id="phone" name="phone" class="form-input" placeholder="Phone Number" required />
+                <span class="form-error" data-error-for="phone"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field full">
+                <label class="form-label" for="email">Email Address <span class="opt">(optional)</span></label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" />
+                <span class="form-error" data-error-for="email"></span>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-field">
-                <label class="form-label" for="service">Choose a Service</label>
+                <label class="form-label" for="service">Choose a Service <span class="req">*</span></label>
                 <select id="service" name="service" class="form-select" required>
                   <option value="">Choose a Service</option>
                   <option>Interior Painting</option>
@@ -422,28 +437,30 @@
                   <option>Deck &amp; Timber Staining</option>
                   <option>Pressure Cleaning</option>
                 </select>
+                <span class="form-error" data-error-for="service"></span>
               </div>
               <div class="form-field">
-                <label class="form-label" for="preferred_date">Preferred Date</label>
-                <select id="preferred_date" name="preferred_date" class="form-select">
+                <label class="form-label" for="preferred_date">Preferred Date <span class="req">*</span></label>
+                <select id="preferred_date" name="preferred_date" class="form-select" required>
                   <option value="">Preferred Date</option>
                   <option>This Week</option>
                   <option>Next Week</option>
                   <option>This Month</option>
                 </select>
+                <span class="form-error" data-error-for="preferred_date"></span>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-field full">
-                <label class="form-label" for="property_size">Property Size (approx sqm)</label>
+                <label class="form-label" for="property_size">Property Size (approx sqm) <span class="opt">(optional)</span></label>
                 <input type="text" id="property_size" name="property_size" class="form-input" placeholder="Property Size (approx sqm)" />
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-field full">
-                <label class="form-label" for="message">Message</label>
+                <label class="form-label" for="message">Message <span class="opt">(optional)</span></label>
                 <textarea id="message" name="message" class="form-textarea" placeholder="Write Your Message Here..."></textarea>
               </div>
             </div>
@@ -548,6 +565,76 @@
       { opacity: 0, x: 40 },
       { opacity: 1, x: 0, duration: 0.9, ease: 'power2.out', delay: 0.3 }
     );
+  </script>
+  <script>
+    (function () {
+      var form = document.getElementById('quoteForm');
+      if (!form) return;
+
+      // name -> custom validator. Fields not listed are required-non-empty only.
+      var rules = {
+        name:           { required: true,  msg: 'Please enter your name.' },
+        phone:          { required: true,  msg: 'Please enter your phone number.',
+                          test: function (v) { return /^[0-9+()\s-]{6,}$/.test(v); },
+                          testMsg: 'Please enter a valid phone number.' },
+        service:        { required: true,  msg: 'Please choose a service.' },
+        preferred_date: { required: true,  msg: 'Please choose a preferred date.' },
+        email:          { required: false, // optional, but validate format if filled
+                          test: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); },
+                          testMsg: 'Please enter a valid email address.' }
+      };
+
+      function fieldOf(el) { return el.closest('.form-field'); }
+      function errorEl(name) { return form.querySelector('[data-error-for="' + name + '"]'); }
+
+      function setError(name, message) {
+        var el = form.elements[name];
+        if (!el) return;
+        var wrap = fieldOf(el), err = errorEl(name);
+        if (message) {
+          wrap.classList.add('invalid');
+          if (err) err.textContent = message;
+        } else {
+          wrap.classList.remove('invalid');
+          if (err) err.textContent = '';
+        }
+      }
+
+      function validateField(name) {
+        var el = form.elements[name];
+        if (!el) return true;
+        var rule = rules[name] || { required: true };
+        var value = (el.value || '').trim();
+        if (!value) {
+          if (rule.required) { setError(name, rule.msg || 'This field is required.'); return false; }
+          setError(name, ''); return true; // optional + empty = ok
+        }
+        if (rule.test && !rule.test(value)) { setError(name, rule.testMsg || 'Please check this field.'); return false; }
+        setError(name, ''); return true;
+      }
+
+      form.addEventListener('submit', function (e) {
+        var firstInvalid = null;
+        Object.keys(rules).forEach(function (name) {
+          if (!validateField(name) && !firstInvalid) firstInvalid = form.elements[name];
+        });
+        if (firstInvalid) {
+          e.preventDefault();
+          firstInvalid.focus();
+        }
+      });
+
+      // Clear/re-check each field as the user fixes it.
+      Object.keys(rules).forEach(function (name) {
+        var el = form.elements[name];
+        if (!el) return;
+        var ev = (el.tagName === 'SELECT') ? 'change' : 'input';
+        el.addEventListener(ev, function () {
+          if (fieldOf(el).classList.contains('invalid')) validateField(name);
+        });
+        el.addEventListener('blur', function () { validateField(name); });
+      });
+    })();
   </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-988ZG4DRG6"></script>
