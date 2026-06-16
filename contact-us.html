@@ -114,6 +114,8 @@
     .btn-submit:hover { background: #d06825; transform: scale(1.01); box-shadow: 0 6px 20px rgba(232, 118, 45, 0.3); }
     .form-success { display: none; padding: 14px 16px; background: #e7f6ec; color: #1b6a39; border-radius: 10px; font-size: 14px; margin-bottom: 16px; }
     .form-success.show { display: block; }
+    .form-failure { display: none; padding: 14px 16px; background: #fdecea; color: #b3261e; border-radius: 10px; font-size: 14px; margin-bottom: 16px; }
+    .form-failure.show { display: block; }
     .req { color: #e8762d; font-weight: 700; }
     .opt { color: #9aa0ad; font-weight: 500; font-size: 12.5px; }
     .form-error { display: none; color: #c0392b; font-size: 13px; margin-top: 2px; }
@@ -400,10 +402,10 @@
           <div class="form-success" id="formSuccess">
             <i class="fa-solid fa-circle-check"></i>&nbsp; Thanks &mdash; your message has been received. We'll get back to you within 1&ndash;2 business days.
           </div>
-          <form id="quoteForm" action="https://formsubmit.co/isra.azizunnisa1@gmail.com" method="POST" novalidate>
-            <input type="hidden" name="_subject" value="New Quote Request - Painters of Geelong">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="">
+          <div class="form-failure" id="formError"></div>
+          <form id="quoteForm" action="/api/send-email" method="POST" novalidate>
+            <!-- Honeypot: hidden from people, often filled by bots -->
+            <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" />
 
             <div class="form-row">
               <div class="form-field">
@@ -613,15 +615,58 @@
         setError(name, ''); return true;
       }
 
+      var successEl = document.getElementById('formSuccess');
+      var errorEl_  = document.getElementById('formError');
+      function showBanner(el, msg) {
+        if (!el) return;
+        if (msg != null) el.textContent = msg;
+        el.classList.add('show');
+      }
+      function hideBanners() {
+        if (successEl) successEl.classList.remove('show');
+        if (errorEl_)  errorEl_.classList.remove('show');
+      }
+
       form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        hideBanners();
+
         var firstInvalid = null;
         Object.keys(rules).forEach(function (name) {
           if (!validateField(name) && !firstInvalid) firstInvalid = form.elements[name];
         });
-        if (firstInvalid) {
-          e.preventDefault();
-          firstInvalid.focus();
-        }
+        if (firstInvalid) { firstInvalid.focus(); return; }
+
+        var btn = form.querySelector('[type="submit"]');
+        var btnHtml = btn ? btn.innerHTML : '';
+        if (btn) { btn.disabled = true; btn.innerHTML = 'Sending…'; }
+
+        var data = {};
+        new FormData(form).forEach(function (val, key) { data[key] = val; });
+        data.source = 'contact';
+
+        fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        })
+          .then(function (r) {
+            return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.ok, error: j.error }; });
+          })
+          .then(function (res) {
+            if (res.ok) {
+              showBanner(successEl);
+              form.reset();
+            } else {
+              showBanner(errorEl_, res.error || 'Sorry, something went wrong. Please call us or try again.');
+            }
+          })
+          .catch(function () {
+            showBanner(errorEl_, 'Network error. Please try again or call us directly.');
+          })
+          .then(function () {
+            if (btn) { btn.disabled = false; btn.innerHTML = btnHtml; }
+          });
       });
 
       // Clear/re-check each field as the user fixes it.

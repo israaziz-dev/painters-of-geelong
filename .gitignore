@@ -1,6 +1,10 @@
 # Local-only backup of original Unsplash JPGs (we ship the .webp copies in images/)
 images/stock/
 
+# Node / Vercel (Resend serverless function)
+node_modules/
+.vercel/
+
 # macOS / editor crud
 .DS_Store
 Thumbs.db
