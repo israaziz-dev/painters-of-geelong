@@ -116,15 +116,19 @@ export default async function handler(req, res) {
     // Let staff reply straight to the customer when they left an email.
     if (f.email) payload.replyTo = f.email;
 
-    const { error } = await resend.emails.send(payload);
+    const { data, error } = await resend.emails.send(payload);
     if (error) {
+      // Surfaced in Vercel → Deployments → Functions → api/send-email logs.
+      console.error('Resend send failed:', JSON.stringify(error), '| from:', FROM_EMAIL, '| to:', TO_EMAIL);
       return res.status(502).json({
         ok: false,
         error: 'The email service could not send your message. Please call us or try again.',
       });
     }
+    console.log('Resend send ok:', data && data.id);
     return res.status(200).json({ ok: true });
   } catch (err) {
+    console.error('send-email unexpected error:', err && (err.stack || err.message || err));
     return res.status(500).json({
       ok: false,
       error: 'Unexpected error sending your message. Please call us or try again.',
