@@ -3,5 +3,22 @@
     "api/send-email.js": {
       "maxDuration": 10
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/blogs/interior-house-painting-geelong-guide/choose-best-interior-house-painters.html",
+      "destination": "/blogs/interior-house-painting-geelong-guide/best-interior-house-painters-geelong.html",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/interior-house-painting-geelong-guide/feature-wall-painting.html",
+      "destination": "/blogs/interior-house-painting-geelong-guide/feature-wall-painting-geelong.html",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/interior-house-painting-geelong-guide/ceiling-painting.html",
+      "destination": "/blogs/interior-house-painting-geelong-guide/ceiling-painting-geelong.html",
+      "permanent": true
+    }
+  ]
 }
