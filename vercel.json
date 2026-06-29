@@ -6,6 +6,46 @@
   },
   "redirects": [
     {
+      "source": "/project-1.html",
+      "destination": "/projects/living-room-painting-newtown.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-2.html",
+      "destination": "/projects/heritage-home-exterior-repaint-geelong.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-3.html",
+      "destination": "/projects/kitchen-cabinet-painting-highton.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-4.html",
+      "destination": "/projects/commercial-office-painting-geelong.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-5.html",
+      "destination": "/projects/weatherboard-house-painting-belmont.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-6.html",
+      "destination": "/projects/feature-wall-painting-highton.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-7.html",
+      "destination": "/projects/retail-store-painting-geelong.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-8.html",
+      "destination": "/projects/exterior-beach-house-painting-torquay.html",
+      "permanent": true
+    },
+    {
       "source": "/blogs/interior-house-painting-geelong-guide/choose-best-interior-house-painters.html",
       "destination": "/blogs/interior-house-painting-geelong-guide/best-interior-house-painters-geelong.html",
       "permanent": true
