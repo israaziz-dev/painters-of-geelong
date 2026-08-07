@@ -99,6 +99,31 @@
       "source": "/images/fence-painters-north-geelong.webp",
       "destination": "/images/weatherboard-house-painting-belmont.webp",
       "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog4.webp",
+      "destination": "/images/heritage-home-exterior-repaint-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog 6.webp",
+      "destination": "/images/weatherboard-exterior-repaint-torquay.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog%206.webp",
+      "destination": "/images/weatherboard-exterior-repaint-torquay.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog 16.webp",
+      "destination": "/images/living-room-painting-newtown.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog%2016.webp",
+      "destination": "/images/living-room-painting-newtown.webp",
+      "permanent": true
     }
   ]
 }
