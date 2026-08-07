@@ -13,8 +13,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" as="image" href="images/professional-painters-of-geelong.webp" type="image/webp" fetchpriority="high">
-  <title>Affordable House and Commercial Painters | Painters of Geelong</title>
-  <meta name="description" content="Trusted painting services company in Geelong for residential and commercial painting. Get free house painting quotes from professional local painters today." />
+  <title>House &amp; Commercial Painters Geelong | Painters of Geelong</title>
+  <meta name="description" content="Local Geelong painters with 25+ years' experience in house and commercial painting. Dulux premium paints, a 10-year workmanship warranty and free written quotes." />
   <meta name="keywords" content="painters Geelong, house painters Geelong, interior painters Geelong, exterior painters Geelong, commercial painters Geelong, painting services Geelong, professional painters Geelong" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -74,7 +74,7 @@
     /* HERO */
     .hero { display: flex; align-items: stretch; padding: 16px 20px 20px 20px; gap: 16px; background: #fff; height: calc(100vh - 72px); }
     .hero-left { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 1px 30px 36px 44px; background: #f3f4f8; border-radius: 20px; }
-    .hero-heading { font-size: 75px; font-weight: 500; color: #0f0f14; line-height: 1.12; letter-spacing: -1.5px; margin-bottom: 16px; }
+    .hero-heading { font-size: 62px; font-weight: 500; color: #0f0f14; line-height: 1.12; letter-spacing: -1.5px; margin-bottom: 16px; }
     .hero-subtext { font-size: 16px; color: #666; line-height: 1.6; max-width: 420px; font-weight: 400; margin-bottom: 30px; }
     .hero-buttons { display: flex; gap: 14px; margin-bottom: 0; }
     .hero-top { flex: 1; display: flex; flex-direction: column; justify-content: center; }
@@ -182,6 +182,19 @@
     .why-card h3 { font-size: 22px; font-weight: 700; color: #0f0f14; }
     .why-card p { font-size: 15px; color: #555; line-height: 1.65; }
 
+    /* AREAS WE SERVICE */
+    .areas-section { padding: clamp(40px, 6vw, 80px) clamp(16px, 4.5vw, 64px); background: #f3f4f8; }
+    .areas-section .section-heading { margin-bottom: 20px; }
+    .areas-intro { max-width: 860px; margin: 0 auto 36px; text-align: center; font-size: 16px; line-height: 1.75; color: #555; }
+    .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; max-width: 1100px; margin: 0 auto; }
+    .area-pill { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 18px 22px; background: #fff; border: 1px solid #e4e6ee; border-radius: 14px; text-decoration: none; color: #0f0f14; font-size: 16px; font-weight: 600; transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+    .area-pill:hover { border-color: #e8762d; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(15,15,20,.07); }
+    .area-pill i { color: #e8762d; font-size: 14px; }
+    @media (max-width: 480px) {
+      .areas-intro { font-size: 14px; margin-bottom: 26px; }
+      .area-pill { padding: 15px 18px; font-size: 15px; }
+    }
+
     /* MARQUEE */
     .marquee-section { padding: 60px 0; background: #fff; overflow: hidden; }
     .marquee-track { display: flex; align-items: center; gap: 0; white-space: nowrap; animation: marqueeScroll 20s linear infinite; width: max-content; }
@@ -277,6 +290,7 @@
     .blogs-heading { font-size: 42px; font-weight: 700; color: #0f0f14; line-height: 1.2; }
     .btn-blogs { display: inline-flex; align-items: center; gap: 8px; background: #1b3a5c; color: #fff; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-size: 15px; font-weight: 600; }
     .blogs-grid { display: flex; gap: 24px; }
+    .blogs-grid-second { margin-top: 32px; }
     .blog-card { flex: 1; transition: flex 0.5s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; }
     .blog-card:hover { flex: 2; }
     .blog-img-wrap { width: 100%; height: 360px; border-radius: 16px; overflow: hidden; margin-bottom: 16px; }
@@ -285,6 +299,20 @@
     .blog-date { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #777; margin-bottom: 8px; }
     .blog-date i { font-size: 14px; color: #999; }
     .blog-title { font-size: 22px; font-weight: 700; color: #0f0f14; line-height: 1.35; }
+
+    /* FAQ */
+    .faq-section { padding: clamp(40px, 6vw, 80px) clamp(16px, 4.5vw, 64px); background: #f3f4f8; }
+    .faq-heading { font-size: clamp(26px, 4vw, 38px); font-weight: 700; color: #0f0f14; line-height: 1.2; text-align: center; margin-bottom: 16px; }
+    .faq-intro { text-align: center; color: #666; max-width: 640px; margin: 0 auto 40px; font-size: 15.5px; line-height: 1.65; }
+    .faq-list { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+    .faq-item { background: #fff; border-radius: 12px; overflow: hidden; }
+    .faq-question { display: flex; align-items: center; justify-content: space-between; padding: 20px 26px; cursor: pointer; font-size: 16.5px; font-weight: 600; color: #0f0f14; line-height: 1.4; gap: 18px; }
+    .faq-question i { font-size: 18px; color: #888; transition: transform .3s; flex-shrink: 0; }
+    .faq-item.open .faq-question i { transform: rotate(45deg); color: #e8762d; }
+    .faq-answer { padding: 0 26px; max-height: 0; overflow: hidden; transition: max-height .4s ease, padding .4s ease; }
+    .faq-item.open .faq-answer { max-height: 400px; padding: 0 26px 22px; }
+    .faq-answer p { font-size: 14.5px; color: #555; line-height: 1.7; margin: 0; }
+    .text-accent { color: #e8762d; }
 
     /* FOOTER */
     .footer { background: linear-gradient(rgba(27, 58, 92, 0.9), rgba(27, 58, 92, 0.9)), url('images/Professional-wall-painting-Dubai-services-for-homes-and-offices-with-expert-painters-and-premium-finishes-500x500.webp') center/cover no-repeat; color: #fff; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
@@ -355,7 +383,7 @@
       .nav-divider { display: none; }
       .hero { padding: 12px 16px 16px 16px; gap: 12px; }
       .hero-left { padding: 32px 28px 28px 28px; }
-      .hero-heading { font-size: 52px; }
+      .hero-heading { font-size: 44px; }
       .hero-subtext { font-size: 15px; }
       .hero-ratings { gap: 24px; }
       .stat-percent { font-size: 40px; }
@@ -536,8 +564,8 @@
   <meta name="author" content="Painters of Geelong">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://www.paintersofgeelong.com.au/">
-  <meta property="og:title" content="Affordable House and Commercial Painters | Painters of Geelong">
-  <meta property="og:description" content="Trusted painting services in Geelong for residential and commercial projects. Get free quotes from professional local painters today.">
+  <meta property="og:title" content="House &amp; Commercial Painters Geelong | Painters of Geelong">
+  <meta property="og:description" content="Local Geelong painters with 25+ years' experience in house and commercial painting. Dulux premium paints, a 10-year workmanship warranty and free written quotes.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.paintersofgeelong.com.au/">
   <meta property="og:image" content="https://www.paintersofgeelong.com.au/images/professional-painters-of-geelong.webp">
@@ -605,6 +633,54 @@
     "sameAs": [
       "https://www.facebook.com/paintersofgeelongau",
       "https://www.instagram.com/paintersofgeelong/"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are you a local painting company near me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Painters of Geelong is a local, owner-operated painting company providing residential and commercial painting services throughout Geelong and surrounding suburbs, including Belmont, Highton, Newtown, Grovedale, Torquay, Ocean Grove, Lara, Waurn Ponds and Armstrong Creek. If you're searching for painters near you in the Geelong region, we're here to help with a free, no-obligation quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer free house painting quotes in Geelong?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We provide free, no-obligation quotes for all residential and commercial painting projects across Geelong. Every quote is itemised, transparent and tailored to your property's needs, so you know exactly what's included before any work begins."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What painting services do you offer in Geelong?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide a complete range of residential and commercial painting services across Geelong, including interior house painting, exterior house painting, commercial painting, deck and timber staining, fence painting, and surface preparation and pressure cleaning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you licensed and insured?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Our painters are fully licensed and insured, giving you confidence that your property is protected throughout every residential and commercial painting project."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does house painting cost in Geelong?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "House painting costs vary depending on the size of your home, the condition of the surfaces, the type of paint selected and the scope of work. We provide a free, itemised quote for every job so you know exactly what to expect before committing — contact us today for a fast estimate."
+        }
+      }
     ]
   }
   </script>
@@ -765,12 +841,12 @@
     <div class="hero-left">
       <div class="hero-top">
         <h1 class="hero-heading">
-          Professional<br>
+          House &amp; Commercial<br>
           Painters in<br>
           Geelong
         </h1>
         <p class="hero-subtext">
-          With 25+ years of experience, our <strong>professional house painters</strong> provide reliable interior and exterior painting services for homes and businesses across Geelong and nearby suburbs. As a trusted <strong>painting company</strong>, we deliver quality finishes, fair pricing, and free quotes.
+          With 25+ years of experience, our <strong>professional house painters</strong> provide reliable interior and exterior painting services for homes and businesses across Geelong and surrounding areas. As a trusted <strong>local painting company</strong>, we deliver quality finishes, fair pricing, and free quotes to homeowners searching for <strong>painters near me</strong> across the region.
         </p>
 
         <div class="hero-buttons">
@@ -1046,6 +1122,30 @@
     </div>
   </section>
 
+  <!-- AREAS WE SERVICE -->
+  <section class="areas-section">
+    <div class="section-badge">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>Areas We Service</span>
+    </div>
+    <h2 class="section-heading">Servicing Geelong &amp; Surrounding Suburbs</h2>
+    <p class="areas-intro">
+      We provide professional house and commercial painting services across Geelong and surrounding suburbs. Whether you're updating a family home, investment property or commercial premises, our local team delivers quality workmanship backed by years of experience.
+    </p>
+
+    <div class="areas-grid">
+      <a href="areas-of-service/painters-highton.html" class="area-pill">Painters Highton <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="areas-of-service/painters-belmont.html" class="area-pill">Painters Belmont <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="areas-of-service/painters-newtown.html" class="area-pill">Painters Newtown <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="areas-of-service/painters-grovedale.html" class="area-pill">Painters Grovedale <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="areas-of-service/painters-lara.html" class="area-pill">Painters Lara <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="areas-of-service/painters-ocean-grove.html" class="area-pill">Painters Ocean Grove <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="areas-of-service/painters-armstrong-creek.html" class="area-pill">Painters Armstrong Creek <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="areas-of-service/painters-torquay.html" class="area-pill">Painters Torquay <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="areas-of-service/painters-waurn-ponds.html" class="area-pill">Painters Waurn Ponds <i class="fa-solid fa-arrow-up-right"></i></a>
+    </div>
+  </section>
+
   <!-- MARQUEE -->
   <section class="marquee-section">
     <div class="marquee-track">
@@ -1170,6 +1270,16 @@
         <span class="portfolio-tag">Exterior Painting</span>
         <h3 class="portfolio-title">Fresh Exterior Repaint — Torquay</h3>
       </a>
+      <a href="projects/modern-home-exterior-repaint-armstrong-creek.html" class="portfolio-card" style="text-decoration:none;color:inherit;">
+        <div class="portfolio-img-wrap"><img src="images/modern-home-exterior-repaint-armstrong-creek.jpeg" alt="Modern render and brick home exterior repaint in Armstrong Creek" class="portfolio-img" loading="lazy" decoding="async" /></div>
+        <span class="portfolio-tag">Exterior Painting</span>
+        <h3 class="portfolio-title">Modern Home Exterior Repaint — Armstrong Creek</h3>
+      </a>
+      <a href="projects/timber-fence-restoration-highton.html" class="portfolio-card" style="text-decoration:none;color:inherit;">
+        <div class="portfolio-img-wrap"><img src="images/timber-fence-restoration-highton.jpeg" alt="Restored and re-stained timber boundary fence in Highton, Geelong" class="portfolio-img" loading="lazy" decoding="async" /></div>
+        <span class="portfolio-tag">Exterior Painting</span>
+        <h3 class="portfolio-title">Timber Fence Restoration — Highton</h3>
+      </a>
     </div>
   </section>
 
@@ -1265,6 +1375,87 @@
         <div class="blog-date"><i class="fa-regular fa-calendar"></i> June 27, 2026</div>
         <h3 class="blog-title">How to Choose the Best Interior House Painters in Geelong</h3>
       </a>
+    </div>
+
+    <div class="blogs-grid blogs-grid-second">
+      <a href="blogs/exterior-house-painting-geelong-guide/exterior-painting-cost-geelong.html" class="blog-card" style="text-decoration:none;color:inherit;">
+        <div class="blog-img-wrap">
+          <img src="images/exterior-painting-cost-geelong.jpg" alt="Freshly painted house exterior in Geelong showing a completed repaint" loading="lazy" decoding="async" />
+        </div>
+        <div class="blog-date"><i class="fa-regular fa-calendar"></i> July 16, 2026</div>
+        <h3 class="blog-title">Exterior Painting Cost Geelong: 2026 Prices by Job &amp; Home Size</h3>
+      </a>
+      <a href="blogs/exterior-house-painting-geelong-guide/weatherboard-painting-geelong.html" class="blog-card" style="text-decoration:none;color:inherit;">
+        <div class="blog-img-wrap">
+          <img src="images/weatherboard-painting-geelong.jpg" alt="Freshly painted weatherboard house exterior in Geelong with a smooth, even finish" loading="lazy" decoding="async" />
+        </div>
+        <div class="blog-date"><i class="fa-regular fa-calendar"></i> August 3, 2026</div>
+        <h3 class="blog-title">Weatherboard Painting in Geelong: Prep, Paint &amp; Repaint-or-Replace</h3>
+      </a>
+      <a href="blogs/exterior-house-painting-geelong-guide/best-exterior-painters-geelong.html" class="blog-card" style="text-decoration:none;color:inherit;">
+        <div class="blog-img-wrap">
+          <img src="images/choosing-exterior-painter-geelong.jpg" alt="Homeowner and painter reviewing an itemised exterior painting quote in Geelong" loading="lazy" decoding="async" />
+        </div>
+        <div class="blog-date"><i class="fa-regular fa-calendar"></i> July 16, 2026</div>
+        <h3 class="blog-title">How to Choose Exterior Painters in Geelong</h3>
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="section-badge">
+      <i class="fa-solid fa-sparkles"></i>
+      <span>FAQ</span>
+    </div>
+    <h2 class="faq-heading">Geelong painting <span class="text-accent">FAQs</span>.</h2>
+    <p class="faq-intro">Quick answers to the questions Geelong homeowners and businesses ask us most often. Don't see what you need? Give us a call — we're a quick chat away.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Are you a local painting company near me?
+          <i class="fa-solid fa-plus"></i>
+        </h3>
+        <div class="faq-answer">
+          <p>Yes. Painters of Geelong is a local, owner-operated painting company providing residential and commercial painting services throughout Geelong and surrounding suburbs, including <a href="areas-of-service/painters-belmont.html">Belmont</a>, <a href="areas-of-service/painters-highton.html">Highton</a>, <a href="areas-of-service/painters-newtown.html">Newtown</a>, <a href="areas-of-service/painters-grovedale.html">Grovedale</a>, <a href="areas-of-service/painters-torquay.html">Torquay</a>, <a href="areas-of-service/painters-ocean-grove.html">Ocean Grove</a>, <a href="areas-of-service/painters-lara.html">Lara</a>, <a href="areas-of-service/painters-waurn-ponds.html">Waurn Ponds</a> and <a href="areas-of-service/painters-armstrong-creek.html">Armstrong Creek</a>. If you're searching for painters near you in the Geelong region, we're here to help with a free, no-obligation quote.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Do you offer free house painting quotes in Geelong?
+          <i class="fa-solid fa-plus"></i>
+        </h3>
+        <div class="faq-answer">
+          <p>Yes. We provide free, no-obligation quotes for all residential and commercial painting projects across Geelong. Every quote is itemised, transparent and tailored to your property's needs, so you know exactly what's included before any work begins.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What painting services do you offer in Geelong?
+          <i class="fa-solid fa-plus"></i>
+        </h3>
+        <div class="faq-answer">
+          <p>We provide a complete range of residential and commercial painting services across Geelong, including <a href="services/interior-house-painters.html">interior house painting</a>, <a href="services/exterior-house-painters.html">exterior house painting</a>, <a href="services/commercial-building-painters.html">commercial painting</a>, <a href="services/deck-and-timber-staining.html">deck and timber staining</a>, fence painting, and <a href="services/pressure-washing-surface-prep.html">surface preparation and pressure cleaning</a>.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Are you licensed and insured?
+          <i class="fa-solid fa-plus"></i>
+        </h3>
+        <div class="faq-answer">
+          <p>Yes. Our painters are fully licensed and insured, giving you confidence that your property is protected throughout every residential and commercial painting project.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How much does house painting cost in Geelong?
+          <i class="fa-solid fa-plus"></i>
+        </h3>
+        <div class="faq-answer">
+          <p>House painting costs vary depending on the size of your home, the condition of the surfaces, the type of paint selected and the scope of work. We provide a free, itemised quote for every job so you know exactly what to expect before committing — <a href="contact-us.html">contact us today</a> for a fast estimate.</p>
+        </div>
+      </div>
     </div>
   </section>
 
