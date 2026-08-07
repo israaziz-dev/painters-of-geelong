@@ -59,6 +59,46 @@
       "source": "/blogs/interior-house-painting-geelong-guide/ceiling-painting.html",
       "destination": "/blogs/interior-house-painting-geelong-guide/ceiling-painting-geelong.html",
       "permanent": true
+    },
+    {
+      "source": "/images/office-building-painting-services.webp",
+      "destination": "/images/commercial-office-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/full-exterior-repainting.webp",
+      "destination": "/images/exterior-beach-house-painting-torquay.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/feature-wall-painters-geelong.webp",
+      "destination": "/images/feature-wall-painting-highton.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/heritage_home_geelong.webp",
+      "destination": "/images/heritage-home-exterior-repaint-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/brick-painting-kitchen.webp",
+      "destination": "/images/kitchen-cabinet-painting-highton.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/retail-shop-repainting-highton.webp",
+      "destination": "/images/retail-store-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/exterior_torquay.webp",
+      "destination": "/images/weatherboard-exterior-repaint-torquay.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/fence-painters-north-geelong.webp",
+      "destination": "/images/weatherboard-house-painting-belmont.webp",
+      "permanent": true
     }
   ]
 }
