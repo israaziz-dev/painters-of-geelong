@@ -124,6 +124,156 @@
       "source": "/images/pog-work/pog%2016.webp",
       "destination": "/images/living-room-painting-newtown.webp",
       "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog1.webp",
+      "destination": "/images/pog-work/white-weatherboard-exterior-repaint-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog%203.webp",
+      "destination": "/images/pog-work/charcoal-timber-deck-staining-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog 3.webp",
+      "destination": "/images/pog-work/charcoal-timber-deck-staining-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog%205.webp",
+      "destination": "/images/pog-work/timber-paling-fence-staining-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog 5.webp",
+      "destination": "/images/pog-work/timber-paling-fence-staining-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog%209.webp",
+      "destination": "/images/pog-work/pergola-garage-door-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog 9.webp",
+      "destination": "/images/pog-work/pergola-garage-door-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog10.webp",
+      "destination": "/images/pog-work/boat-hull-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog11.webp",
+      "destination": "/images/pog-work/white-render-exterior-repaint-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog 12.webp",
+      "destination": "/images/pog-work/charcoal-render-modern-home-exterior-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog%2012.webp",
+      "destination": "/images/pog-work/charcoal-render-modern-home-exterior-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog13.webp",
+      "destination": "/images/pog-work/outdoor-entertaining-area-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog 15.webp",
+      "destination": "/images/pog-work/pool-area-rendered-home-repaint-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog%2015.webp",
+      "destination": "/images/pog-work/pool-area-rendered-home-repaint-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog 18.webp",
+      "destination": "/images/pog-work/charcoal-render-home-side-elevation-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog%2018.webp",
+      "destination": "/images/pog-work/charcoal-render-home-side-elevation-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog19.webp",
+      "destination": "/images/pog-work/modern-home-poolside-exterior-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog20.webp",
+      "destination": "/images/pog-work/commercial-building-spray-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog 22.webp",
+      "destination": "/images/pog-work/pergola-repaint-timber-cladding-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog%2022.webp",
+      "destination": "/images/pog-work/pergola-repaint-timber-cladding-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog%202.webp",
+      "destination": "/images/pog-work/timber-lined-hallway-interior-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog 2.webp",
+      "destination": "/images/pog-work/timber-lined-hallway-interior-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog%208.webp",
+      "destination": "/images/pog-work/colorbond-fence-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog 8.webp",
+      "destination": "/images/pog-work/colorbond-fence-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog 14.webp",
+      "destination": "/images/pog-work/elevated-modern-home-exterior-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog%2014.webp",
+      "destination": "/images/pog-work/elevated-modern-home-exterior-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog 17.webp",
+      "destination": "/images/pog-work/white-cladding-verandah-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog%2017.webp",
+      "destination": "/images/pog-work/white-cladding-verandah-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog 21.webp",
+      "destination": "/images/pog-work/charcoal-timber-fence-painting-geelong.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/pog-work/pog%2021.webp",
+      "destination": "/images/pog-work/charcoal-timber-fence-painting-geelong.webp",
+      "permanent": true
     }
   ]
 }
