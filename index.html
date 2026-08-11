@@ -138,12 +138,15 @@
     .our-work-top .section-badge { justify-content: flex-start; margin-bottom: 14px; }
     .our-work-heading { font-size: 42px; font-weight: 700; color: #0f0f14; line-height: 1.2; letter-spacing: -0.5px; }
     .work-arrows { display: flex; gap: 12px; flex-shrink: 0; }
+    .work-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; color: #0f0f14; font-size: 15px; font-weight: 600; text-decoration: none; border-bottom: 1.5px solid #0f0f14; padding-bottom: 2px; width: fit-content; }
+    .work-link:hover { color: #e8762d; border-bottom-color: #e8762d; }
+    .work-link i { font-size: 13px; }
     .work-arrow { width: 52px; height: 52px; border-radius: 50%; border: 1.5px solid #d5d6de; background: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 18px; color: #333; transition: all 0.2s; }
     .work-arrow:hover { background: #f3f4f8; border-color: #bbb; }
     .work-carousel-wrap { overflow: hidden; }
     .work-carousel { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -ms-overflow-style: none; scrollbar-width: none; padding-bottom: 4px; }
     .work-carousel::-webkit-scrollbar { display: none; }
-    .work-card { position: relative; display: block; flex: 0 0 calc((100% - 40px) / 3); border-radius: 16px; overflow: hidden; aspect-ratio: 4 / 3; background: #f3f4f8; cursor: pointer; text-decoration: none; color: inherit; scroll-snap-align: start; }
+    .work-card { position: relative; display: block; flex: 0 0 calc((100% - 40px) / 3); border-radius: 16px; overflow: hidden; aspect-ratio: 4 / 3; background: #f3f4f8; text-decoration: none; color: inherit; scroll-snap-align: start; }
     .work-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); }
     .work-card:hover img { transform: scale(1.06); }
 
@@ -976,6 +979,7 @@
           <span>Our Work</span>
         </div>
         <h2 class="our-work-heading">Transform Your Space With Our<br>High-quality Painting Work</h2>
+        <a href="projects.html" class="work-link">Check out our projects <i class="fa-solid fa-arrow-up-right"></i></a>
       </div>
       <div class="work-arrows">
         <button class="work-arrow" aria-label="Previous work" onclick="scrollWork(-1)"><i class="fa-solid fa-arrow-left"></i></button>
@@ -985,28 +989,28 @@
 
     <div class="work-carousel-wrap">
       <div class="work-carousel" id="workCarousel">
-        <a href="projects.html" class="work-card"><img src="images/pog-work/white-weatherboard-exterior-repaint-geelong.webp" alt="White weatherboard home and picket fence after an exterior repaint" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/charcoal-timber-deck-staining-geelong.webp" alt="Charcoal-stained timber deck beside a white weatherboard home" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/heritage-home-exterior-repaint-geelong.webp" alt="Two-storey brick home with a repainted dark garage door and trims" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/timber-paling-fence-staining-geelong.webp" alt="Stained timber paling fence running along a driveway" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/weatherboard-exterior-repaint-torquay.webp" alt="Repainted white weatherboard home with a metal roof" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/pergola-garage-door-painting-geelong.webp" alt="Pergola and Colorbond garage door being prepared for painting" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/boat-hull-painting-geelong.webp" alt="Boat hull being repainted in dry dock" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/white-render-exterior-repaint-geelong.webp" alt="White rendered home exterior with timber entry feature" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/charcoal-render-modern-home-exterior-geelong.webp" alt="Charcoal-rendered modern home exterior with repainted window frames" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/outdoor-entertaining-area-painting-geelong.webp" alt="Covered outdoor entertaining area and pool after repainting" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/pool-area-rendered-home-repaint-geelong.webp" alt="Repainted rendered home and pergola beside a swimming pool" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/charcoal-render-home-side-elevation-geelong.webp" alt="Side elevation of a charcoal-rendered home after an exterior repaint" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/modern-home-poolside-exterior-painting-geelong.webp" alt="Modern home exterior and poolside path after painting" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/commercial-building-spray-painting-geelong.webp" alt="Painter spray-painting the exterior of a large modern building" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/pergola-repaint-timber-cladding-geelong.webp" alt="Repainted pergola with dark beams against timber cladding" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/timber-lined-hallway-interior-painting-geelong.webp" alt="Interior hallway with polished timber floor and timber-lined walls" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/painting-door-trims.webp" alt="Repainted front door and timber trims with original leadlight glass" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/colorbond-fence-painting-geelong.webp" alt="Grey Colorbond fence panel painted against a brick wall" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/elevated-modern-home-exterior-painting-geelong.webp" alt="Cream-painted elevated modern home above a curved driveway" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/living-room-painting-newtown.webp" alt="Freshly painted living room interior with warm neutral walls" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/white-cladding-verandah-painting-geelong.webp" alt="Freshly painted white cladding and ceiling under a covered verandah" loading="lazy" /></a>
-        <a href="projects.html" class="work-card"><img src="images/pog-work/charcoal-timber-fence-painting-geelong.webp" alt="Charcoal-painted timber fence alongside a vegetable garden" loading="lazy" /></a>
+        <div class="work-card"><img src="images/pog-work/white-weatherboard-exterior-repaint-geelong.webp" alt="White weatherboard home and picket fence after an exterior repaint" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/charcoal-timber-deck-staining-geelong.webp" alt="Charcoal-stained timber deck beside a white weatherboard home" loading="lazy" /></div>
+        <div class="work-card"><img src="images/heritage-home-exterior-repaint-geelong.webp" alt="Two-storey brick home with a repainted dark garage door and trims" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/timber-paling-fence-staining-geelong.webp" alt="Stained timber paling fence running along a driveway" loading="lazy" /></div>
+        <div class="work-card"><img src="images/weatherboard-exterior-repaint-torquay.webp" alt="Repainted white weatherboard home with a metal roof" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/pergola-garage-door-painting-geelong.webp" alt="Pergola and Colorbond garage door being prepared for painting" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/boat-hull-painting-geelong.webp" alt="Boat hull being repainted in dry dock" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/white-render-exterior-repaint-geelong.webp" alt="White rendered home exterior with timber entry feature" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/charcoal-render-modern-home-exterior-geelong.webp" alt="Charcoal-rendered modern home exterior with repainted window frames" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/outdoor-entertaining-area-painting-geelong.webp" alt="Covered outdoor entertaining area and pool after repainting" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/pool-area-rendered-home-repaint-geelong.webp" alt="Repainted rendered home and pergola beside a swimming pool" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/charcoal-render-home-side-elevation-geelong.webp" alt="Side elevation of a charcoal-rendered home after an exterior repaint" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/modern-home-poolside-exterior-painting-geelong.webp" alt="Modern home exterior and poolside path after painting" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/commercial-building-spray-painting-geelong.webp" alt="Painter spray-painting the exterior of a large modern building" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/pergola-repaint-timber-cladding-geelong.webp" alt="Repainted pergola with dark beams against timber cladding" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/timber-lined-hallway-interior-painting-geelong.webp" alt="Interior hallway with polished timber floor and timber-lined walls" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/painting-door-trims.webp" alt="Repainted front door and timber trims with original leadlight glass" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/colorbond-fence-painting-geelong.webp" alt="Grey Colorbond fence panel painted against a brick wall" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/elevated-modern-home-exterior-painting-geelong.webp" alt="Cream-painted elevated modern home above a curved driveway" loading="lazy" /></div>
+        <div class="work-card"><img src="images/living-room-painting-newtown.webp" alt="Freshly painted living room interior with warm neutral walls" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/white-cladding-verandah-painting-geelong.webp" alt="Freshly painted white cladding and ceiling under a covered verandah" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/charcoal-timber-fence-painting-geelong.webp" alt="Charcoal-painted timber fence alongside a vegetable garden" loading="lazy" /></div>
       </div>
     </div>
   </section>
