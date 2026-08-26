@@ -330,91 +330,223 @@
   <meta name="ICBM" content="-38.234118, 144.370951" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://www.paintersofgeelong.com.au/#website",
-    "name": "Painters of Geelong",
-    "url": "https://www.paintersofgeelong.com.au/",
-    "publisher": { "@id": "https://www.paintersofgeelong.com.au/#organization" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "Organization"],
-    "@id": "https://www.paintersofgeelong.com.au/#organization",
-    "name": "Painters of Geelong",
-    "telephone": "+61431261281",
-    "areaServed": ["Geelong","Newtown","Belmont","Grovedale","Highton","Waurn Ponds","Lara","Torquay","Armstrong Creek","Ocean Grove"],
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-      "opens": "07:00",
-      "closes": "19:00"
-    },
-    "image": { "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#primaryimage" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ImageObject",
-    "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#primaryimage",
-    "url": "https://www.paintersofgeelong.com.au/images/interior-house-painters-geelong.webp",
-    "description": "Interior house painting in Geelong"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#webpage",
-    "url": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html",
-    "name": "Interior Painters Geelong | Painters of Geelong",
-    "isPartOf": { "@id": "https://www.paintersofgeelong.com.au/#website" },
-    "about": { "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#service" },
-    "primaryImageOfPage": { "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#primaryimage" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#service",
-    "name": "Interior House Painting Geelong",
-    "serviceType": "Interior House Painting",
-    "mainEntityOfPage": { "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#webpage" },
-    "provider": { "@id": "https://www.paintersofgeelong.com.au/#organization" },
-    "areaServed": ["Geelong","Newtown","Belmont","Grovedale","Highton","Waurn Ponds","Lara","Torquay","Armstrong Creek","Ocean Grove"],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Interior Painting Services",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wall Painting" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ceiling Painting" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Door & Trim Painting" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Feature Wall Painting" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Apartment Painting" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rental Property Repainting" } }
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.paintersofgeelong.com.au/#website",
+          "name": "Painters of Geelong",
+          "url": "https://www.paintersofgeelong.com.au/",
+          "publisher": {
+            "@id": "https://www.paintersofgeelong.com.au/#organization"
+          }
+        },
+        {
+          "@type": [
+            "LocalBusiness",
+            "HomeAndConstructionBusiness"
+          ],
+          "@id": "https://www.paintersofgeelong.com.au/#organization",
+          "name": "Painters of Geelong",
+          "url": "https://www.paintersofgeelong.com.au/",
+          "telephone": "+61431261281",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Geelong",
+            "addressRegion": "VIC",
+            "addressCountry": "AU"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Geelong"
+            },
+            {
+              "@type": "Place",
+              "name": "Newtown"
+            },
+            {
+              "@type": "Place",
+              "name": "Belmont"
+            },
+            {
+              "@type": "Place",
+              "name": "Grovedale"
+            },
+            {
+              "@type": "Place",
+              "name": "Highton"
+            },
+            {
+              "@type": "Place",
+              "name": "Waurn Ponds"
+            },
+            {
+              "@type": "Place",
+              "name": "Lara"
+            },
+            {
+              "@type": "Place",
+              "name": "Torquay"
+            },
+            {
+              "@type": "Place",
+              "name": "Armstrong Creek"
+            },
+            {
+              "@type": "Place",
+              "name": "Ocean Grove"
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+              ],
+              "opens": "07:00",
+              "closes": "19:00"
+            }
+          ],
+          "image": {
+            "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#primaryimage"
+          }
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#primaryimage",
+          "url": "https://www.paintersofgeelong.com.au/images/interior-house-painters-geelong.webp",
+          "contentUrl": "https://www.paintersofgeelong.com.au/images/interior-house-painters-geelong.webp",
+          "description": "Interior house painting in Geelong"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#webpage",
+          "url": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html",
+          "name": "Interior Painters Geelong | Painters of Geelong",
+          "isPartOf": {
+            "@id": "https://www.paintersofgeelong.com.au/#website"
+          },
+          "about": {
+            "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#service"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#primaryimage"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#service",
+          "name": "Interior House Painting Geelong",
+          "serviceType": "Interior House Painting",
+          "url": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html",
+          "description": "Professional interior house painting services in Geelong, including walls, ceilings, doors, trims, feature walls, apartments and rental properties.",
+          "mainEntityOfPage": {
+            "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#webpage"
+          },
+          "provider": {
+            "@id": "https://www.paintersofgeelong.com.au/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Geelong"
+            },
+            {
+              "@type": "Place",
+              "name": "Newtown"
+            },
+            {
+              "@type": "Place",
+              "name": "Belmont"
+            },
+            {
+              "@type": "Place",
+              "name": "Grovedale"
+            },
+            {
+              "@type": "Place",
+              "name": "Highton"
+            },
+            {
+              "@type": "Place",
+              "name": "Waurn Ponds"
+            },
+            {
+              "@type": "Place",
+              "name": "Lara"
+            },
+            {
+              "@type": "Place",
+              "name": "Torquay"
+            },
+            {
+              "@type": "Place",
+              "name": "Armstrong Creek"
+            },
+            {
+              "@type": "Place",
+              "name": "Ocean Grove"
+            }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "@id": "https://www.paintersofgeelong.com.au/services/interior-house-painters.html#offercatalog",
+            "name": "Interior Painting Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Wall Painting"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Ceiling Painting"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Door & Trim Painting"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Feature Wall Painting"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Apartment Painting"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Rental Property Repainting"
+                }
+              }
+            ]
+          }
+        }
       ]
     }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Interior Painting Services",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Wall Painting" },
-      { "@type": "ListItem", "position": 2, "name": "Ceiling Painting" },
-      { "@type": "ListItem", "position": 3, "name": "Door & Trim Painting" },
-      { "@type": "ListItem", "position": 4, "name": "Feature Wall Painting" },
-      { "@type": "ListItem", "position": 5, "name": "Apartment Painting" },
-      { "@type": "ListItem", "position": 6, "name": "Rental Property Repainting" }
-    ]
-  }
   </script>
   <script type="application/ld+json">
   {
@@ -1080,7 +1212,7 @@
           <i class="fa-solid fa-plus"></i>
         </div>
         <div class="faq-answer">
-          <p>Ceilings are always painted first, then walls, then trims and doors last. Working top-down means any splatter lands on surfaces that haven't been finished yet &mdash; it's how professionals avoid rework, and it's covered step by step in our <a href="../blogs/interior-house-painting-geelong-guide/">interior house painting guide</a>.</p>
+          <p>Ceilings are always painted first, then walls, then trims and doors last. Working top-down means any splatter lands on surfaces that haven't been finished yet &mdash; it's how professionals avoid rework, and it's covered step by step in our <a href="../blogs/interior-house-painting-geelong-guide.html">interior house painting guide</a>.</p>
         </div>
       </div>
       <div class="faq-item">

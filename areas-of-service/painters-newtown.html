@@ -319,6 +319,31 @@
       .footer-subscribe-heading { font-size: 24px; }
       .footer-main { padding: 36px 16px; gap: 28px; }
     }
+
+    /* RECENT PROJECTS */
+    .recent-section { padding: 80px 64px; background: #f3f4f8; }
+    .recent-heading { text-align: center; font-size: 42px; font-weight: 700; color: #0f0f14; line-height: 1.2; margin-bottom: 12px; }
+    .recent-sub { text-align: center; font-size: 15.5px; color: #666; max-width: 720px; margin: 0 auto 40px; line-height: 1.6; }
+    .recent-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 1200px; margin: 0 auto; }
+    .recent-grid.cols-2 { grid-template-columns: repeat(2, 1fr); max-width: 820px; }
+    .recent-grid.cols-1 { grid-template-columns: 1fr; max-width: 520px; }
+    .recent-tile { position: relative; border-radius: 16px; overflow: hidden; display: block; aspect-ratio: 4 / 3; text-decoration: none; }
+    .recent-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+    .recent-tile:hover img { transform: scale(1.06); }
+    .recent-tile-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 16px 18px; color: #fff; background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.35) 65%, transparent 100%); font-size: 14px; line-height: 1.45; font-weight: 500; }
+    .recent-cta-row { text-align: center; margin-top: 36px; }
+    .recent-btn { background: #e8762d; color: #fff; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: transform .3s, box-shadow .3s; }
+    .recent-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(232,118,45,.35); }
+    @media (max-width: 1024px) {
+      .recent-section { padding: 60px 24px; }
+      .recent-heading { font-size: 34px; }
+      .recent-grid, .recent-grid.cols-2 { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    }
+    @media (max-width: 600px) {
+      .recent-section { padding: 40px 16px; }
+      .recent-heading { font-size: 26px; }
+      .recent-grid, .recent-grid.cols-2, .recent-grid.cols-1 { grid-template-columns: 1fr; }
+    }
   </style>
   <meta name="author" content="Painters of Geelong">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -773,6 +798,32 @@
           <p>Yes. All quotes in Newtown are free and provided on-site. We assess condition, substrate, scope and access in person, then send a written quote &mdash; typically within 24 hours. Call <a href="tel:0431261281">0431 261 281</a> or use our online form to book.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+
+  <!-- RECENT PROJECTS -->
+  <section class="recent-section">
+    <div class="section-badge">
+      <i class="fa-solid fa-images"></i>
+      <span>Recent Work</span>
+    </div>
+    <h2 class="recent-heading">Recent Painting Projects in Newtown</h2>
+    <p class="recent-sub">Recent work completed for homeowners in Newtown and the surrounding Geelong suburbs.</p>
+
+    <div class="recent-grid cols-2">
+      <a href="../projects/living-room-painting-newtown.html" class="recent-tile">
+        <img src="../images/living-room-painting-newtown.webp" alt="Living room interior painting in Newtown, Geelong" loading="lazy" decoding="async" />
+        <span class="recent-tile-caption">Newtown &middot; Modern Living Room Refresh</span>
+      </a>
+      <a href="../projects/hallway-interior-timber-staining-newtown.html" class="recent-tile">
+        <img src="../images/hallway-interior-timber-staining-newtown.webp" alt="Interior hallway timber lining staining in Newtown, Geelong" loading="lazy" decoding="async" />
+        <span class="recent-tile-caption">Newtown &middot; Interior Hallway Timber Staining</span>
+      </a>
+    </div>
+
+    <div class="recent-cta-row">
+      <a href="../projects.html" class="recent-btn">View Our Full Portfolio <i class="fa-solid fa-arrow-up-right"></i></a>
     </div>
   </section>
 
